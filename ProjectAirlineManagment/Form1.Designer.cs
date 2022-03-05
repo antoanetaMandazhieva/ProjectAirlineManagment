@@ -30,6 +30,7 @@ namespace ProjectAirlineManagment
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStart));
             this.pictureBoxStartPhoto = new System.Windows.Forms.PictureBox();
             this.labelName = new System.Windows.Forms.Label();
             this.progressBarStart = new System.Windows.Forms.ProgressBar();
@@ -39,10 +40,11 @@ namespace ProjectAirlineManagment
             // 
             // pictureBoxStartPhoto
             // 
-            this.pictureBoxStartPhoto.Image = global::ProjectAirlineManagment.Properties.Resources.MicrosoftTeams_image__1_;
-            this.pictureBoxStartPhoto.Location = new System.Drawing.Point(-56, -31);
+            this.pictureBoxStartPhoto.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxStartPhoto.Image")));
+            this.pictureBoxStartPhoto.InitialImage = null;
+            this.pictureBoxStartPhoto.Location = new System.Drawing.Point(-28, -8);
             this.pictureBoxStartPhoto.Name = "pictureBoxStartPhoto";
-            this.pictureBoxStartPhoto.Size = new System.Drawing.Size(695, 352);
+            this.pictureBoxStartPhoto.Size = new System.Drawing.Size(648, 306);
             this.pictureBoxStartPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxStartPhoto.TabIndex = 0;
             this.pictureBoxStartPhoto.TabStop = false;
@@ -81,7 +83,7 @@ namespace ProjectAirlineManagment
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.pictureBoxStartPhoto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormStart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
