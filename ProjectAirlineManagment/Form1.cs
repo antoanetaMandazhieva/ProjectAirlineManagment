@@ -19,7 +19,26 @@ namespace ProjectAirlineManagment
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            timerProgressBar.Start();
+        }
 
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timerProgressBar_Tick(object sender, EventArgs e)
+        {
+            if (progressBarStart.Value < 100)
+            {
+                progressBarStart.Value += 2;
+            }
+            else
+            {
+                timerProgressBar.Stop();
+                FormProgram form = new FormProgram();
+                form.ShowDialog();
+            }
         }
     }
 }
