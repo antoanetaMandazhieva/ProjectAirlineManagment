@@ -19,5 +19,7 @@ namespace Data
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Flight> Flights { get; set; }
         public DbSet<Pilot> Pilots { get; set; }
+
+        //jhkjnb
     }
 }
