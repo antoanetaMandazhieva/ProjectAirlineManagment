@@ -10,7 +10,7 @@ namespace Business.ModelsBusiness
 {
     public class TicketBusiness
     {
-        public TicketBusiness() : base()
+        public TicketBusiness() 
         {
             tickets = new List<Ticket>();
             airlineManagmentContext = new AirlineManagmentContext();
