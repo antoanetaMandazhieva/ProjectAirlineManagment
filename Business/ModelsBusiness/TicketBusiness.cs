@@ -10,7 +10,7 @@ namespace Business.ModelsBusiness
 {
     public class TicketBusiness
     {
-        public TicketBusiness() : base()
+        public TicketBusiness() 
         {
             tickets = new List<Ticket>();
             airlineManagmentContext = new AirlineManagmentContext();
@@ -18,9 +18,12 @@ namespace Business.ModelsBusiness
         }
 
         private AirlineManagmentContext airlineManagmentContext;
-        private FlightBusiness flightBusiness;
         private List<Ticket> tickets;
+        private FlightBusiness flightBusiness;
+
         public List<Ticket> TicketGetAll() => airlineManagmentContext.Tickets.ToList();
+
+        public Ticket GetTicket(int id) => airlineManagmentContext.Tickets.Find(id);
 
         public int AddTicket(Ticket ticket)
         {
@@ -47,6 +50,26 @@ namespace Business.ModelsBusiness
 
         }
 
+        public void DeleteTicket(int id)
+        {
+            Ticket ticket = airlineManagmentContext.Tickets.Find(id);
+            Flight flight = flightBusiness.GetFlight(ticket.FlightId);
+            if (ticket != null)
+            {
+                flight.TakenSeats--;
+                this.tickets.Remove(ticket);
+                airlineManagmentContext.SaveChanges();
+            }
+        }
 
+        public void UpdateTicket(Ticket ticket)
+        {
+            Ticket updatedTicket = airlineManagmentContext.Tickets.Find(ticket.Id);
+            if (updatedTicket != null)
+            {
+                airlineManagmentContext.Entry(updatedTicket).CurrentValues.SetValues(ticket);
+                airlineManagmentContext.SaveChanges();
+            }
+        }
     }
 }
