@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="AirlineManagmentBusiness.cs" />
     <Compile Include="ModelsBusiness\ClientBusiness.cs" />
     <Compile Include="ModelsBusiness\FlightBusiness.cs" />
     <Compile Include="ModelsBusiness\PilotBusiness.cs" />
