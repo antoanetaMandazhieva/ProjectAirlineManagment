@@ -30,32 +30,20 @@ namespace ProjectAirlineManagment
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStart));
-            this.pictureBoxStartPhoto = new System.Windows.Forms.PictureBox();
             this.labelName = new System.Windows.Forms.Label();
             this.progressBarStart = new System.Windows.Forms.ProgressBar();
             this.timerProgressBar = new System.Windows.Forms.Timer(this.components);
+            this.pictureBoxStartPhoto = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStartPhoto)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBoxStartPhoto
-            // 
-            this.pictureBoxStartPhoto.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxStartPhoto.Image")));
-            this.pictureBoxStartPhoto.InitialImage = null;
-            this.pictureBoxStartPhoto.Location = new System.Drawing.Point(-28, -8);
-            this.pictureBoxStartPhoto.Name = "pictureBoxStartPhoto";
-            this.pictureBoxStartPhoto.Size = new System.Drawing.Size(648, 306);
-            this.pictureBoxStartPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxStartPhoto.TabIndex = 0;
-            this.pictureBoxStartPhoto.TabStop = false;
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
+            this.labelName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.labelName.Font = new System.Drawing.Font("Ravie", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName.ForeColor = System.Drawing.Color.White;
-            this.labelName.Location = new System.Drawing.Point(147, 30);
+            this.labelName.Location = new System.Drawing.Point(135, 120);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(302, 38);
             this.labelName.TabIndex = 1;
@@ -73,6 +61,17 @@ namespace ProjectAirlineManagment
             // 
             this.timerProgressBar.Enabled = true;
             this.timerProgressBar.Tick += new System.EventHandler(this.timerProgressBar_Tick);
+            // 
+            // pictureBoxStartPhoto
+            // 
+            this.pictureBoxStartPhoto.Image = global::ProjectAirlineManagment.Properties.Resources.download;
+            this.pictureBoxStartPhoto.InitialImage = null;
+            this.pictureBoxStartPhoto.Location = new System.Drawing.Point(-49, -54);
+            this.pictureBoxStartPhoto.Name = "pictureBoxStartPhoto";
+            this.pictureBoxStartPhoto.Size = new System.Drawing.Size(712, 352);
+            this.pictureBoxStartPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxStartPhoto.TabIndex = 0;
+            this.pictureBoxStartPhoto.TabStop = false;
             // 
             // FormStart
             // 
