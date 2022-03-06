@@ -76,5 +76,10 @@ namespace ProjectAirlineManagment
         {
 
         }
+
+        private void FormProgram_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

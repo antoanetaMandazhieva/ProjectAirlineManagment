@@ -10,8 +10,8 @@ namespace Data.Models
     {
         public int Id { get; set; }
         public int ClientId { get; set; }
-        public decimal Price { get; set; }
         public int FlightId { get; set; }
+        public decimal Price { get; set; }
         public string Seat { get; set; }
         public bool IsOneWayTicket { get; set; }
     }
