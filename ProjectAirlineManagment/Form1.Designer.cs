@@ -64,7 +64,7 @@ namespace ProjectAirlineManagment
             // 
             // pictureBoxStartPhoto
             // 
-            this.pictureBoxStartPhoto.Image = global::ProjectAirlineManagment.Properties.Resources.download;
+//            this.pictureBoxStartPhoto.Image = global::ProjectAirlineManagment.Properties.Resources.download;
             this.pictureBoxStartPhoto.InitialImage = null;
             this.pictureBoxStartPhoto.Location = new System.Drawing.Point(-49, -54);
             this.pictureBoxStartPhoto.Name = "pictureBoxStartPhoto";
