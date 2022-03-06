@@ -43,11 +43,13 @@ namespace ProjectAirlineManagment
             this.labelName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.labelName.Font = new System.Drawing.Font("Ravie", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName.ForeColor = System.Drawing.Color.White;
-            this.labelName.Location = new System.Drawing.Point(135, 120);
+            this.labelName.Image = global::ProjectAirlineManagment.Properties.Resources.startPhoto;
+            this.labelName.Location = new System.Drawing.Point(139, 109);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(302, 38);
             this.labelName.TabIndex = 1;
             this.labelName.Text = "Balkan Airlines";
+            this.labelName.Click += new System.EventHandler(this.labelName_Click);
             // 
             // progressBarStart
             // 
