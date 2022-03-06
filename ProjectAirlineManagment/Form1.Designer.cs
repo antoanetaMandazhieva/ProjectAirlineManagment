@@ -53,7 +53,7 @@ namespace ProjectAirlineManagment
             // 
             this.progressBarStart.Location = new System.Drawing.Point(-1, 286);
             this.progressBarStart.Name = "progressBarStart";
-            this.progressBarStart.Size = new System.Drawing.Size(592, 24);
+            this.progressBarStart.Size = new System.Drawing.Size(592, 27);
             this.progressBarStart.TabIndex = 2;
             this.progressBarStart.Click += new System.EventHandler(this.progressBar1_Click);
             // 
@@ -64,9 +64,9 @@ namespace ProjectAirlineManagment
             // 
             // pictureBoxStartPhoto
             // 
-            this.pictureBoxStartPhoto.Image = global::ProjectAirlineManagment.Properties.Resources.download;
+            this.pictureBoxStartPhoto.Image = global::ProjectAirlineManagment.Properties.Resources.startPhoto;
             this.pictureBoxStartPhoto.InitialImage = null;
-            this.pictureBoxStartPhoto.Location = new System.Drawing.Point(-49, -54);
+            this.pictureBoxStartPhoto.Location = new System.Drawing.Point(-63, -54);
             this.pictureBoxStartPhoto.Name = "pictureBoxStartPhoto";
             this.pictureBoxStartPhoto.Size = new System.Drawing.Size(712, 352);
             this.pictureBoxStartPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
