@@ -8,5 +8,6 @@ namespace Business.ModelsBusiness
 {
     class FlightBusiness
     {
+        public Flight GetFlight(int id) => airlineManagmentContext.Flights.Find(id);
     }
 }

@@ -12,5 +12,6 @@ namespace Data.Models
         public string Destinatio { get; set; }
         public DateTime Date { get; set; }
         public int SeatCount { get; set; }
+        public int TakenSeats { get; set; }
     }
 }
