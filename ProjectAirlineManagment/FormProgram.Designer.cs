@@ -38,6 +38,7 @@
             this.Name = "FormProgram";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormProgram";
+            this.Load += new System.EventHandler(this.FormProgram_Load);
             this.ResumeLayout(false);
 
         }
