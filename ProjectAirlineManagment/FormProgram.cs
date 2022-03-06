@@ -16,5 +16,10 @@ namespace ProjectAirlineManagment
         {
             InitializeComponent();
         }
+
+        private void FormProgram_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
