@@ -171,16 +171,43 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClients.Designer.cs">
+      <DependentUpon>FormClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFlight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFlight.Designer.cs">
+      <DependentUpon>FormFlight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPilot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPilot.Designer.cs">
+      <DependentUpon>FormPilot.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormProgram.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormProgram.Designer.cs">
       <DependentUpon>FormProgram.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTickets.Designer.cs">
+      <DependentUpon>FormTickets.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClients.resx">
+      <DependentUpon>FormClients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProgram.resx">
       <DependentUpon>FormProgram.cs</DependentUpon>

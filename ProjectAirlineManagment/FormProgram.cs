@@ -41,22 +41,13 @@ namespace ProjectAirlineManagment
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonMenu_Click(object sender, EventArgs e)
         {
             ShowSubMenu(panelMenuSubmenu);
         }
 
-        private void buttonClient_Click(object sender, EventArgs e)
-        {
-            HideSubMenu();
-        }
         private Form activeForm = null;
-        private void openChildForm(Form childForm)
+        private void OpenChildForm(Form childForm)
         {
             if (activeForm != null)
             {
@@ -71,15 +62,25 @@ namespace ProjectAirlineManagment
             childForm.BringToFront();
             childForm.Show();
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        #region SubMenuButtons
+        private void buttonClient_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new FormClients());
+        }
+        private void buttonTicket_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormTickets());
         }
 
-        private void FormProgram_Load(object sender, EventArgs e)
+        private void buttonFlight_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new FormFlight());
         }
+
+        private void buttonPilot_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormPilot());
+        }
+#endregion
     }
 }
