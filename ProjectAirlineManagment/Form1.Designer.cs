@@ -30,6 +30,7 @@ namespace ProjectAirlineManagment
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStart));
             this.labelName = new System.Windows.Forms.Label();
             this.progressBarStart = new System.Windows.Forms.ProgressBar();
             this.timerProgressBar = new System.Windows.Forms.Timer(this.components);
@@ -40,10 +41,9 @@ namespace ProjectAirlineManagment
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.labelName.BackColor = System.Drawing.Color.Transparent;
             this.labelName.Font = new System.Drawing.Font("Ravie", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName.ForeColor = System.Drawing.Color.White;
-            this.labelName.Image = global::ProjectAirlineManagment.Properties.Resources.startPhoto;
             this.labelName.Location = new System.Drawing.Point(139, 109);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(302, 38);
@@ -66,9 +66,9 @@ namespace ProjectAirlineManagment
             // 
             // pictureBoxStartPhoto
             // 
-            this.pictureBoxStartPhoto.Image = global::ProjectAirlineManagment.Properties.Resources.startPhoto;
+            this.pictureBoxStartPhoto.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxStartPhoto.Image")));
             this.pictureBoxStartPhoto.InitialImage = null;
-            this.pictureBoxStartPhoto.Location = new System.Drawing.Point(-63, -54);
+            this.pictureBoxStartPhoto.Location = new System.Drawing.Point(-64, -55);
             this.pictureBoxStartPhoto.Name = "pictureBoxStartPhoto";
             this.pictureBoxStartPhoto.Size = new System.Drawing.Size(712, 352);
             this.pictureBoxStartPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
