@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Business.ModelsBusiness
 {
-    class ClientBusiness
+    public class ClientBusiness
     {
         public ClientBusiness()
         {
