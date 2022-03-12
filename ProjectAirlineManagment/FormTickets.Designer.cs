@@ -36,13 +36,13 @@ namespace ProjectAirlineManagment
             this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.checkedListBoxSeat = new System.Windows.Forms.CheckedListBox();
             this.checkBoxRoundTrip = new System.Windows.Forms.CheckBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonUpdateTickets = new System.Windows.Forms.Button();
+            this.dataGridViewTicket = new System.Windows.Forms.DataGridView();
+            this.buttonTicketsUpdate = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.buttonInsertTickets = new System.Windows.Forms.Button();
-            this.buttonDeleteTickets = new System.Windows.Forms.Button();
-            this.buttonSaveTickets = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.buttonTicketsInsert = new System.Windows.Forms.Button();
+            this.buttonTicketDelete = new System.Windows.Forms.Button();
+            this.buttonTicketSave = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTicket)).BeginInit();
             this.SuspendLayout();
             // 
             // labelTickets
@@ -218,25 +218,27 @@ namespace ProjectAirlineManagment
             this.checkBoxRoundTrip.Text = "A round-trip ticket";
             this.checkBoxRoundTrip.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridViewTicket
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(52, 215);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(379, 170);
-            this.dataGridView1.TabIndex = 8;
+            this.dataGridViewTicket.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
+            this.dataGridViewTicket.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewTicket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTicket.Location = new System.Drawing.Point(52, 215);
+            this.dataGridViewTicket.Name = "dataGridViewTicket";
+            this.dataGridViewTicket.Size = new System.Drawing.Size(379, 170);
+            this.dataGridViewTicket.TabIndex = 8;
             // 
-            // buttonUpdateTickets
+            // buttonTicketsUpdate
             // 
-            this.buttonUpdateTickets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
-            this.buttonUpdateTickets.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdateTickets.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdateTickets.Location = new System.Drawing.Point(485, 150);
-            this.buttonUpdateTickets.Name = "buttonUpdateTickets";
-            this.buttonUpdateTickets.Size = new System.Drawing.Size(97, 37);
-            this.buttonUpdateTickets.TabIndex = 9;
-            this.buttonUpdateTickets.Text = "Update";
-            this.buttonUpdateTickets.UseVisualStyleBackColor = false;
+            this.buttonTicketsUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
+            this.buttonTicketsUpdate.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTicketsUpdate.ForeColor = System.Drawing.Color.White;
+            this.buttonTicketsUpdate.Location = new System.Drawing.Point(485, 150);
+            this.buttonTicketsUpdate.Name = "buttonTicketsUpdate";
+            this.buttonTicketsUpdate.Size = new System.Drawing.Size(97, 37);
+            this.buttonTicketsUpdate.TabIndex = 9;
+            this.buttonTicketsUpdate.Text = "Update";
+            this.buttonTicketsUpdate.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -249,42 +251,42 @@ namespace ProjectAirlineManagment
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // buttonInsertTickets
+            // buttonTicketsInsert
             // 
-            this.buttonInsertTickets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
-            this.buttonInsertTickets.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsertTickets.ForeColor = System.Drawing.Color.White;
-            this.buttonInsertTickets.Location = new System.Drawing.Point(485, 71);
-            this.buttonInsertTickets.Name = "buttonInsertTickets";
-            this.buttonInsertTickets.Size = new System.Drawing.Size(97, 37);
-            this.buttonInsertTickets.TabIndex = 11;
-            this.buttonInsertTickets.Text = "Insert";
-            this.buttonInsertTickets.UseVisualStyleBackColor = false;
-            this.buttonInsertTickets.Click += new System.EventHandler(this.button3_Click);
+            this.buttonTicketsInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
+            this.buttonTicketsInsert.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTicketsInsert.ForeColor = System.Drawing.Color.White;
+            this.buttonTicketsInsert.Location = new System.Drawing.Point(485, 71);
+            this.buttonTicketsInsert.Name = "buttonTicketsInsert";
+            this.buttonTicketsInsert.Size = new System.Drawing.Size(97, 37);
+            this.buttonTicketsInsert.TabIndex = 11;
+            this.buttonTicketsInsert.Text = "Insert";
+            this.buttonTicketsInsert.UseVisualStyleBackColor = false;
+            this.buttonTicketsInsert.Click += new System.EventHandler(this.button3_Click);
             // 
-            // buttonDeleteTickets
+            // buttonTicketDelete
             // 
-            this.buttonDeleteTickets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
-            this.buttonDeleteTickets.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDeleteTickets.ForeColor = System.Drawing.Color.White;
-            this.buttonDeleteTickets.Location = new System.Drawing.Point(485, 248);
-            this.buttonDeleteTickets.Name = "buttonDeleteTickets";
-            this.buttonDeleteTickets.Size = new System.Drawing.Size(97, 37);
-            this.buttonDeleteTickets.TabIndex = 12;
-            this.buttonDeleteTickets.Text = "Delete";
-            this.buttonDeleteTickets.UseVisualStyleBackColor = false;
+            this.buttonTicketDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
+            this.buttonTicketDelete.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTicketDelete.ForeColor = System.Drawing.Color.White;
+            this.buttonTicketDelete.Location = new System.Drawing.Point(485, 248);
+            this.buttonTicketDelete.Name = "buttonTicketDelete";
+            this.buttonTicketDelete.Size = new System.Drawing.Size(97, 37);
+            this.buttonTicketDelete.TabIndex = 12;
+            this.buttonTicketDelete.Text = "Delete";
+            this.buttonTicketDelete.UseVisualStyleBackColor = false;
             // 
-            // buttonSaveTickets
+            // buttonTicketSave
             // 
-            this.buttonSaveTickets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
-            this.buttonSaveTickets.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSaveTickets.ForeColor = System.Drawing.Color.White;
-            this.buttonSaveTickets.Location = new System.Drawing.Point(485, 335);
-            this.buttonSaveTickets.Name = "buttonSaveTickets";
-            this.buttonSaveTickets.Size = new System.Drawing.Size(97, 37);
-            this.buttonSaveTickets.TabIndex = 13;
-            this.buttonSaveTickets.Text = "Save";
-            this.buttonSaveTickets.UseVisualStyleBackColor = false;
+            this.buttonTicketSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
+            this.buttonTicketSave.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTicketSave.ForeColor = System.Drawing.Color.White;
+            this.buttonTicketSave.Location = new System.Drawing.Point(485, 335);
+            this.buttonTicketSave.Name = "buttonTicketSave";
+            this.buttonTicketSave.Size = new System.Drawing.Size(97, 37);
+            this.buttonTicketSave.TabIndex = 13;
+            this.buttonTicketSave.Text = "Save";
+            this.buttonTicketSave.UseVisualStyleBackColor = false;
             // 
             // FormTickets
             // 
@@ -292,12 +294,12 @@ namespace ProjectAirlineManagment
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(663, 471);
-            this.Controls.Add(this.buttonSaveTickets);
-            this.Controls.Add(this.buttonDeleteTickets);
-            this.Controls.Add(this.buttonInsertTickets);
+            this.Controls.Add(this.buttonTicketSave);
+            this.Controls.Add(this.buttonTicketDelete);
+            this.Controls.Add(this.buttonTicketsInsert);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.buttonUpdateTickets);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.buttonTicketsUpdate);
+            this.Controls.Add(this.dataGridViewTicket);
             this.Controls.Add(this.checkBoxRoundTrip);
             this.Controls.Add(this.checkedListBoxSeat);
             this.Controls.Add(this.textBoxPrice);
@@ -309,7 +311,7 @@ namespace ProjectAirlineManagment
             this.Name = "FormTickets";
             this.Text = "FormTickets";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTicket)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,11 +326,11 @@ namespace ProjectAirlineManagment
         private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.CheckedListBox checkedListBoxSeat;
         private System.Windows.Forms.CheckBox checkBoxRoundTrip;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button buttonUpdateTickets;
+        private System.Windows.Forms.DataGridView dataGridViewTicket;
+        private System.Windows.Forms.Button buttonTicketsUpdate;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button buttonInsertTickets;
-        private System.Windows.Forms.Button buttonDeleteTickets;
-        private System.Windows.Forms.Button buttonSaveTickets;
+        private System.Windows.Forms.Button buttonTicketsInsert;
+        private System.Windows.Forms.Button buttonTicketDelete;
+        private System.Windows.Forms.Button buttonTicketSave;
     }
 }
