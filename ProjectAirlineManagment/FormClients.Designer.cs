@@ -63,7 +63,7 @@ namespace ProjectAirlineManagment
             this.labelClients.Location = new System.Drawing.Point(38, 31);
             this.labelClients.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelClients.Name = "labelClients";
-            this.labelClients.Size = new System.Drawing.Size(93, 28);
+            this.labelClients.Size = new System.Drawing.Size(93, 27);
             this.labelClients.TabIndex = 1;
             this.labelClients.Text = "Clients";
             // 
@@ -74,9 +74,10 @@ namespace ProjectAirlineManagment
             this.labelNameClient.ForeColor = System.Drawing.Color.White;
             this.labelNameClient.Location = new System.Drawing.Point(75, 115);
             this.labelNameClient.Name = "labelNameClient";
-            this.labelNameClient.Size = new System.Drawing.Size(68, 23);
+            this.labelNameClient.Size = new System.Drawing.Size(54, 18);
             this.labelNameClient.TabIndex = 2;
             this.labelNameClient.Text = "Name";
+            this.labelNameClient.Click += new System.EventHandler(this.labelNameClient_Click);
             // 
             // labelPhoneNumClient
             // 
@@ -85,7 +86,7 @@ namespace ProjectAirlineManagment
             this.labelPhoneNumClient.ForeColor = System.Drawing.Color.White;
             this.labelPhoneNumClient.Location = new System.Drawing.Point(75, 179);
             this.labelPhoneNumClient.Name = "labelPhoneNumClient";
-            this.labelPhoneNumClient.Size = new System.Drawing.Size(159, 23);
+            this.labelPhoneNumClient.Size = new System.Drawing.Size(123, 18);
             this.labelPhoneNumClient.TabIndex = 3;
             this.labelPhoneNumClient.Text = "Phone number";
             // 
@@ -96,7 +97,7 @@ namespace ProjectAirlineManagment
             this.labelNationalityClient.ForeColor = System.Drawing.Color.White;
             this.labelNationalityClient.Location = new System.Drawing.Point(75, 245);
             this.labelNationalityClient.Name = "labelNationalityClient";
-            this.labelNationalityClient.Size = new System.Drawing.Size(118, 23);
+            this.labelNationalityClient.Size = new System.Drawing.Size(93, 18);
             this.labelNationalityClient.TabIndex = 4;
             this.labelNationalityClient.Text = "Nationality";
             // 
@@ -107,7 +108,7 @@ namespace ProjectAirlineManagment
             this.labelPassNumClient.ForeColor = System.Drawing.Color.White;
             this.labelPassNumClient.Location = new System.Drawing.Point(75, 307);
             this.labelPassNumClient.Name = "labelPassNumClient";
-            this.labelPassNumClient.Size = new System.Drawing.Size(183, 23);
+            this.labelPassNumClient.Size = new System.Drawing.Size(145, 18);
             this.labelPassNumClient.TabIndex = 5;
             this.labelPassNumClient.Text = "Passport number";
             // 
@@ -115,21 +116,21 @@ namespace ProjectAirlineManagment
             // 
             this.textBoxPassNumClient.Location = new System.Drawing.Point(293, 310);
             this.textBoxPassNumClient.Name = "textBoxPassNumClient";
-            this.textBoxPassNumClient.Size = new System.Drawing.Size(121, 22);
+            this.textBoxPassNumClient.Size = new System.Drawing.Size(121, 20);
             this.textBoxPassNumClient.TabIndex = 6;
             // 
             // textBoxPhoneNumClient
             // 
             this.textBoxPhoneNumClient.Location = new System.Drawing.Point(293, 182);
             this.textBoxPhoneNumClient.Name = "textBoxPhoneNumClient";
-            this.textBoxPhoneNumClient.Size = new System.Drawing.Size(121, 22);
+            this.textBoxPhoneNumClient.Size = new System.Drawing.Size(121, 20);
             this.textBoxPhoneNumClient.TabIndex = 7;
             // 
             // textBoxNameClient
             // 
             this.textBoxNameClient.Location = new System.Drawing.Point(293, 118);
             this.textBoxNameClient.Name = "textBoxNameClient";
-            this.textBoxNameClient.Size = new System.Drawing.Size(121, 22);
+            this.textBoxNameClient.Size = new System.Drawing.Size(121, 20);
             this.textBoxNameClient.TabIndex = 8;
             // 
             // comboBoxNationalityClient
@@ -159,7 +160,7 @@ namespace ProjectAirlineManagment
             ""});
             this.comboBoxNationalityClient.Location = new System.Drawing.Point(293, 248);
             this.comboBoxNationalityClient.Name = "comboBoxNationalityClient";
-            this.comboBoxNationalityClient.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxNationalityClient.Size = new System.Drawing.Size(121, 21);
             this.comboBoxNationalityClient.TabIndex = 9;
             // 
             // buttonInsertClient

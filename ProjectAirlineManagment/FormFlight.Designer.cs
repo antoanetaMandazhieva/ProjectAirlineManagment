@@ -37,7 +37,7 @@ namespace ProjectAirlineManagment
             this.comboBoxDestination = new System.Windows.Forms.ComboBox();
             this.textBoxNumberOfSeats = new System.Windows.Forms.TextBox();
             this.buttonFlightInsert = new System.Windows.Forms.Button();
-            this.buttonFlightUpdte = new System.Windows.Forms.Button();
+            this.buttonFlightUpdate = new System.Windows.Forms.Button();
             this.buttonFlightDelete = new System.Windows.Forms.Button();
             this.buttonFlightSave = new System.Windows.Forms.Button();
             this.dataGridViewFlights = new System.Windows.Forms.DataGridView();
@@ -54,7 +54,6 @@ namespace ProjectAirlineManagment
             this.labelTitle.Size = new System.Drawing.Size(91, 27);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Flights";
-            this.labelTitle.Click += new System.EventHandler(this.label1_Click);
             // 
             // labelDate
             // 
@@ -97,6 +96,7 @@ namespace ProjectAirlineManagment
             this.dateTimePickerDate.Name = "dateTimePickerDate";
             this.dateTimePickerDate.Size = new System.Drawing.Size(183, 20);
             this.dateTimePickerDate.TabIndex = 4;
+            this.dateTimePickerDate.ValueChanged += new System.EventHandler(this.dateTimePickerDate_ValueChanged);
             // 
             // comboBoxDestination
             // 
@@ -137,18 +137,20 @@ namespace ProjectAirlineManagment
             this.buttonFlightInsert.TabIndex = 7;
             this.buttonFlightInsert.Text = "Insert";
             this.buttonFlightInsert.UseVisualStyleBackColor = false;
+            this.buttonFlightInsert.Click += new System.EventHandler(this.buttonFlightInsert_Click);
             // 
-            // buttonFlightUpdte
+            // buttonFlightUpdate
             // 
-            this.buttonFlightUpdte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
-            this.buttonFlightUpdte.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonFlightUpdte.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonFlightUpdte.Location = new System.Drawing.Point(551, 293);
-            this.buttonFlightUpdte.Name = "buttonFlightUpdte";
-            this.buttonFlightUpdte.Size = new System.Drawing.Size(77, 28);
-            this.buttonFlightUpdte.TabIndex = 8;
-            this.buttonFlightUpdte.Text = "Update";
-            this.buttonFlightUpdte.UseVisualStyleBackColor = false;
+            this.buttonFlightUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
+            this.buttonFlightUpdate.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFlightUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonFlightUpdate.Location = new System.Drawing.Point(551, 293);
+            this.buttonFlightUpdate.Name = "buttonFlightUpdate";
+            this.buttonFlightUpdate.Size = new System.Drawing.Size(77, 28);
+            this.buttonFlightUpdate.TabIndex = 8;
+            this.buttonFlightUpdate.Text = "Update";
+            this.buttonFlightUpdate.UseVisualStyleBackColor = false;
+            this.buttonFlightUpdate.Click += new System.EventHandler(this.buttonFlightUpdate_Click);
             // 
             // buttonFlightDelete
             // 
@@ -161,6 +163,7 @@ namespace ProjectAirlineManagment
             this.buttonFlightDelete.TabIndex = 9;
             this.buttonFlightDelete.Text = "Delete";
             this.buttonFlightDelete.UseVisualStyleBackColor = false;
+            this.buttonFlightDelete.Click += new System.EventHandler(this.buttonFlightDelete_Click);
             // 
             // buttonFlightSave
             // 
@@ -173,6 +176,8 @@ namespace ProjectAirlineManagment
             this.buttonFlightSave.TabIndex = 10;
             this.buttonFlightSave.Text = "Save";
             this.buttonFlightSave.UseVisualStyleBackColor = false;
+            this.buttonFlightSave.Visible = false;
+            this.buttonFlightSave.Click += new System.EventHandler(this.buttonFlightSave_Click);
             // 
             // dataGridViewFlights
             // 
@@ -193,7 +198,7 @@ namespace ProjectAirlineManagment
             this.Controls.Add(this.dataGridViewFlights);
             this.Controls.Add(this.buttonFlightSave);
             this.Controls.Add(this.buttonFlightDelete);
-            this.Controls.Add(this.buttonFlightUpdte);
+            this.Controls.Add(this.buttonFlightUpdate);
             this.Controls.Add(this.buttonFlightInsert);
             this.Controls.Add(this.textBoxNumberOfSeats);
             this.Controls.Add(this.comboBoxDestination);
@@ -223,7 +228,7 @@ namespace ProjectAirlineManagment
         private System.Windows.Forms.ComboBox comboBoxDestination;
         private System.Windows.Forms.TextBox textBoxNumberOfSeats;
         private System.Windows.Forms.Button buttonFlightInsert;
-        private System.Windows.Forms.Button buttonFlightUpdte;
+        private System.Windows.Forms.Button buttonFlightUpdate;
         private System.Windows.Forms.Button buttonFlightDelete;
         private System.Windows.Forms.Button buttonFlightSave;
         private System.Windows.Forms.DataGridView dataGridViewFlights;
