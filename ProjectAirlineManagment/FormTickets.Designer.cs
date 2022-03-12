@@ -36,13 +36,13 @@ namespace ProjectAirlineManagment
             this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.checkedListBoxSeat = new System.Windows.Forms.CheckedListBox();
             this.checkBoxRoundTrip = new System.Windows.Forms.CheckBox();
-            this.dataGridViewTicket = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
             this.buttonTicketsUpdate = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.buttonTicketsInsert = new System.Windows.Forms.Button();
             this.buttonTicketDelete = new System.Windows.Forms.Button();
             this.buttonTicketSave = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTicket)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).BeginInit();
             this.SuspendLayout();
             // 
             // labelTickets
@@ -218,15 +218,15 @@ namespace ProjectAirlineManagment
             this.checkBoxRoundTrip.Text = "A round-trip ticket";
             this.checkBoxRoundTrip.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewTicket
+            // dataGridViewTickets
             // 
-            this.dataGridViewTicket.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
-            this.dataGridViewTicket.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewTicket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTicket.Location = new System.Drawing.Point(52, 215);
-            this.dataGridViewTicket.Name = "dataGridViewTicket";
-            this.dataGridViewTicket.Size = new System.Drawing.Size(379, 170);
-            this.dataGridViewTicket.TabIndex = 8;
+            this.dataGridViewTickets.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
+            this.dataGridViewTickets.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTickets.Location = new System.Drawing.Point(52, 215);
+            this.dataGridViewTickets.Name = "dataGridViewTickets";
+            this.dataGridViewTickets.Size = new System.Drawing.Size(379, 170);
+            this.dataGridViewTickets.TabIndex = 8;
             // 
             // buttonTicketsUpdate
             // 
@@ -299,7 +299,7 @@ namespace ProjectAirlineManagment
             this.Controls.Add(this.buttonTicketsInsert);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.buttonTicketsUpdate);
-            this.Controls.Add(this.dataGridViewTicket);
+            this.Controls.Add(this.dataGridViewTickets);
             this.Controls.Add(this.checkBoxRoundTrip);
             this.Controls.Add(this.checkedListBoxSeat);
             this.Controls.Add(this.textBoxPrice);
@@ -311,7 +311,7 @@ namespace ProjectAirlineManagment
             this.Name = "FormTickets";
             this.Text = "FormTickets";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTicket)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,7 +326,7 @@ namespace ProjectAirlineManagment
         private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.CheckedListBox checkedListBoxSeat;
         private System.Windows.Forms.CheckBox checkBoxRoundTrip;
-        private System.Windows.Forms.DataGridView dataGridViewTicket;
+        private System.Windows.Forms.DataGridView dataGridViewTickets;
         private System.Windows.Forms.Button buttonTicketsUpdate;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button buttonTicketsInsert;
