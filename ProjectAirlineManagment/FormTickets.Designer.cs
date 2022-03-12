@@ -32,16 +32,16 @@ namespace ProjectAirlineManagment
             this.labelTickets = new System.Windows.Forms.Label();
             this.labelPrice = new System.Windows.Forms.Label();
             this.labelSeat = new System.Windows.Forms.Label();
-            this.checkBoxOneWay = new System.Windows.Forms.CheckBox();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.checkedListBoxSeat = new System.Windows.Forms.CheckedListBox();
-            this.checkBoxRoundTrip = new System.Windows.Forms.CheckBox();
             this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
             this.buttonTicketsUpdate = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.buttonTicketsInsert = new System.Windows.Forms.Button();
             this.buttonTicketDelete = new System.Windows.Forms.Button();
             this.buttonTicketSave = new System.Windows.Forms.Button();
+            this.radioButtonOneWay = new System.Windows.Forms.RadioButton();
+            this.radioButtonRoundTrip = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,18 +77,6 @@ namespace ProjectAirlineManagment
             this.labelSeat.Size = new System.Drawing.Size(42, 18);
             this.labelSeat.TabIndex = 2;
             this.labelSeat.Text = "Seat";
-            // 
-            // checkBoxOneWay
-            // 
-            this.checkBoxOneWay.AutoSize = true;
-            this.checkBoxOneWay.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxOneWay.ForeColor = System.Drawing.Color.White;
-            this.checkBoxOneWay.Location = new System.Drawing.Point(52, 165);
-            this.checkBoxOneWay.Name = "checkBoxOneWay";
-            this.checkBoxOneWay.Size = new System.Drawing.Size(161, 22);
-            this.checkBoxOneWay.TabIndex = 4;
-            this.checkBoxOneWay.Text = "A one-way ticket";
-            this.checkBoxOneWay.UseVisualStyleBackColor = true;
             // 
             // textBoxPrice
             // 
@@ -206,18 +194,6 @@ namespace ProjectAirlineManagment
             this.checkedListBoxSeat.Size = new System.Drawing.Size(135, 49);
             this.checkedListBoxSeat.TabIndex = 6;
             // 
-            // checkBoxRoundTrip
-            // 
-            this.checkBoxRoundTrip.AutoSize = true;
-            this.checkBoxRoundTrip.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxRoundTrip.ForeColor = System.Drawing.Color.White;
-            this.checkBoxRoundTrip.Location = new System.Drawing.Point(245, 165);
-            this.checkBoxRoundTrip.Name = "checkBoxRoundTrip";
-            this.checkBoxRoundTrip.Size = new System.Drawing.Size(174, 22);
-            this.checkBoxRoundTrip.TabIndex = 7;
-            this.checkBoxRoundTrip.Text = "A round-trip ticket";
-            this.checkBoxRoundTrip.UseVisualStyleBackColor = true;
-            // 
             // dataGridViewTickets
             // 
             this.dataGridViewTickets.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
@@ -288,22 +264,48 @@ namespace ProjectAirlineManagment
             this.buttonTicketSave.Text = "Save";
             this.buttonTicketSave.UseVisualStyleBackColor = false;
             // 
+            // radioButtonOneWay
+            // 
+            this.radioButtonOneWay.AutoSize = true;
+            this.radioButtonOneWay.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonOneWay.ForeColor = System.Drawing.Color.White;
+            this.radioButtonOneWay.Location = new System.Drawing.Point(52, 170);
+            this.radioButtonOneWay.Name = "radioButtonOneWay";
+            this.radioButtonOneWay.Size = new System.Drawing.Size(160, 22);
+            this.radioButtonOneWay.TabIndex = 14;
+            this.radioButtonOneWay.TabStop = true;
+            this.radioButtonOneWay.Text = "A one-way ticket";
+            this.radioButtonOneWay.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonRoundTrip
+            // 
+            this.radioButtonRoundTrip.AutoSize = true;
+            this.radioButtonRoundTrip.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonRoundTrip.ForeColor = System.Drawing.Color.White;
+            this.radioButtonRoundTrip.Location = new System.Drawing.Point(244, 170);
+            this.radioButtonRoundTrip.Name = "radioButtonRoundTrip";
+            this.radioButtonRoundTrip.Size = new System.Drawing.Size(173, 22);
+            this.radioButtonRoundTrip.TabIndex = 15;
+            this.radioButtonRoundTrip.TabStop = true;
+            this.radioButtonRoundTrip.Text = "A round-trip ticket";
+            this.radioButtonRoundTrip.UseVisualStyleBackColor = true;
+            // 
             // FormTickets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(663, 471);
+            this.Controls.Add(this.radioButtonRoundTrip);
+            this.Controls.Add(this.radioButtonOneWay);
             this.Controls.Add(this.buttonTicketSave);
             this.Controls.Add(this.buttonTicketDelete);
             this.Controls.Add(this.buttonTicketsInsert);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.buttonTicketsUpdate);
             this.Controls.Add(this.dataGridViewTickets);
-            this.Controls.Add(this.checkBoxRoundTrip);
             this.Controls.Add(this.checkedListBoxSeat);
             this.Controls.Add(this.textBoxPrice);
-            this.Controls.Add(this.checkBoxOneWay);
             this.Controls.Add(this.labelSeat);
             this.Controls.Add(this.labelPrice);
             this.Controls.Add(this.labelTickets);
@@ -322,15 +324,15 @@ namespace ProjectAirlineManagment
         private System.Windows.Forms.Label labelTickets;
         private System.Windows.Forms.Label labelPrice;
         private System.Windows.Forms.Label labelSeat;
-        private System.Windows.Forms.CheckBox checkBoxOneWay;
         private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.CheckedListBox checkedListBoxSeat;
-        private System.Windows.Forms.CheckBox checkBoxRoundTrip;
         private System.Windows.Forms.DataGridView dataGridViewTickets;
         private System.Windows.Forms.Button buttonTicketsUpdate;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button buttonTicketsInsert;
         private System.Windows.Forms.Button buttonTicketDelete;
         private System.Windows.Forms.Button buttonTicketSave;
+        private System.Windows.Forms.RadioButton radioButtonOneWay;
+        private System.Windows.Forms.RadioButton radioButtonRoundTrip;
     }
 }
