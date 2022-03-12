@@ -211,6 +211,9 @@
     <EmbeddedResource Include="FormFlight.resx">
       <DependentUpon>FormFlight.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPilot.resx">
+      <DependentUpon>FormPilot.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormProgram.resx">
       <DependentUpon>FormProgram.cs</DependentUpon>
     </EmbeddedResource>
