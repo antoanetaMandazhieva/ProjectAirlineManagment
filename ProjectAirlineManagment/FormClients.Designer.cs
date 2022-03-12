@@ -198,6 +198,7 @@ namespace ProjectAirlineManagment
             this.buttonSaveClient.TabIndex = 10;
             this.buttonSaveClient.Text = "Save";
             this.buttonSaveClient.UseVisualStyleBackColor = false;
+            this.buttonSaveClient.Visible = false;
             this.buttonSaveClient.Click += new System.EventHandler(this.button3_Click);
             // 
             // FormClients
