@@ -31,15 +31,15 @@ namespace ProjectAirlineManagment
         {
             this.dataGridViewClients = new System.Windows.Forms.DataGridView();
             this.labelClients = new System.Windows.Forms.Label();
-            this.labelName = new System.Windows.Forms.Label();
-            this.labelNamee = new System.Windows.Forms.Label();
-            this.labelNationality = new System.Windows.Forms.Label();
-            this.labelPassNum = new System.Windows.Forms.Label();
-            this.textBoxPassNum = new System.Windows.Forms.TextBox();
-            this.textBoxPhoneNum = new System.Windows.Forms.TextBox();
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.comboBoxNationality = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.labelNameClient = new System.Windows.Forms.Label();
+            this.labelPhoneNumClient = new System.Windows.Forms.Label();
+            this.labelNationalityClient = new System.Windows.Forms.Label();
+            this.labelPassNumClient = new System.Windows.Forms.Label();
+            this.textBoxPassNumClient = new System.Windows.Forms.TextBox();
+            this.textBoxPhoneNumClient = new System.Windows.Forms.TextBox();
+            this.textBoxNameClient = new System.Windows.Forms.TextBox();
+            this.comboBoxNationalityClient = new System.Windows.Forms.ComboBox();
+            this.buttonInsertClient = new System.Windows.Forms.Button();
             this.buttonUpdateClient = new System.Windows.Forms.Button();
             this.buttonSaveClient = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClients)).BeginInit();
@@ -49,7 +49,7 @@ namespace ProjectAirlineManagment
             // 
             this.dataGridViewClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewClients.Location = new System.Drawing.Point(458, 115);
-            this.dataGridViewClients.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewClients.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewClients.Name = "dataGridViewClients";
             this.dataGridViewClients.RowHeadersWidth = 51;
             this.dataGridViewClients.Size = new System.Drawing.Size(390, 217);
@@ -58,7 +58,7 @@ namespace ProjectAirlineManagment
             // labelClients
             // 
             this.labelClients.AutoSize = true;
-            this.labelClients.Font = new System.Drawing.Font("Lucida Bright", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClients.Font = new System.Drawing.Font("Lucida Bright", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelClients.ForeColor = System.Drawing.Color.White;
             this.labelClients.Location = new System.Drawing.Point(50, 38);
             this.labelClients.Name = "labelClients";
@@ -66,76 +66,75 @@ namespace ProjectAirlineManagment
             this.labelClients.TabIndex = 1;
             this.labelClients.Text = "Clients";
             // 
-            // labelName
+            // labelNameClient
             // 
-            this.labelName.AutoSize = true;
-            this.labelName.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.ForeColor = System.Drawing.Color.White;
-            this.labelName.Location = new System.Drawing.Point(75, 115);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(68, 23);
-            this.labelName.TabIndex = 2;
-            this.labelName.Text = "Name";
+            this.labelNameClient.AutoSize = true;
+            this.labelNameClient.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNameClient.ForeColor = System.Drawing.Color.White;
+            this.labelNameClient.Location = new System.Drawing.Point(75, 115);
+            this.labelNameClient.Name = "labelNameClient";
+            this.labelNameClient.Size = new System.Drawing.Size(68, 23);
+            this.labelNameClient.TabIndex = 2;
+            this.labelNameClient.Text = "Name";
             // 
-            // labelNamee
+            // labelPhoneNumClient
             // 
-            this.labelNamee.AutoSize = true;
-            this.labelNamee.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNamee.ForeColor = System.Drawing.Color.White;
-            this.labelNamee.Location = new System.Drawing.Point(75, 179);
-            this.labelNamee.Name = "labelNamee";
-            this.labelNamee.Size = new System.Drawing.Size(159, 23);
-            this.labelNamee.TabIndex = 3;
-            this.labelNamee.Text = "Phone number";
+            this.labelPhoneNumClient.AutoSize = true;
+            this.labelPhoneNumClient.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPhoneNumClient.ForeColor = System.Drawing.Color.White;
+            this.labelPhoneNumClient.Location = new System.Drawing.Point(75, 179);
+            this.labelPhoneNumClient.Name = "labelPhoneNumClient";
+            this.labelPhoneNumClient.Size = new System.Drawing.Size(159, 23);
+            this.labelPhoneNumClient.TabIndex = 3;
+            this.labelPhoneNumClient.Text = "Phone number";
             // 
-            // labelNationality
+            // labelNationalityClient
             // 
-            this.labelNationality.AutoSize = true;
-            this.labelNationality.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNationality.ForeColor = System.Drawing.Color.White;
-            this.labelNationality.Location = new System.Drawing.Point(75, 245);
-            this.labelNationality.Name = "labelNationality";
-            this.labelNationality.Size = new System.Drawing.Size(118, 23);
-            this.labelNationality.TabIndex = 4;
-            this.labelNationality.Text = "Nationality";
+            this.labelNationalityClient.AutoSize = true;
+            this.labelNationalityClient.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNationalityClient.ForeColor = System.Drawing.Color.White;
+            this.labelNationalityClient.Location = new System.Drawing.Point(75, 245);
+            this.labelNationalityClient.Name = "labelNationalityClient";
+            this.labelNationalityClient.Size = new System.Drawing.Size(118, 23);
+            this.labelNationalityClient.TabIndex = 4;
+            this.labelNationalityClient.Text = "Nationality";
             // 
-            // labelPassNum
+            // labelPassNumClient
             // 
-            this.labelPassNum.AutoSize = true;
-            this.labelPassNum.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassNum.ForeColor = System.Drawing.Color.White;
-            this.labelPassNum.Location = new System.Drawing.Point(75, 307);
-            this.labelPassNum.Name = "labelPassNum";
-            this.labelPassNum.Size = new System.Drawing.Size(183, 23);
-            this.labelPassNum.TabIndex = 5;
-            this.labelPassNum.Text = "Passport number";
-            this.labelPassNum.Click += new System.EventHandler(this.label5_Click);
+            this.labelPassNumClient.AutoSize = true;
+            this.labelPassNumClient.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPassNumClient.ForeColor = System.Drawing.Color.White;
+            this.labelPassNumClient.Location = new System.Drawing.Point(75, 307);
+            this.labelPassNumClient.Name = "labelPassNumClient";
+            this.labelPassNumClient.Size = new System.Drawing.Size(183, 23);
+            this.labelPassNumClient.TabIndex = 5;
+            this.labelPassNumClient.Text = "Passport number";
             // 
-            // textBoxPassNum
+            // textBoxPassNumClient
             // 
-            this.textBoxPassNum.Location = new System.Drawing.Point(293, 310);
-            this.textBoxPassNum.Name = "textBoxPassNum";
-            this.textBoxPassNum.Size = new System.Drawing.Size(121, 22);
-            this.textBoxPassNum.TabIndex = 6;
+            this.textBoxPassNumClient.Location = new System.Drawing.Point(293, 310);
+            this.textBoxPassNumClient.Name = "textBoxPassNumClient";
+            this.textBoxPassNumClient.Size = new System.Drawing.Size(121, 22);
+            this.textBoxPassNumClient.TabIndex = 6;
             // 
-            // textBoxPhoneNum
+            // textBoxPhoneNumClient
             // 
-            this.textBoxPhoneNum.Location = new System.Drawing.Point(293, 182);
-            this.textBoxPhoneNum.Name = "textBoxPhoneNum";
-            this.textBoxPhoneNum.Size = new System.Drawing.Size(121, 22);
-            this.textBoxPhoneNum.TabIndex = 7;
+            this.textBoxPhoneNumClient.Location = new System.Drawing.Point(293, 182);
+            this.textBoxPhoneNumClient.Name = "textBoxPhoneNumClient";
+            this.textBoxPhoneNumClient.Size = new System.Drawing.Size(121, 22);
+            this.textBoxPhoneNumClient.TabIndex = 7;
             // 
-            // textBoxName
+            // textBoxNameClient
             // 
-            this.textBoxName.Location = new System.Drawing.Point(293, 118);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(121, 22);
-            this.textBoxName.TabIndex = 8;
+            this.textBoxNameClient.Location = new System.Drawing.Point(293, 118);
+            this.textBoxNameClient.Name = "textBoxNameClient";
+            this.textBoxNameClient.Size = new System.Drawing.Size(121, 22);
+            this.textBoxNameClient.TabIndex = 8;
             // 
-            // comboBoxNationality
+            // comboBoxNationalityClient
             // 
-            this.comboBoxNationality.FormattingEnabled = true;
-            this.comboBoxNationality.Items.AddRange(new object[] {
+            this.comboBoxNationalityClient.FormattingEnabled = true;
+            this.comboBoxNationalityClient.Items.AddRange(new object[] {
             "Austrian",
             "Australian",
             "American",
@@ -157,31 +156,33 @@ namespace ProjectAirlineManagment
             "Russian",
             "Turkish",
             ""});
-            this.comboBoxNationality.Location = new System.Drawing.Point(293, 248);
-            this.comboBoxNationality.Name = "comboBoxNationality";
-            this.comboBoxNationality.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxNationality.TabIndex = 9;
+            this.comboBoxNationalityClient.Location = new System.Drawing.Point(293, 248);
+            this.comboBoxNationalityClient.Name = "comboBoxNationalityClient";
+            this.comboBoxNationalityClient.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxNationalityClient.TabIndex = 9;
             // 
-            // button1
+            // buttonInsertClient
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
-            this.button1.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(96, 394);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 37);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Insert";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonInsertClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
+            this.buttonInsertClient.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonInsertClient.ForeColor = System.Drawing.Color.White;
+            this.buttonInsertClient.Location = new System.Drawing.Point(96, 394);
+            this.buttonInsertClient.Name = "buttonInsertClient";
+            this.buttonInsertClient.Size = new System.Drawing.Size(97, 37);
+            this.buttonInsertClient.TabIndex = 10;
+            this.buttonInsertClient.Text = "Insert";
+            this.buttonInsertClient.UseVisualStyleBackColor = false;
+            this.buttonInsertClient.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonUpdateClient
             // 
             this.buttonUpdateClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.buttonUpdateClient.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUpdateClient.ForeColor = System.Drawing.Color.White;
             this.buttonUpdateClient.Location = new System.Drawing.Point(266, 394);
             this.buttonUpdateClient.Name = "buttonUpdateClient";
             this.buttonUpdateClient.Size = new System.Drawing.Size(97, 37);
-            this.buttonUpdateClient.TabIndex = 11;
+            this.buttonUpdateClient.TabIndex = 10;
             this.buttonUpdateClient.Text = "Update";
             this.buttonUpdateClient.UseVisualStyleBackColor = false;
             this.buttonUpdateClient.Click += new System.EventHandler(this.button2_Click);
@@ -190,10 +191,11 @@ namespace ProjectAirlineManagment
             // 
             this.buttonSaveClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.buttonSaveClient.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaveClient.ForeColor = System.Drawing.Color.White;
             this.buttonSaveClient.Location = new System.Drawing.Point(434, 394);
             this.buttonSaveClient.Name = "buttonSaveClient";
             this.buttonSaveClient.Size = new System.Drawing.Size(97, 37);
-            this.buttonSaveClient.TabIndex = 12;
+            this.buttonSaveClient.TabIndex = 10;
             this.buttonSaveClient.Text = "Save";
             this.buttonSaveClient.UseVisualStyleBackColor = false;
             this.buttonSaveClient.Click += new System.EventHandler(this.button3_Click);
@@ -206,19 +208,19 @@ namespace ProjectAirlineManagment
             this.ClientSize = new System.Drawing.Size(880, 502);
             this.Controls.Add(this.buttonSaveClient);
             this.Controls.Add(this.buttonUpdateClient);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBoxNationality);
-            this.Controls.Add(this.textBoxName);
-            this.Controls.Add(this.textBoxPhoneNum);
-            this.Controls.Add(this.textBoxPassNum);
-            this.Controls.Add(this.labelPassNum);
-            this.Controls.Add(this.labelNationality);
-            this.Controls.Add(this.labelNamee);
-            this.Controls.Add(this.labelName);
+            this.Controls.Add(this.buttonInsertClient);
+            this.Controls.Add(this.comboBoxNationalityClient);
+            this.Controls.Add(this.textBoxNameClient);
+            this.Controls.Add(this.textBoxPhoneNumClient);
+            this.Controls.Add(this.textBoxPassNumClient);
+            this.Controls.Add(this.labelPassNumClient);
+            this.Controls.Add(this.labelNationalityClient);
+            this.Controls.Add(this.labelPhoneNumClient);
+            this.Controls.Add(this.labelNameClient);
             this.Controls.Add(this.labelClients);
             this.Controls.Add(this.dataGridViewClients);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormClients";
             this.Text = "FormClients";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -233,15 +235,15 @@ namespace ProjectAirlineManagment
 
         private System.Windows.Forms.DataGridView dataGridViewClients;
         private System.Windows.Forms.Label labelClients;
-        private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.Label labelNamee;
-        private System.Windows.Forms.Label labelNationality;
-        private System.Windows.Forms.Label labelPassNum;
-        private System.Windows.Forms.TextBox textBoxPassNum;
-        private System.Windows.Forms.TextBox textBoxPhoneNum;
-        private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.ComboBox comboBoxNationality;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label labelNameClient;
+        private System.Windows.Forms.Label labelPhoneNumClient;
+        private System.Windows.Forms.Label labelNationalityClient;
+        private System.Windows.Forms.Label labelPassNumClient;
+        private System.Windows.Forms.TextBox textBoxPassNumClient;
+        private System.Windows.Forms.TextBox textBoxPhoneNumClient;
+        private System.Windows.Forms.TextBox textBoxNameClient;
+        private System.Windows.Forms.ComboBox comboBoxNationalityClient;
+        private System.Windows.Forms.Button buttonInsertClient;
         private System.Windows.Forms.Button buttonUpdateClient;
         private System.Windows.Forms.Button buttonSaveClient;
     }

@@ -20,10 +20,10 @@ namespace ProjectAirlineManagment
 
         private void ClearTextBoxes()
         {
-            textBoxName.Text = "";
-            textBoxPhoneNum.Text = "";
-            comboBoxNationality.Text = "";
-            textBoxPassNum.Text = "";
+            textBoxNameClient.Text = "";
+            textBoxPhoneNumClient.Text = "";
+            comboBoxNationalityClient.Text = "";
+            textBoxPassNumClient.Text = "";
         }
 
         private void UpdateGrid()
@@ -39,17 +39,12 @@ namespace ProjectAirlineManagment
             clientBusiness = new ClientBusiness();
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            string name = textBoxName.Text;
-            string phoneNumber = textBoxPhoneNum.Text;
-            string nationality = comboBoxNationality.Text;
-            string passportNumber = textBoxPassNum.Text;
+            string name = textBoxNameClient.Text;
+            string phoneNumber = textBoxPhoneNumClient.Text;
+            string nationality = comboBoxNationalityClient.Text;
+            string passportNumber = textBoxPassNumClient.Text;
 
             Client client = new Client();
             client.Name = name;
@@ -65,10 +60,10 @@ namespace ProjectAirlineManagment
         private void UpdateTextBoxes(int id)
         {
             Client client = clientBusiness.GetClient(id);
-            textBoxName.Text = client.Name;
-            textBoxPhoneNum.Text = client.PhoneNumber;
-            comboBoxNationality.Text = client.Nationality;
-            textBoxPassNum.Text = client.PassportNumber;
+            textBoxNameClient.Text = client.Name;
+            textBoxPhoneNumClient.Text = client.PhoneNumber;
+            comboBoxNationalityClient.Text = client.Nationality;
+            textBoxPassNumClient.Text = client.PassportNumber;
         }
 
         private void FormClients_Load(object sender, EventArgs e)
@@ -79,7 +74,34 @@ namespace ProjectAirlineManagment
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Client client = GetEditedClient();
+            clientBusiness.UpdateClient(client);
+            UpdateGrid();
+            ToggleSaveUpdate();
+            ResetSelect();
+            ClearTextBoxes();
+        }
 
+        private void ResetSelect()
+        {
+            dataGridViewClients.Enabled = true;
+            dataGridViewClients.ClearSelection();
+        }
+
+        private Client GetEditedClient()
+        {
+            string name = textBoxNameClient.Text;
+            string phoneNumber = textBoxPhoneNumClient.Text;
+            string nationality = comboBoxNationalityClient.Text;
+            string passportNumber = textBoxPassNumClient.Text;
+
+            Client client = new Client();
+            client.Id = editId;
+            client.Name = name;
+            client.Nationality = nationality;
+            client.PassportNumber = passportNumber;
+
+            return client;
         }
 
         private void ToggleSaveUpdate()
