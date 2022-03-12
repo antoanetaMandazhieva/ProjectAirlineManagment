@@ -63,6 +63,17 @@ namespace ProjectAirlineManagment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap avion_sur_le_fond_rose_avec_coucher_du_soleil_un_de_vol_en_ciel_illustration_d_atterrissage_voyage_l_privé_118791947 {
+            get {
+                object obj = ResourceManager.GetObject("avion-sur-le-fond-rose-avec-coucher-du-soleil-un-de-vol-en-ciel-illustration-d-at" +
+                        "terrissage-voyage-l-privé-118791947", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap download {
             get {
                 object obj = ResourceManager.GetObject("download", resourceCulture);
