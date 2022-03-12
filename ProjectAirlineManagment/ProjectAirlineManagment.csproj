@@ -260,6 +260,9 @@
       <Name>Data</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avion-sur-le-fond-rose-avec-coucher-du-soleil-un-de-vol-en-ciel-illustration-d-atterrissage-voyage-l-privé-118791947.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
