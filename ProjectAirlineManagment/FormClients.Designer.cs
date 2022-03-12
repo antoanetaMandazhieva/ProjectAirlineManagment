@@ -52,7 +52,7 @@ namespace ProjectAirlineManagment
             this.dataGridViewClients.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewClients.Name = "dataGridViewClients";
             this.dataGridViewClients.RowHeadersWidth = 51;
-            this.dataGridViewClients.Size = new System.Drawing.Size(390, 217);
+            this.dataGridViewClients.Size = new System.Drawing.Size(292, 176);
             this.dataGridViewClients.TabIndex = 0;
             // 
             // labelClients
@@ -60,9 +60,10 @@ namespace ProjectAirlineManagment
             this.labelClients.AutoSize = true;
             this.labelClients.Font = new System.Drawing.Font("Lucida Bright", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelClients.ForeColor = System.Drawing.Color.White;
-            this.labelClients.Location = new System.Drawing.Point(50, 38);
+            this.labelClients.Location = new System.Drawing.Point(38, 31);
+            this.labelClients.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelClients.Name = "labelClients";
-            this.labelClients.Size = new System.Drawing.Size(119, 34);
+            this.labelClients.Size = new System.Drawing.Size(93, 28);
             this.labelClients.TabIndex = 1;
             this.labelClients.Text = "Clients";
             // 
@@ -203,10 +204,10 @@ namespace ProjectAirlineManagment
             // 
             // FormClients
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(880, 502);
+            this.ClientSize = new System.Drawing.Size(660, 408);
             this.Controls.Add(this.buttonSaveClient);
             this.Controls.Add(this.buttonUpdateClient);
             this.Controls.Add(this.buttonInsertClient);
