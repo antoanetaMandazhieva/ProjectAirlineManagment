@@ -48,11 +48,11 @@ namespace ProjectAirlineManagment
             // dataGridViewClients
             // 
             this.dataGridViewClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewClients.Location = new System.Drawing.Point(458, 115);
-            this.dataGridViewClients.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewClients.Location = new System.Drawing.Point(57, 214);
+            this.dataGridViewClients.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.dataGridViewClients.Name = "dataGridViewClients";
             this.dataGridViewClients.RowHeadersWidth = 51;
-            this.dataGridViewClients.Size = new System.Drawing.Size(292, 176);
+            this.dataGridViewClients.Size = new System.Drawing.Size(756, 237);
             this.dataGridViewClients.TabIndex = 0;
             // 
             // labelClients
@@ -60,10 +60,9 @@ namespace ProjectAirlineManagment
             this.labelClients.AutoSize = true;
             this.labelClients.Font = new System.Drawing.Font("Lucida Bright", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelClients.ForeColor = System.Drawing.Color.White;
-            this.labelClients.Location = new System.Drawing.Point(38, 31);
-            this.labelClients.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelClients.Location = new System.Drawing.Point(51, 51);
             this.labelClients.Name = "labelClients";
-            this.labelClients.Size = new System.Drawing.Size(93, 28);
+            this.labelClients.Size = new System.Drawing.Size(119, 34);
             this.labelClients.TabIndex = 1;
             this.labelClients.Text = "Clients";
             // 
@@ -72,7 +71,8 @@ namespace ProjectAirlineManagment
             this.labelNameClient.AutoSize = true;
             this.labelNameClient.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNameClient.ForeColor = System.Drawing.Color.White;
-            this.labelNameClient.Location = new System.Drawing.Point(75, 115);
+            this.labelNameClient.Location = new System.Drawing.Point(72, 113);
+            this.labelNameClient.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNameClient.Name = "labelNameClient";
             this.labelNameClient.Size = new System.Drawing.Size(68, 23);
             this.labelNameClient.TabIndex = 2;
@@ -83,7 +83,8 @@ namespace ProjectAirlineManagment
             this.labelPhoneNumClient.AutoSize = true;
             this.labelPhoneNumClient.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPhoneNumClient.ForeColor = System.Drawing.Color.White;
-            this.labelPhoneNumClient.Location = new System.Drawing.Point(75, 179);
+            this.labelPhoneNumClient.Location = new System.Drawing.Point(72, 160);
+            this.labelPhoneNumClient.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPhoneNumClient.Name = "labelPhoneNumClient";
             this.labelPhoneNumClient.Size = new System.Drawing.Size(159, 23);
             this.labelPhoneNumClient.TabIndex = 3;
@@ -94,7 +95,8 @@ namespace ProjectAirlineManagment
             this.labelNationalityClient.AutoSize = true;
             this.labelNationalityClient.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNationalityClient.ForeColor = System.Drawing.Color.White;
-            this.labelNationalityClient.Location = new System.Drawing.Point(75, 245);
+            this.labelNationalityClient.Location = new System.Drawing.Point(462, 113);
+            this.labelNationalityClient.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNationalityClient.Name = "labelNationalityClient";
             this.labelNationalityClient.Size = new System.Drawing.Size(118, 23);
             this.labelNationalityClient.TabIndex = 4;
@@ -105,7 +107,8 @@ namespace ProjectAirlineManagment
             this.labelPassNumClient.AutoSize = true;
             this.labelPassNumClient.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPassNumClient.ForeColor = System.Drawing.Color.White;
-            this.labelPassNumClient.Location = new System.Drawing.Point(75, 307);
+            this.labelPassNumClient.Location = new System.Drawing.Point(462, 160);
+            this.labelPassNumClient.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPassNumClient.Name = "labelPassNumClient";
             this.labelPassNumClient.Size = new System.Drawing.Size(183, 23);
             this.labelPassNumClient.TabIndex = 5;
@@ -113,23 +116,26 @@ namespace ProjectAirlineManagment
             // 
             // textBoxPassNumClient
             // 
-            this.textBoxPassNumClient.Location = new System.Drawing.Point(293, 310);
+            this.textBoxPassNumClient.Location = new System.Drawing.Point(653, 163);
+            this.textBoxPassNumClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPassNumClient.Name = "textBoxPassNumClient";
-            this.textBoxPassNumClient.Size = new System.Drawing.Size(121, 22);
+            this.textBoxPassNumClient.Size = new System.Drawing.Size(160, 22);
             this.textBoxPassNumClient.TabIndex = 6;
             // 
             // textBoxPhoneNumClient
             // 
-            this.textBoxPhoneNumClient.Location = new System.Drawing.Point(293, 182);
+            this.textBoxPhoneNumClient.Location = new System.Drawing.Point(239, 163);
+            this.textBoxPhoneNumClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPhoneNumClient.Name = "textBoxPhoneNumClient";
-            this.textBoxPhoneNumClient.Size = new System.Drawing.Size(121, 22);
+            this.textBoxPhoneNumClient.Size = new System.Drawing.Size(160, 22);
             this.textBoxPhoneNumClient.TabIndex = 7;
             // 
             // textBoxNameClient
             // 
-            this.textBoxNameClient.Location = new System.Drawing.Point(293, 118);
+            this.textBoxNameClient.Location = new System.Drawing.Point(239, 112);
+            this.textBoxNameClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxNameClient.Name = "textBoxNameClient";
-            this.textBoxNameClient.Size = new System.Drawing.Size(121, 22);
+            this.textBoxNameClient.Size = new System.Drawing.Size(160, 22);
             this.textBoxNameClient.TabIndex = 8;
             // 
             // comboBoxNationalityClient
@@ -157,9 +163,10 @@ namespace ProjectAirlineManagment
             "Russian",
             "Turkish",
             ""});
-            this.comboBoxNationalityClient.Location = new System.Drawing.Point(293, 248);
+            this.comboBoxNationalityClient.Location = new System.Drawing.Point(653, 116);
+            this.comboBoxNationalityClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxNationalityClient.Name = "comboBoxNationalityClient";
-            this.comboBoxNationalityClient.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxNationalityClient.Size = new System.Drawing.Size(160, 24);
             this.comboBoxNationalityClient.TabIndex = 9;
             // 
             // buttonInsertClient
@@ -167,9 +174,10 @@ namespace ProjectAirlineManagment
             this.buttonInsertClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.buttonInsertClient.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInsertClient.ForeColor = System.Drawing.Color.White;
-            this.buttonInsertClient.Location = new System.Drawing.Point(96, 394);
+            this.buttonInsertClient.Location = new System.Drawing.Point(57, 490);
+            this.buttonInsertClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonInsertClient.Name = "buttonInsertClient";
-            this.buttonInsertClient.Size = new System.Drawing.Size(97, 37);
+            this.buttonInsertClient.Size = new System.Drawing.Size(129, 46);
             this.buttonInsertClient.TabIndex = 10;
             this.buttonInsertClient.Text = "Insert";
             this.buttonInsertClient.UseVisualStyleBackColor = false;
@@ -180,9 +188,10 @@ namespace ProjectAirlineManagment
             this.buttonUpdateClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.buttonUpdateClient.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdateClient.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdateClient.Location = new System.Drawing.Point(266, 394);
+            this.buttonUpdateClient.Location = new System.Drawing.Point(246, 490);
+            this.buttonUpdateClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonUpdateClient.Name = "buttonUpdateClient";
-            this.buttonUpdateClient.Size = new System.Drawing.Size(97, 37);
+            this.buttonUpdateClient.Size = new System.Drawing.Size(129, 46);
             this.buttonUpdateClient.TabIndex = 10;
             this.buttonUpdateClient.Text = "Update";
             this.buttonUpdateClient.UseVisualStyleBackColor = false;
@@ -193,9 +202,10 @@ namespace ProjectAirlineManagment
             this.buttonSaveClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.buttonSaveClient.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSaveClient.ForeColor = System.Drawing.Color.White;
-            this.buttonSaveClient.Location = new System.Drawing.Point(434, 394);
+            this.buttonSaveClient.Location = new System.Drawing.Point(439, 490);
+            this.buttonSaveClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSaveClient.Name = "buttonSaveClient";
-            this.buttonSaveClient.Size = new System.Drawing.Size(97, 37);
+            this.buttonSaveClient.Size = new System.Drawing.Size(129, 46);
             this.buttonSaveClient.TabIndex = 10;
             this.buttonSaveClient.Text = "Save";
             this.buttonSaveClient.UseVisualStyleBackColor = false;
@@ -204,10 +214,10 @@ namespace ProjectAirlineManagment
             // 
             // FormClients
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(660, 408);
+            this.ClientSize = new System.Drawing.Size(880, 569);
             this.Controls.Add(this.buttonSaveClient);
             this.Controls.Add(this.buttonUpdateClient);
             this.Controls.Add(this.buttonInsertClient);
@@ -222,7 +232,7 @@ namespace ProjectAirlineManagment
             this.Controls.Add(this.labelClients);
             this.Controls.Add(this.dataGridViewClients);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "FormClients";
             this.Text = "FormClients";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
