@@ -40,6 +40,9 @@ namespace ProjectAirlineManagment
             this.buttonPilotUpdate = new System.Windows.Forms.Button();
             this.buttonPiloDelete = new System.Windows.Forms.Button();
             this.buttonPilotSave = new System.Windows.Forms.Button();
+            this.textBoxFirstName = new System.Windows.Forms.TextBox();
+            this.textBoxLastName = new System.Windows.Forms.TextBox();
+            this.textBoxAge = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPilot)).BeginInit();
             this.SuspendLayout();
             // 
@@ -169,12 +172,36 @@ namespace ProjectAirlineManagment
             this.buttonPilotSave.Text = "Save";
             this.buttonPilotSave.UseVisualStyleBackColor = false;
             // 
+            // textBoxFirstName
+            // 
+            this.textBoxFirstName.Location = new System.Drawing.Point(173, 83);
+            this.textBoxFirstName.Name = "textBoxFirstName";
+            this.textBoxFirstName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxFirstName.TabIndex = 12;
+            // 
+            // textBoxLastName
+            // 
+            this.textBoxLastName.Location = new System.Drawing.Point(173, 127);
+            this.textBoxLastName.Name = "textBoxLastName";
+            this.textBoxLastName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLastName.TabIndex = 13;
+            // 
+            // textBoxAge
+            // 
+            this.textBoxAge.Location = new System.Drawing.Point(173, 166);
+            this.textBoxAge.Name = "textBoxAge";
+            this.textBoxAge.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAge.TabIndex = 14;
+            // 
             // FormPilot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(647, 432);
+            this.Controls.Add(this.textBoxAge);
+            this.Controls.Add(this.textBoxLastName);
+            this.Controls.Add(this.textBoxFirstName);
             this.Controls.Add(this.buttonPilotSave);
             this.Controls.Add(this.buttonPiloDelete);
             this.Controls.Add(this.buttonPilotUpdate);
@@ -209,5 +236,8 @@ namespace ProjectAirlineManagment
         private System.Windows.Forms.Button buttonPilotUpdate;
         private System.Windows.Forms.Button buttonPiloDelete;
         private System.Windows.Forms.Button buttonPilotSave;
+        private System.Windows.Forms.TextBox textBoxFirstName;
+        private System.Windows.Forms.TextBox textBoxLastName;
+        private System.Windows.Forms.TextBox textBoxAge;
     }
 }
