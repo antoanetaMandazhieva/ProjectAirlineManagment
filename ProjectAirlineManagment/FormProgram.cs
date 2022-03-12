@@ -46,7 +46,7 @@ namespace ProjectAirlineManagment
             ShowSubMenu(panelMenuSubmenu);
         }
 
-        private Form activeForm = null;
+        //private Form activeForm = null;
         //private void OpenChildForm(Form childForm)
         //{
         //    if (activeForm != null)
@@ -65,24 +65,32 @@ namespace ProjectAirlineManagment
         #region SubMenuButtons
         private void buttonClient_Click(object sender, EventArgs e)
         {
-            FormClients clients = new FormClients();
+            FormClients client = new FormClients();
             foreach (var item in this.MdiChildren)
             {
                 item.Close();
             }
-            clients.MdiParent = this;
-            clients.Show();
+            client.MdiParent = this;
+            client.Show();
         }
         private void buttonTicket_Click(object sender, EventArgs e)
         {
-            FormTickets tickets = new FormTickets();
-            tickets.MdiParent = this;
-            tickets.Show();
+            FormTickets ticket = new FormTickets();
+            foreach (var item in this.MdiChildren)
+            {
+                item.Close();
+            }
+            ticket.MdiParent = this;
+            ticket.Show();
         }
 
         private void buttonFlight_Click(object sender, EventArgs e)
         {
             FormFlight flight = new FormFlight();
+            foreach (var item in this.MdiChildren)
+            {
+                item.Close();
+            }
             flight.MdiParent = this;
             flight.Show();
         }
@@ -90,6 +98,10 @@ namespace ProjectAirlineManagment
         private void buttonPilot_Click(object sender, EventArgs e)
         {
             FormPilot pilot = new FormPilot();
+            foreach (var item in this.MdiChildren)
+            {
+                item.Close();
+            }
             pilot.MdiParent = this;
             pilot.Show();
         }
