@@ -35,7 +35,7 @@ namespace ProjectAirlineManagment
             this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.checkedListBoxSeat = new System.Windows.Forms.CheckedListBox();
             this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
-            this.buttonTicketsUpdate = new System.Windows.Forms.Button();
+            this.buttonTicketUpdate = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.buttonTicketsInsert = new System.Windows.Forms.Button();
             this.buttonTicketDelete = new System.Windows.Forms.Button();
@@ -50,9 +50,10 @@ namespace ProjectAirlineManagment
             this.labelTickets.AutoSize = true;
             this.labelTickets.Font = new System.Drawing.Font("Lucida Bright", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTickets.ForeColor = System.Drawing.Color.White;
-            this.labelTickets.Location = new System.Drawing.Point(35, 21);
+            this.labelTickets.Location = new System.Drawing.Point(48, 50);
+            this.labelTickets.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTickets.Name = "labelTickets";
-            this.labelTickets.Size = new System.Drawing.Size(98, 27);
+            this.labelTickets.Size = new System.Drawing.Size(126, 34);
             this.labelTickets.TabIndex = 0;
             this.labelTickets.Text = "Tickets";
             // 
@@ -61,9 +62,10 @@ namespace ProjectAirlineManagment
             this.labelPrice.AutoSize = true;
             this.labelPrice.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPrice.ForeColor = System.Drawing.Color.White;
-            this.labelPrice.Location = new System.Drawing.Point(49, 80);
+            this.labelPrice.Location = new System.Drawing.Point(66, 122);
+            this.labelPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(48, 18);
+            this.labelPrice.Size = new System.Drawing.Size(60, 23);
             this.labelPrice.TabIndex = 1;
             this.labelPrice.Text = "Price";
             // 
@@ -72,17 +74,19 @@ namespace ProjectAirlineManagment
             this.labelSeat.AutoSize = true;
             this.labelSeat.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSeat.ForeColor = System.Drawing.Color.White;
-            this.labelSeat.Location = new System.Drawing.Point(49, 121);
+            this.labelSeat.Location = new System.Drawing.Point(66, 173);
+            this.labelSeat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSeat.Name = "labelSeat";
-            this.labelSeat.Size = new System.Drawing.Size(42, 18);
+            this.labelSeat.Size = new System.Drawing.Size(52, 23);
             this.labelSeat.TabIndex = 2;
             this.labelSeat.Text = "Seat";
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(116, 80);
+            this.textBoxPrice.Location = new System.Drawing.Point(156, 122);
+            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(135, 20);
+            this.textBoxPrice.Size = new System.Drawing.Size(179, 22);
             this.textBoxPrice.TabIndex = 5;
             // 
             // checkedListBoxSeat
@@ -189,9 +193,10 @@ namespace ProjectAirlineManagment
             "18F",
             "19F",
             "20F"});
-            this.checkedListBoxSeat.Location = new System.Drawing.Point(116, 106);
+            this.checkedListBoxSeat.Location = new System.Drawing.Point(156, 154);
+            this.checkedListBoxSeat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkedListBoxSeat.Name = "checkedListBoxSeat";
-            this.checkedListBoxSeat.Size = new System.Drawing.Size(135, 49);
+            this.checkedListBoxSeat.Size = new System.Drawing.Size(179, 55);
             this.checkedListBoxSeat.TabIndex = 6;
             // 
             // dataGridViewTickets
@@ -199,28 +204,33 @@ namespace ProjectAirlineManagment
             this.dataGridViewTickets.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.dataGridViewTickets.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTickets.Location = new System.Drawing.Point(52, 215);
+            this.dataGridViewTickets.Location = new System.Drawing.Point(70, 289);
+            this.dataGridViewTickets.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewTickets.Name = "dataGridViewTickets";
-            this.dataGridViewTickets.Size = new System.Drawing.Size(379, 170);
+            this.dataGridViewTickets.RowHeadersWidth = 51;
+            this.dataGridViewTickets.Size = new System.Drawing.Size(599, 209);
             this.dataGridViewTickets.TabIndex = 8;
             // 
-            // buttonTicketsUpdate
+            // buttonTicketUpdate
             // 
-            this.buttonTicketsUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
-            this.buttonTicketsUpdate.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTicketsUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonTicketsUpdate.Location = new System.Drawing.Point(485, 150);
-            this.buttonTicketsUpdate.Name = "buttonTicketsUpdate";
-            this.buttonTicketsUpdate.Size = new System.Drawing.Size(97, 37);
-            this.buttonTicketsUpdate.TabIndex = 9;
-            this.buttonTicketsUpdate.Text = "Update";
-            this.buttonTicketsUpdate.UseVisualStyleBackColor = false;
+            this.buttonTicketUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
+            this.buttonTicketUpdate.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTicketUpdate.ForeColor = System.Drawing.Color.White;
+            this.buttonTicketUpdate.Location = new System.Drawing.Point(712, 233);
+            this.buttonTicketUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonTicketUpdate.Name = "buttonTicketUpdate";
+            this.buttonTicketUpdate.Size = new System.Drawing.Size(129, 46);
+            this.buttonTicketUpdate.TabIndex = 9;
+            this.buttonTicketUpdate.Text = "Update";
+            this.buttonTicketUpdate.UseVisualStyleBackColor = false;
+            this.buttonTicketUpdate.Click += new System.EventHandler(this.buttonTicketUpdate_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(485, 120);
+            this.button2.Location = new System.Drawing.Point(712, 188);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(0, 0);
             this.button2.TabIndex = 10;
@@ -232,9 +242,10 @@ namespace ProjectAirlineManagment
             this.buttonTicketsInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.buttonTicketsInsert.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTicketsInsert.ForeColor = System.Drawing.Color.White;
-            this.buttonTicketsInsert.Location = new System.Drawing.Point(485, 71);
+            this.buttonTicketsInsert.Location = new System.Drawing.Point(712, 127);
+            this.buttonTicketsInsert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonTicketsInsert.Name = "buttonTicketsInsert";
-            this.buttonTicketsInsert.Size = new System.Drawing.Size(97, 37);
+            this.buttonTicketsInsert.Size = new System.Drawing.Size(129, 46);
             this.buttonTicketsInsert.TabIndex = 11;
             this.buttonTicketsInsert.Text = "Insert";
             this.buttonTicketsInsert.UseVisualStyleBackColor = false;
@@ -245,33 +256,39 @@ namespace ProjectAirlineManagment
             this.buttonTicketDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.buttonTicketDelete.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTicketDelete.ForeColor = System.Drawing.Color.White;
-            this.buttonTicketDelete.Location = new System.Drawing.Point(485, 248);
+            this.buttonTicketDelete.Location = new System.Drawing.Point(712, 341);
+            this.buttonTicketDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonTicketDelete.Name = "buttonTicketDelete";
-            this.buttonTicketDelete.Size = new System.Drawing.Size(97, 37);
+            this.buttonTicketDelete.Size = new System.Drawing.Size(129, 46);
             this.buttonTicketDelete.TabIndex = 12;
             this.buttonTicketDelete.Text = "Delete";
             this.buttonTicketDelete.UseVisualStyleBackColor = false;
+            this.buttonTicketDelete.Click += new System.EventHandler(this.buttonTicketDelete_Click);
             // 
             // buttonTicketSave
             // 
             this.buttonTicketSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.buttonTicketSave.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTicketSave.ForeColor = System.Drawing.Color.White;
-            this.buttonTicketSave.Location = new System.Drawing.Point(485, 335);
+            this.buttonTicketSave.Location = new System.Drawing.Point(712, 452);
+            this.buttonTicketSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonTicketSave.Name = "buttonTicketSave";
-            this.buttonTicketSave.Size = new System.Drawing.Size(97, 37);
+            this.buttonTicketSave.Size = new System.Drawing.Size(129, 46);
             this.buttonTicketSave.TabIndex = 13;
             this.buttonTicketSave.Text = "Save";
             this.buttonTicketSave.UseVisualStyleBackColor = false;
+            this.buttonTicketSave.Visible = false;
+            this.buttonTicketSave.Click += new System.EventHandler(this.buttonTicketSave_Click);
             // 
             // radioButtonOneWay
             // 
             this.radioButtonOneWay.AutoSize = true;
             this.radioButtonOneWay.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonOneWay.ForeColor = System.Drawing.Color.White;
-            this.radioButtonOneWay.Location = new System.Drawing.Point(52, 170);
+            this.radioButtonOneWay.Location = new System.Drawing.Point(422, 147);
+            this.radioButtonOneWay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButtonOneWay.Name = "radioButtonOneWay";
-            this.radioButtonOneWay.Size = new System.Drawing.Size(160, 22);
+            this.radioButtonOneWay.Size = new System.Drawing.Size(199, 27);
             this.radioButtonOneWay.TabIndex = 14;
             this.radioButtonOneWay.TabStop = true;
             this.radioButtonOneWay.Text = "A one-way ticket";
@@ -282,9 +299,10 @@ namespace ProjectAirlineManagment
             this.radioButtonRoundTrip.AutoSize = true;
             this.radioButtonRoundTrip.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonRoundTrip.ForeColor = System.Drawing.Color.White;
-            this.radioButtonRoundTrip.Location = new System.Drawing.Point(244, 170);
+            this.radioButtonRoundTrip.Location = new System.Drawing.Point(422, 182);
+            this.radioButtonRoundTrip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButtonRoundTrip.Name = "radioButtonRoundTrip";
-            this.radioButtonRoundTrip.Size = new System.Drawing.Size(173, 22);
+            this.radioButtonRoundTrip.Size = new System.Drawing.Size(216, 27);
             this.radioButtonRoundTrip.TabIndex = 15;
             this.radioButtonRoundTrip.TabStop = true;
             this.radioButtonRoundTrip.Text = "A round-trip ticket";
@@ -292,17 +310,17 @@ namespace ProjectAirlineManagment
             // 
             // FormTickets
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(663, 471);
+            this.ClientSize = new System.Drawing.Size(884, 580);
             this.Controls.Add(this.radioButtonRoundTrip);
             this.Controls.Add(this.radioButtonOneWay);
             this.Controls.Add(this.buttonTicketSave);
             this.Controls.Add(this.buttonTicketDelete);
             this.Controls.Add(this.buttonTicketsInsert);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.buttonTicketsUpdate);
+            this.Controls.Add(this.buttonTicketUpdate);
             this.Controls.Add(this.dataGridViewTickets);
             this.Controls.Add(this.checkedListBoxSeat);
             this.Controls.Add(this.textBoxPrice);
@@ -310,9 +328,11 @@ namespace ProjectAirlineManagment
             this.Controls.Add(this.labelPrice);
             this.Controls.Add(this.labelTickets);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormTickets";
             this.Text = "FormTickets";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormTickets_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -327,7 +347,7 @@ namespace ProjectAirlineManagment
         private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.CheckedListBox checkedListBoxSeat;
         private System.Windows.Forms.DataGridView dataGridViewTickets;
-        private System.Windows.Forms.Button buttonTicketsUpdate;
+        private System.Windows.Forms.Button buttonTicketUpdate;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button buttonTicketsInsert;
         private System.Windows.Forms.Button buttonTicketDelete;

@@ -16,5 +16,10 @@ namespace ProjectAirlineManagment
         {
             InitializeComponent();
         }
+
+        private void buttonPilotUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
