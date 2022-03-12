@@ -62,6 +62,10 @@
     <Compile Include="Migrations\202203061058121_updatedClassFlight.designer.cs">
       <DependentUpon>202203061058121_updatedClassFlight.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202203121030499_ClientChanged.cs" />
+    <Compile Include="Migrations\202203121030499_ClientChanged.designer.cs">
+      <DependentUpon>202203121030499_ClientChanged.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Flight.cs" />
@@ -79,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202203061058121_updatedClassFlight.resx">
       <DependentUpon>202203061058121_updatedClassFlight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203121030499_ClientChanged.resx">
+      <DependentUpon>202203121030499_ClientChanged.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
