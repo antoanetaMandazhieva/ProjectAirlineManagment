@@ -97,7 +97,7 @@ namespace ProjectAirlineManagment
 
         private void buttonPilot_Click(object sender, EventArgs e)
         {
-            FormPilot pilot = new FormPilot();
+            FormPilotAge pilot = new FormPilotAge();
             foreach (var item in this.MdiChildren)
             {
                 item.Close();
