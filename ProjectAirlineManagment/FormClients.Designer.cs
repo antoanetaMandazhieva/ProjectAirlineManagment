@@ -74,9 +74,10 @@ namespace ProjectAirlineManagment
             this.labelNameClient.Location = new System.Drawing.Point(72, 113);
             this.labelNameClient.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNameClient.Name = "labelNameClient";
-            this.labelNameClient.Size = new System.Drawing.Size(68, 23);
+            this.labelNameClient.Size = new System.Drawing.Size(54, 18);
             this.labelNameClient.TabIndex = 2;
             this.labelNameClient.Text = "Name";
+            this.labelNameClient.Click += new System.EventHandler(this.labelNameClient_Click);
             // 
             // labelPhoneNumClient
             // 
@@ -86,7 +87,7 @@ namespace ProjectAirlineManagment
             this.labelPhoneNumClient.Location = new System.Drawing.Point(72, 160);
             this.labelPhoneNumClient.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPhoneNumClient.Name = "labelPhoneNumClient";
-            this.labelPhoneNumClient.Size = new System.Drawing.Size(159, 23);
+            this.labelPhoneNumClient.Size = new System.Drawing.Size(123, 18);
             this.labelPhoneNumClient.TabIndex = 3;
             this.labelPhoneNumClient.Text = "Phone number";
             // 
@@ -98,7 +99,7 @@ namespace ProjectAirlineManagment
             this.labelNationalityClient.Location = new System.Drawing.Point(462, 113);
             this.labelNationalityClient.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNationalityClient.Name = "labelNationalityClient";
-            this.labelNationalityClient.Size = new System.Drawing.Size(118, 23);
+            this.labelNationalityClient.Size = new System.Drawing.Size(93, 18);
             this.labelNationalityClient.TabIndex = 4;
             this.labelNationalityClient.Text = "Nationality";
             // 
@@ -110,7 +111,7 @@ namespace ProjectAirlineManagment
             this.labelPassNumClient.Location = new System.Drawing.Point(462, 160);
             this.labelPassNumClient.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPassNumClient.Name = "labelPassNumClient";
-            this.labelPassNumClient.Size = new System.Drawing.Size(183, 23);
+            this.labelPassNumClient.Size = new System.Drawing.Size(145, 18);
             this.labelPassNumClient.TabIndex = 5;
             this.labelPassNumClient.Text = "Passport number";
             // 

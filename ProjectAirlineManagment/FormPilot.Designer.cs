@@ -30,8 +30,8 @@ namespace ProjectAirlineManagment
         private void InitializeComponent()
         {
             this.labelPilot = new System.Windows.Forms.Label();
-            this.labelFirstName = new System.Windows.Forms.Label();
-            this.labelLastName = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.labelPhoneNumber = new System.Windows.Forms.Label();
             this.labelAge = new System.Windows.Forms.Label();
             this.dataGridViewPilot = new System.Windows.Forms.DataGridView();
             this.buttonPilotInsert = new System.Windows.Forms.Button();
@@ -57,27 +57,27 @@ namespace ProjectAirlineManagment
             this.labelPilot.TabIndex = 0;
             this.labelPilot.Text = "Pilot";
             // 
-            // labelFirstName
+            // labelName
             // 
-            this.labelFirstName.AutoSize = true;
-            this.labelFirstName.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFirstName.ForeColor = System.Drawing.Color.White;
-            this.labelFirstName.Location = new System.Drawing.Point(39, 83);
-            this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(100, 18);
-            this.labelFirstName.TabIndex = 1;
-            this.labelFirstName.Text = " First Name";
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.ForeColor = System.Drawing.Color.White;
+            this.labelName.Location = new System.Drawing.Point(39, 83);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(59, 18);
+            this.labelName.TabIndex = 1;
+            this.labelName.Text = " Name";
             // 
-            // labelLastName
+            // labelPhoneNumber
             // 
-            this.labelLastName.AutoSize = true;
-            this.labelLastName.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLastName.ForeColor = System.Drawing.Color.White;
-            this.labelLastName.Location = new System.Drawing.Point(46, 126);
-            this.labelLastName.Name = "labelLastName";
-            this.labelLastName.Size = new System.Drawing.Size(93, 18);
-            this.labelLastName.TabIndex = 2;
-            this.labelLastName.Text = "Last Name";
+            this.labelPhoneNumber.AutoSize = true;
+            this.labelPhoneNumber.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPhoneNumber.ForeColor = System.Drawing.Color.White;
+            this.labelPhoneNumber.Location = new System.Drawing.Point(46, 126);
+            this.labelPhoneNumber.Name = "labelPhoneNumber";
+            this.labelPhoneNumber.Size = new System.Drawing.Size(123, 18);
+            this.labelPhoneNumber.TabIndex = 2;
+            this.labelPhoneNumber.Text = "Phone number";
             // 
             // labelAge
             // 
@@ -150,21 +150,21 @@ namespace ProjectAirlineManagment
             // 
             // textBoxFirstName
             // 
-            this.textBoxFirstName.Location = new System.Drawing.Point(173, 83);
+            this.textBoxFirstName.Location = new System.Drawing.Point(197, 78);
             this.textBoxFirstName.Name = "textBoxFirstName";
             this.textBoxFirstName.Size = new System.Drawing.Size(100, 20);
             this.textBoxFirstName.TabIndex = 12;
             // 
             // textBoxLastName
             // 
-            this.textBoxLastName.Location = new System.Drawing.Point(173, 127);
+            this.textBoxLastName.Location = new System.Drawing.Point(197, 127);
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(100, 20);
             this.textBoxLastName.TabIndex = 13;
             // 
             // textBoxAge
             // 
-            this.textBoxAge.Location = new System.Drawing.Point(173, 166);
+            this.textBoxAge.Location = new System.Drawing.Point(197, 166);
             this.textBoxAge.Name = "textBoxAge";
             this.textBoxAge.Size = new System.Drawing.Size(100, 20);
             this.textBoxAge.TabIndex = 14;
@@ -212,8 +212,8 @@ namespace ProjectAirlineManagment
             this.Controls.Add(this.buttonPilotInsert);
             this.Controls.Add(this.dataGridViewPilot);
             this.Controls.Add(this.labelAge);
-            this.Controls.Add(this.labelLastName);
-            this.Controls.Add(this.labelFirstName);
+            this.Controls.Add(this.labelPhoneNumber);
+            this.Controls.Add(this.labelName);
             this.Controls.Add(this.labelPilot);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPilot";
@@ -228,8 +228,8 @@ namespace ProjectAirlineManagment
         #endregion
 
         private System.Windows.Forms.Label labelPilot;
-        private System.Windows.Forms.Label labelFirstName;
-        private System.Windows.Forms.Label labelLastName;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelPhoneNumber;
         private System.Windows.Forms.Label labelAge;
         private System.Windows.Forms.DataGridView dataGridViewPilot;
         private System.Windows.Forms.Button buttonPilotInsert;

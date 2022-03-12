@@ -135,5 +135,10 @@ namespace ProjectAirlineManagment
                 DisabeSelect();
             }
         }
+
+        private void labelNameClient_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
