@@ -33,8 +33,6 @@ namespace ProjectAirlineManagment
             this.labelFirstName = new System.Windows.Forms.Label();
             this.labelLastName = new System.Windows.Forms.Label();
             this.labelAge = new System.Windows.Forms.Label();
-            this.checkBoxChiefPilot = new System.Windows.Forms.CheckBox();
-            this.checkBoxAssistantPilot = new System.Windows.Forms.CheckBox();
             this.dataGridViewPilot = new System.Windows.Forms.DataGridView();
             this.buttonPilotInsert = new System.Windows.Forms.Button();
             this.buttonPilotUpdate = new System.Windows.Forms.Button();
@@ -43,6 +41,8 @@ namespace ProjectAirlineManagment
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
             this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.textBoxAge = new System.Windows.Forms.TextBox();
+            this.radioButtonChiefPilot = new System.Windows.Forms.RadioButton();
+            this.radioButtonAssistantPilot = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPilot)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,30 +89,6 @@ namespace ProjectAirlineManagment
             this.labelAge.Size = new System.Drawing.Size(40, 18);
             this.labelAge.TabIndex = 3;
             this.labelAge.Text = "Age";
-            // 
-            // checkBoxChiefPilot
-            // 
-            this.checkBoxChiefPilot.AutoSize = true;
-            this.checkBoxChiefPilot.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxChiefPilot.ForeColor = System.Drawing.Color.White;
-            this.checkBoxChiefPilot.Location = new System.Drawing.Point(47, 215);
-            this.checkBoxChiefPilot.Name = "checkBoxChiefPilot";
-            this.checkBoxChiefPilot.Size = new System.Drawing.Size(109, 22);
-            this.checkBoxChiefPilot.TabIndex = 4;
-            this.checkBoxChiefPilot.Text = "Chief Pilot";
-            this.checkBoxChiefPilot.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxAssistantPilot
-            // 
-            this.checkBoxAssistantPilot.AutoSize = true;
-            this.checkBoxAssistantPilot.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxAssistantPilot.ForeColor = System.Drawing.Color.White;
-            this.checkBoxAssistantPilot.Location = new System.Drawing.Point(222, 215);
-            this.checkBoxAssistantPilot.Name = "checkBoxAssistantPilot";
-            this.checkBoxAssistantPilot.Size = new System.Drawing.Size(140, 22);
-            this.checkBoxAssistantPilot.TabIndex = 5;
-            this.checkBoxAssistantPilot.Text = "Assistant Pilot";
-            this.checkBoxAssistantPilot.UseVisualStyleBackColor = true;
             // 
             // dataGridViewPilot
             // 
@@ -193,12 +169,40 @@ namespace ProjectAirlineManagment
             this.textBoxAge.Size = new System.Drawing.Size(100, 20);
             this.textBoxAge.TabIndex = 14;
             // 
+            // radioButtonChiefPilot
+            // 
+            this.radioButtonChiefPilot.AutoSize = true;
+            this.radioButtonChiefPilot.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonChiefPilot.ForeColor = System.Drawing.Color.White;
+            this.radioButtonChiefPilot.Location = new System.Drawing.Point(54, 215);
+            this.radioButtonChiefPilot.Name = "radioButtonChiefPilot";
+            this.radioButtonChiefPilot.Size = new System.Drawing.Size(108, 22);
+            this.radioButtonChiefPilot.TabIndex = 15;
+            this.radioButtonChiefPilot.TabStop = true;
+            this.radioButtonChiefPilot.Text = "Chief Pilot";
+            this.radioButtonChiefPilot.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonAssistantPilot
+            // 
+            this.radioButtonAssistantPilot.AutoSize = true;
+            this.radioButtonAssistantPilot.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonAssistantPilot.ForeColor = System.Drawing.Color.White;
+            this.radioButtonAssistantPilot.Location = new System.Drawing.Point(227, 215);
+            this.radioButtonAssistantPilot.Name = "radioButtonAssistantPilot";
+            this.radioButtonAssistantPilot.Size = new System.Drawing.Size(139, 22);
+            this.radioButtonAssistantPilot.TabIndex = 16;
+            this.radioButtonAssistantPilot.TabStop = true;
+            this.radioButtonAssistantPilot.Text = "Assistant Pilot";
+            this.radioButtonAssistantPilot.UseVisualStyleBackColor = true;
+            // 
             // FormPilot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(647, 432);
+            this.Controls.Add(this.radioButtonAssistantPilot);
+            this.Controls.Add(this.radioButtonChiefPilot);
             this.Controls.Add(this.textBoxAge);
             this.Controls.Add(this.textBoxLastName);
             this.Controls.Add(this.textBoxFirstName);
@@ -207,8 +211,6 @@ namespace ProjectAirlineManagment
             this.Controls.Add(this.buttonPilotUpdate);
             this.Controls.Add(this.buttonPilotInsert);
             this.Controls.Add(this.dataGridViewPilot);
-            this.Controls.Add(this.checkBoxAssistantPilot);
-            this.Controls.Add(this.checkBoxChiefPilot);
             this.Controls.Add(this.labelAge);
             this.Controls.Add(this.labelLastName);
             this.Controls.Add(this.labelFirstName);
@@ -229,8 +231,6 @@ namespace ProjectAirlineManagment
         private System.Windows.Forms.Label labelFirstName;
         private System.Windows.Forms.Label labelLastName;
         private System.Windows.Forms.Label labelAge;
-        private System.Windows.Forms.CheckBox checkBoxChiefPilot;
-        private System.Windows.Forms.CheckBox checkBoxAssistantPilot;
         private System.Windows.Forms.DataGridView dataGridViewPilot;
         private System.Windows.Forms.Button buttonPilotInsert;
         private System.Windows.Forms.Button buttonPilotUpdate;
@@ -239,5 +239,7 @@ namespace ProjectAirlineManagment
         private System.Windows.Forms.TextBox textBoxFirstName;
         private System.Windows.Forms.TextBox textBoxLastName;
         private System.Windows.Forms.TextBox textBoxAge;
+        private System.Windows.Forms.RadioButton radioButtonChiefPilot;
+        private System.Windows.Forms.RadioButton radioButtonAssistantPilot;
     }
 }
