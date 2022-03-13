@@ -141,11 +141,15 @@ namespace ProjectAirlineManagment
             {
                 buttonTicketSave.Visible = false;
                 buttonTicketUpdate.Visible = true;
+                buttonTicketsInsert.Visible = true;
+                buttonTicketDelete.Visible = true;
             }
             else
             {
                 buttonTicketSave.Visible = true;
                 buttonTicketUpdate.Visible = false;
+                buttonTicketsInsert.Visible = false;
+                buttonTicketDelete.Visible = false;
             }
         }
 

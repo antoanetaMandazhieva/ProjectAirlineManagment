@@ -62,10 +62,6 @@ namespace ProjectAirlineManagment
                 UpdateGrid();
                 ClearTextBoxes();
             }
-
-            clientBusiness.AddClient(client);
-            UpdateGrid();
-            ClearTextBoxes();
         }
 
         private void UpdateTextBoxes(int id)
@@ -122,11 +118,13 @@ namespace ProjectAirlineManagment
             {
                 buttonSaveClient.Visible = false;
                 buttonUpdateClient.Visible = true;
+                buttonInsertClient.Visible = true;
             }
             else
             {
                 buttonSaveClient.Visible = true;
                 buttonUpdateClient.Visible = false;
+                buttonInsertClient.Visible = false;
             }
         }
 

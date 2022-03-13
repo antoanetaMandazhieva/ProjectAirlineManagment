@@ -33,8 +33,8 @@ namespace Business.ModelsBusiness
             else
             {
                 airlineManagmentContext.Clients.Add(client);
-                airlineManagmentContext.SaveChanges();
                 this.clients.Add(client);
+                airlineManagmentContext.SaveChanges();
                 return 0;
                 // vs top
             }
