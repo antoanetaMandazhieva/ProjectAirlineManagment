@@ -168,6 +168,7 @@ namespace ProjectAirlineManagment
             this.textBoxPilotPhoneNum.Name = "textBoxPilotPhoneNum";
             this.textBoxPilotPhoneNum.Size = new System.Drawing.Size(100, 20);
             this.textBoxPilotPhoneNum.TabIndex = 13;
+            this.textBoxPilotPhoneNum.TextChanged += new System.EventHandler(this.textBoxPilotPhoneNum_TextChanged);
             // 
             // textBoxPilotAge
             // 

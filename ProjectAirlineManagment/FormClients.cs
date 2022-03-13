@@ -99,6 +99,7 @@ namespace ProjectAirlineManagment
             client.Id = editId;
             client.Name = name;
             client.Nationality = nationality;
+            client.PhoneNumber = phoneNumber;
             client.PassportNumber = passportNumber;
 
             return client;
@@ -142,6 +143,11 @@ namespace ProjectAirlineManagment
         }
 
         private void textBoxNameClient_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPhoneNumClient_TextChanged(object sender, EventArgs e)
         {
 
         }

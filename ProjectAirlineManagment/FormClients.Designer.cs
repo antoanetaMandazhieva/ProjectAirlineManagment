@@ -49,7 +49,7 @@ namespace ProjectAirlineManagment
             // 
             this.dataGridViewClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewClients.Location = new System.Drawing.Point(43, 174);
-            this.dataGridViewClients.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewClients.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewClients.Name = "dataGridViewClients";
             this.dataGridViewClients.RowHeadersWidth = 51;
             this.dataGridViewClients.Size = new System.Drawing.Size(567, 193);
@@ -125,6 +125,7 @@ namespace ProjectAirlineManagment
             this.textBoxPhoneNumClient.Name = "textBoxPhoneNumClient";
             this.textBoxPhoneNumClient.Size = new System.Drawing.Size(121, 20);
             this.textBoxPhoneNumClient.TabIndex = 7;
+            this.textBoxPhoneNumClient.TextChanged += new System.EventHandler(this.textBoxPhoneNumClient_TextChanged);
             // 
             // textBoxNameClient
             // 
@@ -224,7 +225,7 @@ namespace ProjectAirlineManagment
             this.Controls.Add(this.labelClients);
             this.Controls.Add(this.dataGridViewClients);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormClients";
             this.Text = "FormClients";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
