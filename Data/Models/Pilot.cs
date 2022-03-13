@@ -6,13 +6,40 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
+    /// <summary>
+    /// Create class Pilot.
+    /// This class contain an object and properties for the table in FormPilot.
+    /// </summary>
     public class Pilot
     {
+        /// <summary>
+        /// Create an object and properties.
+        /// /// </summary>
         public int Id { get; set; }
+       
+        /// <summary>
+        /// Create an object and properties.
+        /// </summary>
         public string Name { get; set; }
+
+        /// <summary>
+        /// Create an object an properties.
+        /// </summary>
         public string PhoneNumber { get; set; }
+
+        /// <summary>
+        /// Create an object and properties.
+        /// </summary>
         public int Age { get; set; }
+
+        /// <summary>
+        /// Create an object and properties.
+        /// </summary>
         public string TypePilot { get; set; }
+
+        /// <summary>
+        /// Create an object and properties.
+        /// </summary>
         public int FlightId { get; set; }
     }
 }

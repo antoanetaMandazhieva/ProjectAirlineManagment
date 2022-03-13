@@ -52,9 +52,16 @@ namespace ProjectAirlineManagment
             client.Nationality = nationality;
             client.PassportNumber = passportNumber;
 
-            clientBusiness.AddClient(client);
-            UpdateGrid();
-            ClearTextBoxes();
+            int n = clientBusiness.AddClient(client);
+            if (n == 1)
+            {
+                MessageBox.Show("This client has already been introduced", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                UpdateGrid();
+                ClearTextBoxes();
+            }
         }
 
         private void UpdateTextBoxes(int id)
@@ -111,11 +118,13 @@ namespace ProjectAirlineManagment
             {
                 buttonSaveClient.Visible = false;
                 buttonUpdateClient.Visible = true;
+                buttonInsertClient.Visible = true;
             }
             else
             {
                 buttonSaveClient.Visible = true;
                 buttonUpdateClient.Visible = false;
+                buttonInsertClient.Visible = false;
             }
         }
 

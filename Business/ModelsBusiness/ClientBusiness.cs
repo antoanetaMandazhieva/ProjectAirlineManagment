@@ -8,19 +8,26 @@ using System.Threading.Tasks;
 
 namespace Business.ModelsBusiness
 {
+   
     public class ClientBusiness
     {
+       
         public ClientBusiness()
         {
             clients = new List<Client>();
             airlineManagmentContext = new AirlineManagmentContext();
         }
 
+     
         private List<Client> clients;
+        
+       
         private AirlineManagmentContext airlineManagmentContext;
         
+    
         public List<Client> ClientGetAll() => airlineManagmentContext.Clients.ToList();
 
+    
         public Client GetClient(int id) => airlineManagmentContext.Clients.Find(id);
 
         public int AddClient(Client client)
@@ -33,8 +40,8 @@ namespace Business.ModelsBusiness
             else
             {
                 airlineManagmentContext.Clients.Add(client);
-                airlineManagmentContext.SaveChanges();
                 this.clients.Add(client);
+                airlineManagmentContext.SaveChanges();
                 return 0;
                 // vs top
             }

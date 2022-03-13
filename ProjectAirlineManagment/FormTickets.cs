@@ -67,11 +67,11 @@ namespace ProjectAirlineManagment
             int n = ticketBusiness.AddTicket(ticket);
             if (n == 1)
             {
-                //message
+                MessageBox.Show("There are no seats available for this flight", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (n == 2)
             {
-                //message
+                MessageBox.Show("This flight does not exist", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -141,11 +141,15 @@ namespace ProjectAirlineManagment
             {
                 buttonTicketSave.Visible = false;
                 buttonTicketUpdate.Visible = true;
+                buttonTicketsInsert.Visible = true;
+                buttonTicketDelete.Visible = true;
             }
             else
             {
                 buttonTicketSave.Visible = true;
                 buttonTicketUpdate.Visible = false;
+                buttonTicketsInsert.Visible = false;
+                buttonTicketDelete.Visible = false;
             }
         }
 

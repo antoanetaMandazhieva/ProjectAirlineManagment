@@ -59,6 +59,17 @@ namespace ProjectAirlineManagment
             flight.Destination = destination;
             flight.SeatCount = numOfSeats;
 
+            int n = flightBusiness.AddFlight(flight);
+            if (n == 1)
+            {
+                MessageBox.Show("This flight has already been introduced", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                UpdateGrid();
+                ClearTextBoxes();
+            }
+
             flightBusiness.AddFlight(flight);
             UpdateGrid();
             ClearTextBoxes();
@@ -108,11 +119,15 @@ namespace ProjectAirlineManagment
             {
                 buttonFlightSave.Visible = false;
                 buttonFlightUpdate.Visible = true;
+                buttonFlightInsert.Visible = true;
+                buttonFlightDelete.Visible = true;
             }
             else
             {
                 buttonFlightSave.Visible = true;
                 buttonFlightUpdate.Visible = false;
+                buttonFlightInsert.Visible = false;
+                buttonFlightDelete.Visible = false;
             }
         }
         private void DisabeSelect()

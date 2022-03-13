@@ -65,11 +65,15 @@ namespace ProjectAirlineManagment
             {
                 buttonPilotSave.Visible = false;
                 buttonPilotUpdate.Visible = true;
+                buttonPilotInsert.Visible = true;
+                buttonPiloDelete.Visible = true;
             }
             else
             {
                 buttonPilotSave.Visible = true;
                 buttonPilotUpdate.Visible = false;
+                buttonPilotInsert.Visible = false;
+                buttonPiloDelete.Visible = false;
             }
         }
 
@@ -123,7 +127,7 @@ namespace ProjectAirlineManagment
             int n = pilotBusiness.AddPilot(pilot);
             if (n == 1)
             {
-                //message ima go
+                MessageBox.Show("This pilot has already been introduced", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
