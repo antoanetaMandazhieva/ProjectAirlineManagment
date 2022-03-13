@@ -66,7 +66,7 @@ namespace ProjectAirlineManagment
         {
             Ticket ticket = ticketBusiness.GetTicket(id);
             textBoxPrice.Text = ticket.Price.ToString();
-            checkedListBoxSeat.Text = ticket.Seat;
+            comboBoxSeat.Text = ticket.Seat;
             if (radioButtonOneWay.Checked)
             {
                 ticket.IsOneWayTicket = true;
@@ -97,7 +97,7 @@ namespace ProjectAirlineManagment
         {
             decimal price = 0;
             decimal.TryParse(textBoxPrice.Text, out price);
-            string seat = checkedListBoxSeat.Text; ;
+            string seat = comboBoxSeat.Text;
 
             Ticket ticket = new Ticket();
             ticket.Id = editId;
@@ -164,6 +164,11 @@ namespace ProjectAirlineManagment
                 UpdateGrid();
                 ResetSelect();
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

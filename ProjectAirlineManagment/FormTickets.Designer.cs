@@ -41,7 +41,7 @@ namespace ProjectAirlineManagment
             this.buttonTicketSave = new System.Windows.Forms.Button();
             this.radioButtonOneWay = new System.Windows.Forms.RadioButton();
             this.radioButtonRoundTrip = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxSeat = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).BeginInit();
             this.SuspendLayout();
             // 
@@ -186,10 +186,10 @@ namespace ProjectAirlineManagment
             this.radioButtonRoundTrip.Text = "A round-trip ticket";
             this.radioButtonRoundTrip.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // comboBoxSeat
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxSeat.FormattingEnabled = true;
+            this.comboBoxSeat.Items.AddRange(new object[] {
             "1А",
             "2А",
             "3А",
@@ -290,10 +290,11 @@ namespace ProjectAirlineManagment
             "18F",
             "19F",
             "20F"});
-            this.comboBox1.Location = new System.Drawing.Point(117, 138);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(135, 21);
-            this.comboBox1.TabIndex = 16;
+            this.comboBoxSeat.Location = new System.Drawing.Point(117, 138);
+            this.comboBoxSeat.Name = "comboBoxSeat";
+            this.comboBoxSeat.Size = new System.Drawing.Size(135, 21);
+            this.comboBoxSeat.TabIndex = 16;
+            this.comboBoxSeat.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // FormTickets
             // 
@@ -301,7 +302,7 @@ namespace ProjectAirlineManagment
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(663, 471);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxSeat);
             this.Controls.Add(this.radioButtonRoundTrip);
             this.Controls.Add(this.radioButtonOneWay);
             this.Controls.Add(this.buttonTicketSave);
@@ -339,6 +340,6 @@ namespace ProjectAirlineManagment
         private System.Windows.Forms.Button buttonTicketSave;
         private System.Windows.Forms.RadioButton radioButtonOneWay;
         private System.Windows.Forms.RadioButton radioButtonRoundTrip;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxSeat;
     }
 }
