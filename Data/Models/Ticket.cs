@@ -13,6 +13,6 @@ namespace Data.Models
         public int FlightId { get; set; }
         public decimal Price { get; set; }
         public string Seat { get; set; }
-        public bool IsOneWayTicket { get; set; }
+        public string TypeTicket { get; set; }
     }
 }

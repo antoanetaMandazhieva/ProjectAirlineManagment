@@ -70,6 +70,10 @@
     <Compile Include="Migrations\202203121153157_editedPilot.designer.cs">
       <DependentUpon>202203121153157_editedPilot.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202203130758495_editedModelTicket.cs" />
+    <Compile Include="Migrations\202203130758495_editedModelTicket.designer.cs">
+      <DependentUpon>202203130758495_editedModelTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Flight.cs" />
@@ -93,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202203121153157_editedPilot.resx">
       <DependentUpon>202203121153157_editedPilot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203130758495_editedModelTicket.resx">
+      <DependentUpon>202203130758495_editedModelTicket.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
