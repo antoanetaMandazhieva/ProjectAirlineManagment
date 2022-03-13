@@ -36,9 +36,9 @@ namespace Business.ModelsBusiness
             if (flight.Id == ticket.FlightId)
             {
                 airlineManagmentContext.Tickets.Add(ticket);
-                airlineManagmentContext.SaveChanges();
                 this.tickets.Add(ticket);
                 flight.TakenSeats++;
+                airlineManagmentContext.SaveChanges();
                 return 0;
                 // wsichko top
             }

@@ -52,6 +52,17 @@ namespace ProjectAirlineManagment
             client.Nationality = nationality;
             client.PassportNumber = passportNumber;
 
+            int n = clientBusiness.AddClient(client);
+            if (n == 1)
+            {
+                MessageBox.Show("This client has already been introduced", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                UpdateGrid();
+                ClearTextBoxes();
+            }
+
             clientBusiness.AddClient(client);
             UpdateGrid();
             ClearTextBoxes();
