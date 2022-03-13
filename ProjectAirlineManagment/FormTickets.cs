@@ -19,7 +19,7 @@ namespace ProjectAirlineManagment
 
         private void ClearTextBoxes()
         {
-            textBoxPrice.Text = "";
+            textBoxPrice.Text = "0";
             comboBoxSeat.Text = "";
             radioButtonOneWay.Checked = true;
             radioButtonRoundTrip.Checked = false;
