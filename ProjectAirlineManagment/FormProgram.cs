@@ -63,6 +63,7 @@ namespace ProjectAirlineManagment
         //    childForm.Show();
         //}
         #region SubMenuButtons
+        
         private void buttonClient_Click(object sender, EventArgs e)
         {
             FormClients client = new FormClients();
@@ -118,6 +119,102 @@ namespace ProjectAirlineManagment
         }
 
         private void FormProgram_Load(object sender, EventArgs e)
+        {
+            menuStripMenu.ForeColor = Color.White;
+        }
+        int mm = 0;
+        int mov;
+        int movX;
+        int movY;
+        private void menuStripMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+       
+
+        private void pictureBoxMinimize_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelClose_Paint_1(object sender, PaintEventArgs e)
+        {
+            Graphics z = e.Graphics;
+            Pen pen = new Pen(Color.Purple);
+            z.DrawLine(pen, 7, 7, 19, 19);
+            z.DrawLine(pen, 7, 19, 19, 7);
+            z.DrawLine(pen, 8, 7, 20, 19);
+            z.DrawLine(pen, 8, 19, 20, 7);
+        }
+
+        private void panelMax_Paint_1(object sender, PaintEventArgs e)
+        {
+            Graphics z = e.Graphics;
+            Color color = Color.Purple;
+            SolidBrush myBrush = new SolidBrush(color);
+            Pen pen = new Pen(Color.Purple);
+            z.DrawRectangle(pen, 7, 7, 12, 12);
+            z.FillRectangle(myBrush, 7, 7, 12, 12);
+            z.DrawRectangle(pen, 9, 7, 7, 10);
+            z.DrawRectangle(pen, 12, 12, 10, 10);
+        }
+
+        private void panelMin_Paint_1(object sender, PaintEventArgs e)
+        {
+            Graphics z = e.Graphics;
+            Color color = Color.Purple;
+            SolidBrush myBrush = new SolidBrush(color);
+            Pen pen = new Pen(Color.Purple);
+            z.DrawRectangle(pen, 7, 16, 12, 4);
+            z.FillRectangle(myBrush, 7, 16, 12, 4);
+        }
+
+        private void panelMin_Click_1(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void panelMax_Click_1(object sender, EventArgs e)
+        {
+            if (mm == 0)
+            {
+                WindowState = FormWindowState.Maximized;
+                mm = 1;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+                mm = 0;
+            }
+        }
+
+        private void panelClose_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void menuStripMenu_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            mov = 1;
+            movX = e.X;
+            movY = e.Y;
+        }
+
+        private void menuStripMenu_MouseMove_1(object sender, MouseEventArgs e)
+        {
+            if (mov == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - movX, MousePosition.Y - movY);
+            }
+        }
+
+        private void menuStripMenu_MouseUp_1(object sender, MouseEventArgs e)
+        {
+            mov = 0;
+        }
+
+        private void drawer_Paint(object sender, PaintEventArgs e)
         {
 
         }

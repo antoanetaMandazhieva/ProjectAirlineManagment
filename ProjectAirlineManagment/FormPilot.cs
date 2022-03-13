@@ -182,5 +182,10 @@ namespace ProjectAirlineManagment
         {
 
         }
+
+        private void buttonPilotInsert_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
