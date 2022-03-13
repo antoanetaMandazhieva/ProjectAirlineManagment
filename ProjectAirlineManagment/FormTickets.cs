@@ -20,7 +20,7 @@ namespace ProjectAirlineManagment
         private void ClearTextBoxes()
         {
             textBoxPrice.Text = "0";
-            checkedListBoxSeat.Text = "";
+            comboBoxSeat.Text = "";
             radioButtonOneWay.Checked = true;
             radioButtonRoundTrip.Checked = false;
         }
@@ -42,7 +42,7 @@ namespace ProjectAirlineManagment
         {
             decimal price = 0;
             decimal.TryParse(textBoxPrice.Text, out price);
-            string seat = checkedListBoxSeat.Text;;
+            string seat = comboBoxSeat.Text;;
 
             Ticket ticket = new Ticket();
             ticket.Price = price;
