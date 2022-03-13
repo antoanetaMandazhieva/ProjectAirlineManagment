@@ -8,7 +8,7 @@ namespace Data.Models
 {
     /// <summary>
     /// Create class Flight.
-    /// This class contains an objects and properties for flights.
+    /// This class contains an objects and properties for the table in FormFlight.
     /// </summary>
     public class Flight
     {
