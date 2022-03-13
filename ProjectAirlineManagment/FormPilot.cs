@@ -103,11 +103,14 @@ namespace ProjectAirlineManagment
             int age = 0;
             int.TryParse(textBoxPilotAge.Text, out age);
             string phoneNumber = textBoxPilotPhoneNum.Text; ;
+            int flightId = 0;
+            int.TryParse(textBoxPilotFlightId.Text, out flightId);
 
             Pilot pilot = new Pilot();
             pilot.Name = name;
             pilot.Age = age;
             pilot.PhoneNumber = phoneNumber;
+            pilot.FlightId = flightId;
             if (radioButtonChiefPilot.Checked)
             {
                 pilot.TypePilot = "Chief Pilot";
@@ -117,9 +120,16 @@ namespace ProjectAirlineManagment
                 pilot.TypePilot = "Assistant Pilot";
             }
 
-            pilotBusiness.AddPilot(pilot);
-            UpdateGrid();
-            ClearTextBoxes();
+            int n = pilotBusiness.AddPilot(pilot);
+            if (n == 1)
+            {
+                //message ima go
+            }
+            else
+            {
+                UpdateGrid();
+                ClearTextBoxes();
+            }
         }
 
         private void FormPilotAge_Load(object sender, EventArgs e)
