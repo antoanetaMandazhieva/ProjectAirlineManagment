@@ -140,5 +140,10 @@ namespace ProjectAirlineManagment
         {
 
         }
+
+        private void textBoxNameClient_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

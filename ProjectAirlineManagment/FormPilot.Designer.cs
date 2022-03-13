@@ -51,10 +51,9 @@ namespace ProjectAirlineManagment
             this.labelPilot.AutoSize = true;
             this.labelPilot.Font = new System.Drawing.Font("Lucida Bright", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPilot.ForeColor = System.Drawing.Color.Transparent;
-            this.labelPilot.Location = new System.Drawing.Point(50, 54);
-            this.labelPilot.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPilot.Location = new System.Drawing.Point(38, 44);
             this.labelPilot.Name = "labelPilot";
-            this.labelPilot.Size = new System.Drawing.Size(86, 34);
+            this.labelPilot.Size = new System.Drawing.Size(66, 27);
             this.labelPilot.TabIndex = 0;
             this.labelPilot.Text = "Pilot";
             // 
@@ -63,10 +62,9 @@ namespace ProjectAirlineManagment
             this.labelPilotName.AutoSize = true;
             this.labelPilotName.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPilotName.ForeColor = System.Drawing.Color.White;
-            this.labelPilotName.Location = new System.Drawing.Point(69, 124);
-            this.labelPilotName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPilotName.Location = new System.Drawing.Point(52, 101);
             this.labelPilotName.Name = "labelPilotName";
-            this.labelPilotName.Size = new System.Drawing.Size(68, 23);
+            this.labelPilotName.Size = new System.Drawing.Size(54, 18);
             this.labelPilotName.TabIndex = 1;
             this.labelPilotName.Text = "Name";
             // 
@@ -75,10 +73,9 @@ namespace ProjectAirlineManagment
             this.labelPilotPhoneNum.AutoSize = true;
             this.labelPilotPhoneNum.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPilotPhoneNum.ForeColor = System.Drawing.Color.White;
-            this.labelPilotPhoneNum.Location = new System.Drawing.Point(69, 209);
-            this.labelPilotPhoneNum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPilotPhoneNum.Location = new System.Drawing.Point(52, 170);
             this.labelPilotPhoneNum.Name = "labelPilotPhoneNum";
-            this.labelPilotPhoneNum.Size = new System.Drawing.Size(159, 23);
+            this.labelPilotPhoneNum.Size = new System.Drawing.Size(123, 18);
             this.labelPilotPhoneNum.TabIndex = 2;
             this.labelPilotPhoneNum.Text = "Phone number";
             // 
@@ -87,10 +84,9 @@ namespace ProjectAirlineManagment
             this.labelAge.AutoSize = true;
             this.labelAge.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAge.ForeColor = System.Drawing.Color.White;
-            this.labelAge.Location = new System.Drawing.Point(69, 166);
-            this.labelAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelAge.Location = new System.Drawing.Point(52, 135);
             this.labelAge.Name = "labelAge";
-            this.labelAge.Size = new System.Drawing.Size(49, 23);
+            this.labelAge.Size = new System.Drawing.Size(40, 18);
             this.labelAge.TabIndex = 3;
             this.labelAge.Text = "Age";
             // 
@@ -99,11 +95,10 @@ namespace ProjectAirlineManagment
             this.dataGridViewPilot.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.dataGridViewPilot.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewPilot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPilot.Location = new System.Drawing.Point(73, 283);
-            this.dataGridViewPilot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewPilot.Location = new System.Drawing.Point(55, 230);
             this.dataGridViewPilot.Name = "dataGridViewPilot";
             this.dataGridViewPilot.RowHeadersWidth = 51;
-            this.dataGridViewPilot.Size = new System.Drawing.Size(540, 185);
+            this.dataGridViewPilot.Size = new System.Drawing.Size(405, 150);
             this.dataGridViewPilot.TabIndex = 7;
             // 
             // buttonPilotInsert
@@ -111,10 +106,9 @@ namespace ProjectAirlineManagment
             this.buttonPilotInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.buttonPilotInsert.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPilotInsert.ForeColor = System.Drawing.Color.White;
-            this.buttonPilotInsert.Location = new System.Drawing.Point(694, 118);
-            this.buttonPilotInsert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonPilotInsert.Location = new System.Drawing.Point(520, 96);
             this.buttonPilotInsert.Name = "buttonPilotInsert";
-            this.buttonPilotInsert.Size = new System.Drawing.Size(129, 46);
+            this.buttonPilotInsert.Size = new System.Drawing.Size(97, 37);
             this.buttonPilotInsert.TabIndex = 8;
             this.buttonPilotInsert.Text = "Insert";
             this.buttonPilotInsert.UseVisualStyleBackColor = false;
@@ -125,10 +119,9 @@ namespace ProjectAirlineManagment
             this.buttonPilotUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.buttonPilotUpdate.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPilotUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonPilotUpdate.Location = new System.Drawing.Point(694, 212);
-            this.buttonPilotUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonPilotUpdate.Location = new System.Drawing.Point(520, 172);
             this.buttonPilotUpdate.Name = "buttonPilotUpdate";
-            this.buttonPilotUpdate.Size = new System.Drawing.Size(129, 46);
+            this.buttonPilotUpdate.Size = new System.Drawing.Size(97, 37);
             this.buttonPilotUpdate.TabIndex = 9;
             this.buttonPilotUpdate.Text = "Update";
             this.buttonPilotUpdate.UseVisualStyleBackColor = false;
@@ -139,10 +132,9 @@ namespace ProjectAirlineManagment
             this.buttonPiloDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.buttonPiloDelete.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPiloDelete.ForeColor = System.Drawing.Color.White;
-            this.buttonPiloDelete.Location = new System.Drawing.Point(694, 315);
-            this.buttonPiloDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonPiloDelete.Location = new System.Drawing.Point(520, 256);
             this.buttonPiloDelete.Name = "buttonPiloDelete";
-            this.buttonPiloDelete.Size = new System.Drawing.Size(129, 46);
+            this.buttonPiloDelete.Size = new System.Drawing.Size(97, 37);
             this.buttonPiloDelete.TabIndex = 10;
             this.buttonPiloDelete.Text = "Delete";
             this.buttonPiloDelete.UseVisualStyleBackColor = false;
@@ -153,10 +145,9 @@ namespace ProjectAirlineManagment
             this.buttonPilotSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.buttonPilotSave.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPilotSave.ForeColor = System.Drawing.Color.White;
-            this.buttonPilotSave.Location = new System.Drawing.Point(694, 422);
-            this.buttonPilotSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonPilotSave.Location = new System.Drawing.Point(520, 343);
             this.buttonPilotSave.Name = "buttonPilotSave";
-            this.buttonPilotSave.Size = new System.Drawing.Size(129, 46);
+            this.buttonPilotSave.Size = new System.Drawing.Size(97, 37);
             this.buttonPilotSave.TabIndex = 11;
             this.buttonPilotSave.Text = "Save";
             this.buttonPilotSave.UseVisualStyleBackColor = false;
@@ -165,26 +156,24 @@ namespace ProjectAirlineManagment
             // 
             // textBoxPilotName
             // 
-            this.textBoxPilotName.Location = new System.Drawing.Point(269, 127);
-            this.textBoxPilotName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPilotName.Location = new System.Drawing.Point(202, 103);
             this.textBoxPilotName.Name = "textBoxPilotName";
-            this.textBoxPilotName.Size = new System.Drawing.Size(132, 22);
+            this.textBoxPilotName.Size = new System.Drawing.Size(100, 20);
             this.textBoxPilotName.TabIndex = 12;
+            this.textBoxPilotName.TextChanged += new System.EventHandler(this.textBoxPilotName_TextChanged);
             // 
             // textBoxPilotPhoneNum
             // 
-            this.textBoxPilotPhoneNum.Location = new System.Drawing.Point(269, 212);
-            this.textBoxPilotPhoneNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPilotPhoneNum.Location = new System.Drawing.Point(202, 172);
             this.textBoxPilotPhoneNum.Name = "textBoxPilotPhoneNum";
-            this.textBoxPilotPhoneNum.Size = new System.Drawing.Size(132, 22);
+            this.textBoxPilotPhoneNum.Size = new System.Drawing.Size(100, 20);
             this.textBoxPilotPhoneNum.TabIndex = 13;
             // 
             // textBoxPilotAge
             // 
-            this.textBoxPilotAge.Location = new System.Drawing.Point(269, 169);
-            this.textBoxPilotAge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPilotAge.Location = new System.Drawing.Point(202, 137);
             this.textBoxPilotAge.Name = "textBoxPilotAge";
-            this.textBoxPilotAge.Size = new System.Drawing.Size(132, 22);
+            this.textBoxPilotAge.Size = new System.Drawing.Size(100, 20);
             this.textBoxPilotAge.TabIndex = 14;
             // 
             // radioButtonChiefPilot
@@ -192,10 +181,9 @@ namespace ProjectAirlineManagment
             this.radioButtonChiefPilot.AutoSize = true;
             this.radioButtonChiefPilot.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonChiefPilot.ForeColor = System.Drawing.Color.White;
-            this.radioButtonChiefPilot.Location = new System.Drawing.Point(466, 137);
-            this.radioButtonChiefPilot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButtonChiefPilot.Location = new System.Drawing.Point(350, 111);
             this.radioButtonChiefPilot.Name = "radioButtonChiefPilot";
-            this.radioButtonChiefPilot.Size = new System.Drawing.Size(135, 27);
+            this.radioButtonChiefPilot.Size = new System.Drawing.Size(108, 22);
             this.radioButtonChiefPilot.TabIndex = 15;
             this.radioButtonChiefPilot.TabStop = true;
             this.radioButtonChiefPilot.Text = "Chief Pilot";
@@ -206,10 +194,9 @@ namespace ProjectAirlineManagment
             this.radioButtonAssistantPilot.AutoSize = true;
             this.radioButtonAssistantPilot.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonAssistantPilot.ForeColor = System.Drawing.Color.White;
-            this.radioButtonAssistantPilot.Location = new System.Drawing.Point(466, 172);
-            this.radioButtonAssistantPilot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButtonAssistantPilot.Location = new System.Drawing.Point(350, 140);
             this.radioButtonAssistantPilot.Name = "radioButtonAssistantPilot";
-            this.radioButtonAssistantPilot.Size = new System.Drawing.Size(173, 27);
+            this.radioButtonAssistantPilot.Size = new System.Drawing.Size(139, 22);
             this.radioButtonAssistantPilot.TabIndex = 16;
             this.radioButtonAssistantPilot.TabStop = true;
             this.radioButtonAssistantPilot.Text = "Assistant Pilot";
@@ -217,10 +204,10 @@ namespace ProjectAirlineManagment
             // 
             // FormPilotAge
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(863, 532);
+            this.ClientSize = new System.Drawing.Size(647, 432);
             this.Controls.Add(this.radioButtonAssistantPilot);
             this.Controls.Add(this.radioButtonChiefPilot);
             this.Controls.Add(this.textBoxPilotAge);
@@ -236,7 +223,6 @@ namespace ProjectAirlineManagment
             this.Controls.Add(this.labelPilotName);
             this.Controls.Add(this.labelPilot);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormPilotAge";
             this.Text = "FormPilot";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
