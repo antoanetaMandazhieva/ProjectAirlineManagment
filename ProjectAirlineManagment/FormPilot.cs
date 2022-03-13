@@ -65,11 +65,15 @@ namespace ProjectAirlineManagment
             {
                 buttonPilotSave.Visible = false;
                 buttonPilotUpdate.Visible = true;
+                buttonPilotInsert.Visible = true;
+                buttonPiloDelete.Visible = true;
             }
             else
             {
                 buttonPilotSave.Visible = true;
                 buttonPilotUpdate.Visible = false;
+                buttonPilotInsert.Visible = false;
+                buttonPiloDelete.Visible = false;
             }
         }
 

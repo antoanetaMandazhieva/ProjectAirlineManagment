@@ -119,11 +119,15 @@ namespace ProjectAirlineManagment
             {
                 buttonFlightSave.Visible = false;
                 buttonFlightUpdate.Visible = true;
+                buttonFlightInsert.Visible = true;
+                buttonFlightDelete.Visible = true;
             }
             else
             {
                 buttonFlightSave.Visible = true;
                 buttonFlightUpdate.Visible = false;
+                buttonFlightInsert.Visible = false;
+                buttonFlightDelete.Visible = false;
             }
         }
         private void DisabeSelect()
