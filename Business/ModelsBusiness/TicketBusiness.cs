@@ -57,6 +57,7 @@ namespace Business.ModelsBusiness
             if (ticket != null)
             {
                 flight.TakenSeats--;
+                airlineManagmentContext.Tickets.Remove(ticket);
                 this.tickets.Remove(ticket);
                 airlineManagmentContext.SaveChanges();
             }

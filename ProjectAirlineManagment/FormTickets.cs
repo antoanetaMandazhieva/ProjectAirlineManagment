@@ -19,7 +19,7 @@ namespace ProjectAirlineManagment
 
         private void ClearTextBoxes()
         {
-            textBoxPrice.Text = "";
+            textBoxPrice.Text = "0";
             comboBoxSeat.Text = "";
             radioButtonOneWay.Checked = true;
             radioButtonRoundTrip.Checked = false;
@@ -40,11 +40,19 @@ namespace ProjectAirlineManagment
 
         private void button3_Click(object sender, EventArgs e)
         {
+
+            int clientId = 0;
+            int.TryParse(textBoxTicketClientId.Text, out clientId);
+            int flightId = 0;
+            int.TryParse(textBoxTicketFlightId.Text, out flightId);
             decimal price = 0;
             decimal.TryParse(textBoxPrice.Text, out price);
             string seat = comboBoxSeat.Text;;
 
+
             Ticket ticket = new Ticket();
+            ticket.ClientId = clientId;
+            ticket.FlightId = flightId;
             ticket.Price = price;
             ticket.Seat = seat;
             if (radioButtonOneWay.Checked)
@@ -56,9 +64,21 @@ namespace ProjectAirlineManagment
                 ticket.TypeTicket = "A round-trip ticket";
             }
 
-            ticketBusiness.AddTicket(ticket);
-            UpdateGrid();
-            ClearTextBoxes();
+            int n = ticketBusiness.AddTicket(ticket);
+            if (n == 1)
+            {
+                //message
+            }
+            else if (n == 2)
+            {
+                //message
+            }
+            else
+            {
+                UpdateGrid();
+                ClearTextBoxes();
+            }
+           
         }
 
         private void UpdateTextBoxes(int id)
@@ -166,6 +186,11 @@ namespace ProjectAirlineManagment
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
