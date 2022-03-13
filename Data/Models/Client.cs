@@ -8,7 +8,7 @@ namespace Data.Models
 {
     /// <summary>
     /// Create class Client.
-    /// This class contains objects with their properties.
+    /// This class contains objects with their properties for the table in FormClient.
     /// </summary>
     public class Client
     {
