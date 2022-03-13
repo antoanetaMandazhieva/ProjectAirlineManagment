@@ -19,7 +19,7 @@ namespace ProjectAirlineManagment
 
         private void ClearTextBoxes()
         {
-            textBoxPrice.Text = "0";
+            textBoxPrice.Text = "";
             comboBoxSeat.Text = "";
             radioButtonOneWay.Checked = true;
             radioButtonRoundTrip.Checked = false;
@@ -47,14 +47,13 @@ namespace ProjectAirlineManagment
             Ticket ticket = new Ticket();
             ticket.Price = price;
             ticket.Seat = seat;
-            ticket.IsOneWayTicket = false;
             if (radioButtonOneWay.Checked)
             {
-                ticket.IsOneWayTicket = true;
+                ticket.TypeTicket = "A one-way ticket";
             }
             else
             {
-                ticket.IsOneWayTicket = false;
+                ticket.TypeTicket = "A round-trip ticket";
             }
 
             ticketBusiness.AddTicket(ticket);
@@ -69,11 +68,11 @@ namespace ProjectAirlineManagment
             comboBoxSeat.Text = ticket.Seat;
             if (radioButtonOneWay.Checked)
             {
-                ticket.IsOneWayTicket = true;
+                ticket.TypeTicket = "A one-way ticket";
             }
             else
             {
-                ticket.IsOneWayTicket = false;
+                ticket.TypeTicket = "A round-trip ticket";
             }
         }
 
@@ -103,14 +102,14 @@ namespace ProjectAirlineManagment
             ticket.Id = editId;
             ticket.Price = price;
             ticket.Seat = seat;
-            ticket.IsOneWayTicket = false;
+
             if (radioButtonOneWay.Checked)
             {
-                ticket.IsOneWayTicket = true;
+                ticket.TypeTicket = "A one-way ticket";
             }
             else
             {
-                ticket.IsOneWayTicket = false;
+                ticket.TypeTicket = "A round-trip ticket";
             }
 
             return ticket;
