@@ -29,21 +29,25 @@ namespace ProjectAirlineManagment
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFirstPage));
             this.menuStripMenu = new System.Windows.Forms.MenuStrip();
             this.panelMax = new System.Windows.Forms.Panel();
             this.panelClose = new System.Windows.Forms.Panel();
             this.panelMin = new System.Windows.Forms.Panel();
             this.panelSideMenu = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.buttonHome = new System.Windows.Forms.Button();
-            this.buttonMenu = new System.Windows.Forms.Button();
             this.panelMenuSubmenu = new System.Windows.Forms.Panel();
-            this.buttonClients = new System.Windows.Forms.Button();
-            this.buttonFlights = new System.Windows.Forms.Button();
-            this.buttonTickets = new System.Windows.Forms.Button();
             this.buttonPilots = new System.Windows.Forms.Button();
+            this.buttonTickets = new System.Windows.Forms.Button();
+            this.buttonFlights = new System.Windows.Forms.Button();
+            this.buttonClients = new System.Windows.Forms.Button();
+            this.buttonMenu = new System.Windows.Forms.Button();
+            this.buttonHome = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
             this.panelMenuSubmenu.SuspendLayout();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStripMenu
@@ -105,30 +109,81 @@ namespace ProjectAirlineManagment
             this.panelSideMenu.Size = new System.Drawing.Size(155, 426);
             this.panelSideMenu.TabIndex = 3;
             // 
-            // panelLogo
+            // panelMenuSubmenu
             // 
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(155, 83);
-            this.panelLogo.TabIndex = 4;
+            this.panelMenuSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
+            this.panelMenuSubmenu.Controls.Add(this.buttonPilots);
+            this.panelMenuSubmenu.Controls.Add(this.buttonTickets);
+            this.panelMenuSubmenu.Controls.Add(this.buttonFlights);
+            this.panelMenuSubmenu.Controls.Add(this.buttonClients);
+            this.panelMenuSubmenu.Location = new System.Drawing.Point(0, 173);
+            this.panelMenuSubmenu.Name = "panelMenuSubmenu";
+            this.panelMenuSubmenu.Size = new System.Drawing.Size(155, 163);
+            this.panelMenuSubmenu.TabIndex = 7;
             // 
-            // buttonHome
+            // buttonPilots
             // 
-            this.buttonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(26)))), ((int)(((byte)(56)))));
-            this.buttonHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHome.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHome.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonHome.Location = new System.Drawing.Point(0, 83);
-            this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonHome.Size = new System.Drawing.Size(155, 45);
-            this.buttonHome.TabIndex = 5;
-            this.buttonHome.Text = "Home";
-            this.buttonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHome.UseVisualStyleBackColor = false;
-            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
+            this.buttonPilots.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonPilots.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPilots.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPilots.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonPilots.Location = new System.Drawing.Point(0, 120);
+            this.buttonPilots.Name = "buttonPilots";
+            this.buttonPilots.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.buttonPilots.Size = new System.Drawing.Size(155, 40);
+            this.buttonPilots.TabIndex = 3;
+            this.buttonPilots.Text = "Pilots";
+            this.buttonPilots.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPilots.UseVisualStyleBackColor = true;
+            this.buttonPilots.Click += new System.EventHandler(this.buttonPilots_Click);
+            // 
+            // buttonTickets
+            // 
+            this.buttonTickets.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTickets.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTickets.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonTickets.Location = new System.Drawing.Point(0, 80);
+            this.buttonTickets.Name = "buttonTickets";
+            this.buttonTickets.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.buttonTickets.Size = new System.Drawing.Size(155, 40);
+            this.buttonTickets.TabIndex = 2;
+            this.buttonTickets.Text = "Tickets";
+            this.buttonTickets.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTickets.UseVisualStyleBackColor = true;
+            this.buttonTickets.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // buttonFlights
+            // 
+            this.buttonFlights.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonFlights.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFlights.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFlights.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonFlights.Location = new System.Drawing.Point(0, 40);
+            this.buttonFlights.Name = "buttonFlights";
+            this.buttonFlights.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.buttonFlights.Size = new System.Drawing.Size(155, 40);
+            this.buttonFlights.TabIndex = 1;
+            this.buttonFlights.Text = "Flights";
+            this.buttonFlights.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonFlights.UseVisualStyleBackColor = true;
+            this.buttonFlights.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // buttonClients
+            // 
+            this.buttonClients.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClients.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClients.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonClients.Location = new System.Drawing.Point(0, 0);
+            this.buttonClients.Name = "buttonClients";
+            this.buttonClients.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.buttonClients.Size = new System.Drawing.Size(155, 40);
+            this.buttonClients.TabIndex = 0;
+            this.buttonClients.Text = "Clients";
+            this.buttonClients.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonClients.UseVisualStyleBackColor = true;
+            this.buttonClients.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonMenu
             // 
@@ -147,81 +202,41 @@ namespace ProjectAirlineManagment
             this.buttonMenu.UseVisualStyleBackColor = false;
             this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
             // 
-            // panelMenuSubmenu
+            // buttonHome
             // 
-            this.panelMenuSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
-            this.panelMenuSubmenu.Controls.Add(this.buttonPilots);
-            this.panelMenuSubmenu.Controls.Add(this.buttonTickets);
-            this.panelMenuSubmenu.Controls.Add(this.buttonFlights);
-            this.panelMenuSubmenu.Controls.Add(this.buttonClients);
-            this.panelMenuSubmenu.Location = new System.Drawing.Point(0, 173);
-            this.panelMenuSubmenu.Name = "panelMenuSubmenu";
-            this.panelMenuSubmenu.Size = new System.Drawing.Size(155, 163);
-            this.panelMenuSubmenu.TabIndex = 7;
+            this.buttonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(26)))), ((int)(((byte)(56)))));
+            this.buttonHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHome.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHome.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonHome.Location = new System.Drawing.Point(0, 83);
+            this.buttonHome.Name = "buttonHome";
+            this.buttonHome.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonHome.Size = new System.Drawing.Size(155, 45);
+            this.buttonHome.TabIndex = 5;
+            this.buttonHome.Text = "Home";
+            this.buttonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHome.UseVisualStyleBackColor = false;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
-            // buttonClients
+            // panelLogo
             // 
-            this.buttonClients.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClients.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClients.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonClients.Location = new System.Drawing.Point(0, 0);
-            this.buttonClients.Name = "buttonClients";
-            this.buttonClients.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.buttonClients.Size = new System.Drawing.Size(155, 40);
-            this.buttonClients.TabIndex = 0;
-            this.buttonClients.Text = "Clients";
-            this.buttonClients.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonClients.UseVisualStyleBackColor = true;
-            this.buttonClients.Click += new System.EventHandler(this.button1_Click);
+            this.panelLogo.Controls.Add(this.pictureBox1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(155, 83);
+            this.panelLogo.TabIndex = 4;
             // 
-            // buttonFlights
+            // pictureBox1
             // 
-            this.buttonFlights.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonFlights.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonFlights.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonFlights.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonFlights.Location = new System.Drawing.Point(0, 40);
-            this.buttonFlights.Name = "buttonFlights";
-            this.buttonFlights.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.buttonFlights.Size = new System.Drawing.Size(155, 40);
-            this.buttonFlights.TabIndex = 1;
-            this.buttonFlights.Text = "Flights";
-            this.buttonFlights.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonFlights.UseVisualStyleBackColor = true;
-            this.buttonFlights.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // buttonTickets
-            // 
-            this.buttonTickets.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTickets.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTickets.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonTickets.Location = new System.Drawing.Point(0, 80);
-            this.buttonTickets.Name = "buttonTickets";
-            this.buttonTickets.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.buttonTickets.Size = new System.Drawing.Size(155, 40);
-            this.buttonTickets.TabIndex = 2;
-            this.buttonTickets.Text = "Tickets";
-            this.buttonTickets.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTickets.UseVisualStyleBackColor = true;
-            this.buttonTickets.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // buttonPilots
-            // 
-            this.buttonPilots.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonPilots.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPilots.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPilots.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonPilots.Location = new System.Drawing.Point(0, 120);
-            this.buttonPilots.Name = "buttonPilots";
-            this.buttonPilots.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.buttonPilots.Size = new System.Drawing.Size(155, 40);
-            this.buttonPilots.TabIndex = 3;
-            this.buttonPilots.Text = "Pilots";
-            this.buttonPilots.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPilots.UseVisualStyleBackColor = true;
-            this.buttonPilots.Click += new System.EventHandler(this.buttonPilots_Click);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(155, 83);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // FormFirstPage
             // 
@@ -241,6 +256,8 @@ namespace ProjectAirlineManagment
             this.Load += new System.EventHandler(this.FormFirstPage_Load);
             this.panelSideMenu.ResumeLayout(false);
             this.panelMenuSubmenu.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,5 +278,6 @@ namespace ProjectAirlineManagment
         private System.Windows.Forms.Button buttonPilots;
         private System.Windows.Forms.Button buttonTickets;
         private System.Windows.Forms.Button buttonFlights;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -44,7 +44,7 @@ namespace Data
 
         /// <summary>
         /// Create an object from Dbcontext using Dbcontext.Set method for pilots.
-        /// Create a properties.
+        /// 
         /// </summary>
         public DbSet<Pilot> Pilots { get; set; }
 
