@@ -54,6 +54,10 @@
     <Compile Include="AirlineManagmentBusiness.cs" />
     <Compile Include="ModelsBusiness\ClientBusiness.cs" />
     <Compile Include="ModelsBusiness\FlightBusiness.cs" />
+    <Compile Include="ModelsBusiness\IClientBusiness.cs" />
+    <Compile Include="ModelsBusiness\IFlightBusiness.cs" />
+    <Compile Include="ModelsBusiness\IPilotBusiness.cs" />
+    <Compile Include="ModelsBusiness\ITicketBusiness.cs" />
     <Compile Include="ModelsBusiness\PilotBusiness.cs" />
     <Compile Include="ModelsBusiness\TicketBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

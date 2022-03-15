@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{9BE40F5D-4D55-47F7-A0E6-04F217037358}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectAirlineManagment.Tests", "ProjectAirlineManagment.Tests\ProjectAirlineManagment.Tests.csproj", "{B49EEFA7-86E2-4C4F-9812-23219F7F796B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9BE40F5D-4D55-47F7-A0E6-04F217037358}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BE40F5D-4D55-47F7-A0E6-04F217037358}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BE40F5D-4D55-47F7-A0E6-04F217037358}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B49EEFA7-86E2-4C4F-9812-23219F7F796B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B49EEFA7-86E2-4C4F-9812-23219F7F796B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B49EEFA7-86E2-4C4F-9812-23219F7F796B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B49EEFA7-86E2-4C4F-9812-23219F7F796B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
