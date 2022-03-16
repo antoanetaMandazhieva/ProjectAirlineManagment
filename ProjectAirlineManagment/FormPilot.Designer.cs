@@ -64,7 +64,7 @@ namespace ProjectAirlineManagment
             this.labelPilotName.AutoSize = true;
             this.labelPilotName.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPilotName.ForeColor = System.Drawing.Color.White;
-            this.labelPilotName.Location = new System.Drawing.Point(52, 123);
+            this.labelPilotName.Location = new System.Drawing.Point(55, 90);
             this.labelPilotName.Name = "labelPilotName";
             this.labelPilotName.Size = new System.Drawing.Size(54, 18);
             this.labelPilotName.TabIndex = 1;
@@ -75,7 +75,7 @@ namespace ProjectAirlineManagment
             this.labelPilotPhoneNum.AutoSize = true;
             this.labelPilotPhoneNum.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPilotPhoneNum.ForeColor = System.Drawing.Color.White;
-            this.labelPilotPhoneNum.Location = new System.Drawing.Point(52, 188);
+            this.labelPilotPhoneNum.Location = new System.Drawing.Point(55, 155);
             this.labelPilotPhoneNum.Name = "labelPilotPhoneNum";
             this.labelPilotPhoneNum.Size = new System.Drawing.Size(123, 18);
             this.labelPilotPhoneNum.TabIndex = 2;
@@ -86,7 +86,7 @@ namespace ProjectAirlineManagment
             this.labelAge.AutoSize = true;
             this.labelAge.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAge.ForeColor = System.Drawing.Color.White;
-            this.labelAge.Location = new System.Drawing.Point(52, 157);
+            this.labelAge.Location = new System.Drawing.Point(55, 124);
             this.labelAge.Name = "labelAge";
             this.labelAge.Size = new System.Drawing.Size(40, 18);
             this.labelAge.TabIndex = 3;
@@ -97,7 +97,7 @@ namespace ProjectAirlineManagment
             this.dataGridViewPilot.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.dataGridViewPilot.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewPilot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPilot.Location = new System.Drawing.Point(55, 256);
+            this.dataGridViewPilot.Location = new System.Drawing.Point(58, 223);
             this.dataGridViewPilot.Name = "dataGridViewPilot";
             this.dataGridViewPilot.RowHeadersWidth = 51;
             this.dataGridViewPilot.Size = new System.Drawing.Size(425, 164);
@@ -109,7 +109,7 @@ namespace ProjectAirlineManagment
             this.buttonPilotInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPilotInsert.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPilotInsert.ForeColor = System.Drawing.Color.White;
-            this.buttonPilotInsert.Location = new System.Drawing.Point(520, 254);
+            this.buttonPilotInsert.Location = new System.Drawing.Point(523, 221);
             this.buttonPilotInsert.Name = "buttonPilotInsert";
             this.buttonPilotInsert.Size = new System.Drawing.Size(97, 37);
             this.buttonPilotInsert.TabIndex = 8;
@@ -124,7 +124,7 @@ namespace ProjectAirlineManagment
             this.buttonPilotUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPilotUpdate.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPilotUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonPilotUpdate.Location = new System.Drawing.Point(520, 297);
+            this.buttonPilotUpdate.Location = new System.Drawing.Point(523, 264);
             this.buttonPilotUpdate.Name = "buttonPilotUpdate";
             this.buttonPilotUpdate.Size = new System.Drawing.Size(97, 37);
             this.buttonPilotUpdate.TabIndex = 9;
@@ -138,7 +138,7 @@ namespace ProjectAirlineManagment
             this.buttonPiloDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPiloDelete.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPiloDelete.ForeColor = System.Drawing.Color.White;
-            this.buttonPiloDelete.Location = new System.Drawing.Point(520, 340);
+            this.buttonPiloDelete.Location = new System.Drawing.Point(523, 307);
             this.buttonPiloDelete.Name = "buttonPiloDelete";
             this.buttonPiloDelete.Size = new System.Drawing.Size(97, 37);
             this.buttonPiloDelete.TabIndex = 10;
@@ -152,7 +152,7 @@ namespace ProjectAirlineManagment
             this.buttonPilotSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPilotSave.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPilotSave.ForeColor = System.Drawing.Color.White;
-            this.buttonPilotSave.Location = new System.Drawing.Point(520, 383);
+            this.buttonPilotSave.Location = new System.Drawing.Point(523, 350);
             this.buttonPilotSave.Name = "buttonPilotSave";
             this.buttonPilotSave.Size = new System.Drawing.Size(97, 37);
             this.buttonPilotSave.TabIndex = 11;
@@ -163,7 +163,7 @@ namespace ProjectAirlineManagment
             // 
             // textBoxPilotName
             // 
-            this.textBoxPilotName.Location = new System.Drawing.Point(202, 124);
+            this.textBoxPilotName.Location = new System.Drawing.Point(205, 91);
             this.textBoxPilotName.Name = "textBoxPilotName";
             this.textBoxPilotName.Size = new System.Drawing.Size(100, 20);
             this.textBoxPilotName.TabIndex = 12;
@@ -171,7 +171,7 @@ namespace ProjectAirlineManagment
             // 
             // textBoxPilotPhoneNum
             // 
-            this.textBoxPilotPhoneNum.Location = new System.Drawing.Point(202, 189);
+            this.textBoxPilotPhoneNum.Location = new System.Drawing.Point(205, 156);
             this.textBoxPilotPhoneNum.Name = "textBoxPilotPhoneNum";
             this.textBoxPilotPhoneNum.Size = new System.Drawing.Size(100, 20);
             this.textBoxPilotPhoneNum.TabIndex = 13;
@@ -179,7 +179,7 @@ namespace ProjectAirlineManagment
             // 
             // textBoxPilotAge
             // 
-            this.textBoxPilotAge.Location = new System.Drawing.Point(202, 158);
+            this.textBoxPilotAge.Location = new System.Drawing.Point(205, 125);
             this.textBoxPilotAge.Name = "textBoxPilotAge";
             this.textBoxPilotAge.Size = new System.Drawing.Size(100, 20);
             this.textBoxPilotAge.TabIndex = 14;
@@ -189,7 +189,7 @@ namespace ProjectAirlineManagment
             this.radioButtonChiefPilot.AutoSize = true;
             this.radioButtonChiefPilot.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonChiefPilot.ForeColor = System.Drawing.Color.White;
-            this.radioButtonChiefPilot.Location = new System.Drawing.Point(341, 95);
+            this.radioButtonChiefPilot.Location = new System.Drawing.Point(344, 62);
             this.radioButtonChiefPilot.Name = "radioButtonChiefPilot";
             this.radioButtonChiefPilot.Size = new System.Drawing.Size(108, 22);
             this.radioButtonChiefPilot.TabIndex = 15;
@@ -202,7 +202,7 @@ namespace ProjectAirlineManagment
             this.radioButtonAssistantPilot.AutoSize = true;
             this.radioButtonAssistantPilot.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonAssistantPilot.ForeColor = System.Drawing.Color.White;
-            this.radioButtonAssistantPilot.Location = new System.Drawing.Point(341, 124);
+            this.radioButtonAssistantPilot.Location = new System.Drawing.Point(344, 91);
             this.radioButtonAssistantPilot.Name = "radioButtonAssistantPilot";
             this.radioButtonAssistantPilot.Size = new System.Drawing.Size(139, 22);
             this.radioButtonAssistantPilot.TabIndex = 16;
@@ -212,7 +212,7 @@ namespace ProjectAirlineManagment
             // 
             // textBoxPilotFlightId
             // 
-            this.textBoxPilotFlightId.Location = new System.Drawing.Point(202, 219);
+            this.textBoxPilotFlightId.Location = new System.Drawing.Point(205, 186);
             this.textBoxPilotFlightId.Name = "textBoxPilotFlightId";
             this.textBoxPilotFlightId.Size = new System.Drawing.Size(100, 20);
             this.textBoxPilotFlightId.TabIndex = 20;
@@ -222,7 +222,7 @@ namespace ProjectAirlineManagment
             this.labelPilotFlightId.AutoSize = true;
             this.labelPilotFlightId.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPilotFlightId.ForeColor = System.Drawing.Color.White;
-            this.labelPilotFlightId.Location = new System.Drawing.Point(52, 221);
+            this.labelPilotFlightId.Location = new System.Drawing.Point(55, 188);
             this.labelPilotFlightId.Name = "labelPilotFlightId";
             this.labelPilotFlightId.Size = new System.Drawing.Size(75, 18);
             this.labelPilotFlightId.TabIndex = 19;
@@ -233,7 +233,7 @@ namespace ProjectAirlineManagment
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(647, 432);
+            this.ClientSize = new System.Drawing.Size(644, 399);
             this.Controls.Add(this.textBoxPilotFlightId);
             this.Controls.Add(this.labelPilotFlightId);
             this.Controls.Add(this.radioButtonAssistantPilot);

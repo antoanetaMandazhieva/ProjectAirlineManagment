@@ -36,12 +36,17 @@ namespace ProjectAirlineManagment
             else
             {
                 timerProgressBar.Stop();
-                FormProgram form = new FormProgram();
+                FormFirstPage form = new FormFirstPage();
                 form.ShowDialog();
             }
         }
 
         private void labelName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxStartPhoto_Click(object sender, EventArgs e)
         {
 
         }

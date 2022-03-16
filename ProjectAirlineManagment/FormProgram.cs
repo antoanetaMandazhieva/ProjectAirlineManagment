@@ -72,6 +72,7 @@ namespace ProjectAirlineManagment
                 item.Close();
             }
             client.MdiParent = this;
+            client.BringToFront();
             client.Show();
         }
         private void buttonTicket_Click(object sender, EventArgs e)
@@ -215,6 +216,11 @@ namespace ProjectAirlineManagment
         }
 
         private void drawer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
         {
 
         }

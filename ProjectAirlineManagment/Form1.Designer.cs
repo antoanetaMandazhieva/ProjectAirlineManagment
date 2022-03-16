@@ -55,7 +55,7 @@ namespace ProjectAirlineManagment
             // progressBarStart
             // 
             this.progressBarStart.Location = new System.Drawing.Point(-1, 232);
-            this.progressBarStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.progressBarStart.Margin = new System.Windows.Forms.Padding(2);
             this.progressBarStart.Name = "progressBarStart";
             this.progressBarStart.Size = new System.Drawing.Size(444, 22);
             this.progressBarStart.TabIndex = 2;
@@ -71,12 +71,13 @@ namespace ProjectAirlineManagment
             this.pictureBoxStartPhoto.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxStartPhoto.Image")));
             this.pictureBoxStartPhoto.InitialImage = null;
             this.pictureBoxStartPhoto.Location = new System.Drawing.Point(-47, -44);
-            this.pictureBoxStartPhoto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxStartPhoto.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxStartPhoto.Name = "pictureBoxStartPhoto";
             this.pictureBoxStartPhoto.Size = new System.Drawing.Size(534, 286);
             this.pictureBoxStartPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxStartPhoto.TabIndex = 0;
             this.pictureBoxStartPhoto.TabStop = false;
+            this.pictureBoxStartPhoto.Click += new System.EventHandler(this.pictureBoxStartPhoto_Click);
             // 
             // FormStart
             // 
