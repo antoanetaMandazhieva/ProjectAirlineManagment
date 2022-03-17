@@ -105,10 +105,12 @@ namespace ProjectAirlineManagment
             this.panelSideMenu.Controls.Add(this.buttonHome);
             this.panelSideMenu.Controls.Add(this.panelLogo);
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSideMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panelSideMenu.Location = new System.Drawing.Point(0, 24);
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(155, 476);
             this.panelSideMenu.TabIndex = 3;
+            this.panelSideMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSideMenu_Paint);
             // 
             // panelMenuSubmenu
             // 
@@ -117,6 +119,7 @@ namespace ProjectAirlineManagment
             this.panelMenuSubmenu.Controls.Add(this.buttonTickets);
             this.panelMenuSubmenu.Controls.Add(this.buttonFlights);
             this.panelMenuSubmenu.Controls.Add(this.buttonClients);
+            this.panelMenuSubmenu.ForeColor = System.Drawing.Color.Gainsboro;
             this.panelMenuSubmenu.Location = new System.Drawing.Point(0, 173);
             this.panelMenuSubmenu.Name = "panelMenuSubmenu";
             this.panelMenuSubmenu.Size = new System.Drawing.Size(155, 163);
@@ -191,8 +194,8 @@ namespace ProjectAirlineManagment
             this.buttonMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(26)))), ((int)(((byte)(56)))));
             this.buttonMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMenu.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMenu.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonMenu.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMenu.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonMenu.Location = new System.Drawing.Point(0, 128);
             this.buttonMenu.Name = "buttonMenu";
             this.buttonMenu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -208,8 +211,8 @@ namespace ProjectAirlineManagment
             this.buttonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(26)))), ((int)(((byte)(56)))));
             this.buttonHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHome.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHome.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonHome.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHome.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonHome.Location = new System.Drawing.Point(0, 83);
             this.buttonHome.Name = "buttonHome";
             this.buttonHome.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);

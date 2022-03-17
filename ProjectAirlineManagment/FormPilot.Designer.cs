@@ -41,11 +41,11 @@ namespace ProjectAirlineManagment
             this.textBoxPilotName = new System.Windows.Forms.TextBox();
             this.textBoxPilotPhoneNum = new System.Windows.Forms.TextBox();
             this.textBoxPilotAge = new System.Windows.Forms.TextBox();
-            this.radioButtonChiefPilot = new System.Windows.Forms.RadioButton();
-            this.radioButtonAssistantPilot = new System.Windows.Forms.RadioButton();
             this.textBoxPilotFlightId = new System.Windows.Forms.TextBox();
             this.labelPilotFlightId = new System.Windows.Forms.Label();
             this.labelUnderTitle = new System.Windows.Forms.Label();
+            this.rjRadioButtonAssistantPilot = new ProjectAirlineManagment.RJRadioButton();
+            this.rjRadioButtonChiefPilot = new ProjectAirlineManagment.RJRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPilot)).BeginInit();
             this.SuspendLayout();
             // 
@@ -185,32 +185,6 @@ namespace ProjectAirlineManagment
             this.textBoxPilotAge.Size = new System.Drawing.Size(100, 20);
             this.textBoxPilotAge.TabIndex = 14;
             // 
-            // radioButtonChiefPilot
-            // 
-            this.radioButtonChiefPilot.AutoSize = true;
-            this.radioButtonChiefPilot.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonChiefPilot.ForeColor = System.Drawing.Color.White;
-            this.radioButtonChiefPilot.Location = new System.Drawing.Point(353, 71);
-            this.radioButtonChiefPilot.Name = "radioButtonChiefPilot";
-            this.radioButtonChiefPilot.Size = new System.Drawing.Size(108, 22);
-            this.radioButtonChiefPilot.TabIndex = 15;
-            this.radioButtonChiefPilot.TabStop = true;
-            this.radioButtonChiefPilot.Text = "Chief Pilot";
-            this.radioButtonChiefPilot.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonAssistantPilot
-            // 
-            this.radioButtonAssistantPilot.AutoSize = true;
-            this.radioButtonAssistantPilot.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonAssistantPilot.ForeColor = System.Drawing.Color.White;
-            this.radioButtonAssistantPilot.Location = new System.Drawing.Point(353, 100);
-            this.radioButtonAssistantPilot.Name = "radioButtonAssistantPilot";
-            this.radioButtonAssistantPilot.Size = new System.Drawing.Size(139, 22);
-            this.radioButtonAssistantPilot.TabIndex = 16;
-            this.radioButtonAssistantPilot.TabStop = true;
-            this.radioButtonAssistantPilot.Text = "Assistant Pilot";
-            this.radioButtonAssistantPilot.UseVisualStyleBackColor = true;
-            // 
             // textBoxPilotFlightId
             // 
             this.textBoxPilotFlightId.Location = new System.Drawing.Point(198, 164);
@@ -236,10 +210,44 @@ namespace ProjectAirlineManagment
             this.labelUnderTitle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelUnderTitle.Location = new System.Drawing.Point(-2, 25);
             this.labelUnderTitle.Name = "labelUnderTitle";
-            this.labelUnderTitle.Size = new System.Drawing.Size(865, 13);
+            this.labelUnderTitle.Size = new System.Drawing.Size(1171, 13);
             this.labelUnderTitle.TabIndex = 21;
             this.labelUnderTitle.Text = "_________________________________________________________________________________" +
-    "______________________________________________________________";
+    "________________________________________________________________________________" +
+    "_________________________________";
+            // 
+            // rjRadioButtonAssistantPilot
+            // 
+            this.rjRadioButtonAssistantPilot.AutoSize = true;
+            this.rjRadioButtonAssistantPilot.CheckedColor = System.Drawing.Color.MediumAquamarine;
+            this.rjRadioButtonAssistantPilot.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjRadioButtonAssistantPilot.ForeColor = System.Drawing.Color.White;
+            this.rjRadioButtonAssistantPilot.Location = new System.Drawing.Point(389, 129);
+            this.rjRadioButtonAssistantPilot.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rjRadioButtonAssistantPilot.Name = "rjRadioButtonAssistantPilot";
+            this.rjRadioButtonAssistantPilot.Size = new System.Drawing.Size(151, 22);
+            this.rjRadioButtonAssistantPilot.TabIndex = 23;
+            this.rjRadioButtonAssistantPilot.TabStop = true;
+            this.rjRadioButtonAssistantPilot.Text = "Assistant Pilot";
+            this.rjRadioButtonAssistantPilot.UnChekedColor = System.Drawing.Color.LightCoral;
+            this.rjRadioButtonAssistantPilot.UseVisualStyleBackColor = true;
+            // 
+            // rjRadioButtonChiefPilot
+            // 
+            this.rjRadioButtonChiefPilot.AutoSize = true;
+            this.rjRadioButtonChiefPilot.CheckedColor = System.Drawing.Color.MediumAquamarine;
+            this.rjRadioButtonChiefPilot.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjRadioButtonChiefPilot.ForeColor = System.Drawing.Color.White;
+            this.rjRadioButtonChiefPilot.Location = new System.Drawing.Point(389, 98);
+            this.rjRadioButtonChiefPilot.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rjRadioButtonChiefPilot.Name = "rjRadioButtonChiefPilot";
+            this.rjRadioButtonChiefPilot.Size = new System.Drawing.Size(120, 22);
+            this.rjRadioButtonChiefPilot.TabIndex = 22;
+            this.rjRadioButtonChiefPilot.TabStop = true;
+            this.rjRadioButtonChiefPilot.Text = "Chief Pilot";
+            this.rjRadioButtonChiefPilot.UnChekedColor = System.Drawing.Color.LightCoral;
+            this.rjRadioButtonChiefPilot.UseVisualStyleBackColor = true;
+            this.rjRadioButtonChiefPilot.CheckedChanged += new System.EventHandler(this.rjRadioButtonChiefPilot_CheckedChanged);
             // 
             // FormPilotAge
             // 
@@ -247,10 +255,10 @@ namespace ProjectAirlineManagment
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(846, 474);
+            this.Controls.Add(this.rjRadioButtonAssistantPilot);
+            this.Controls.Add(this.rjRadioButtonChiefPilot);
             this.Controls.Add(this.textBoxPilotFlightId);
             this.Controls.Add(this.labelPilotFlightId);
-            this.Controls.Add(this.radioButtonAssistantPilot);
-            this.Controls.Add(this.radioButtonChiefPilot);
             this.Controls.Add(this.textBoxPilotAge);
             this.Controls.Add(this.textBoxPilotPhoneNum);
             this.Controls.Add(this.textBoxPilotName);
@@ -289,10 +297,10 @@ namespace ProjectAirlineManagment
         private System.Windows.Forms.TextBox textBoxPilotName;
         private System.Windows.Forms.TextBox textBoxPilotPhoneNum;
         private System.Windows.Forms.TextBox textBoxPilotAge;
-        private System.Windows.Forms.RadioButton radioButtonChiefPilot;
-        private System.Windows.Forms.RadioButton radioButtonAssistantPilot;
         private System.Windows.Forms.TextBox textBoxPilotFlightId;
         private System.Windows.Forms.Label labelPilotFlightId;
         private System.Windows.Forms.Label labelUnderTitle;
+        private RJRadioButton rjRadioButtonChiefPilot;
+        private RJRadioButton rjRadioButtonAssistantPilot;
     }
 }

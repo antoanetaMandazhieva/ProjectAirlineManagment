@@ -39,14 +39,14 @@ namespace ProjectAirlineManagment
             this.buttonTicketsInsert = new System.Windows.Forms.Button();
             this.buttonTicketDelete = new System.Windows.Forms.Button();
             this.buttonTicketSave = new System.Windows.Forms.Button();
-            this.radioButtonOneWay = new System.Windows.Forms.RadioButton();
-            this.radioButtonRoundTrip = new System.Windows.Forms.RadioButton();
             this.comboBoxSeat = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxTicketClientId = new System.Windows.Forms.TextBox();
             this.textBoxTicketFlightId = new System.Windows.Forms.TextBox();
             this.labelUnderTitle = new System.Windows.Forms.Label();
+            this.rjRadioButtonOneWay = new ProjectAirlineManagment.RJRadioButton();
+            this.rjRadioButtonRoundTrip = new ProjectAirlineManagment.RJRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).BeginInit();
             this.SuspendLayout();
             // 
@@ -164,32 +164,6 @@ namespace ProjectAirlineManagment
             this.buttonTicketSave.UseVisualStyleBackColor = false;
             this.buttonTicketSave.Visible = false;
             this.buttonTicketSave.Click += new System.EventHandler(this.buttonTicketSave_Click);
-            // 
-            // radioButtonOneWay
-            // 
-            this.radioButtonOneWay.AutoSize = true;
-            this.radioButtonOneWay.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonOneWay.ForeColor = System.Drawing.Color.White;
-            this.radioButtonOneWay.Location = new System.Drawing.Point(317, 114);
-            this.radioButtonOneWay.Name = "radioButtonOneWay";
-            this.radioButtonOneWay.Size = new System.Drawing.Size(160, 22);
-            this.radioButtonOneWay.TabIndex = 14;
-            this.radioButtonOneWay.TabStop = true;
-            this.radioButtonOneWay.Text = "A one-way ticket";
-            this.radioButtonOneWay.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonRoundTrip
-            // 
-            this.radioButtonRoundTrip.AutoSize = true;
-            this.radioButtonRoundTrip.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonRoundTrip.ForeColor = System.Drawing.Color.White;
-            this.radioButtonRoundTrip.Location = new System.Drawing.Point(317, 143);
-            this.radioButtonRoundTrip.Name = "radioButtonRoundTrip";
-            this.radioButtonRoundTrip.Size = new System.Drawing.Size(173, 22);
-            this.radioButtonRoundTrip.TabIndex = 15;
-            this.radioButtonRoundTrip.TabStop = true;
-            this.radioButtonRoundTrip.Text = "A round-trip ticket";
-            this.radioButtonRoundTrip.UseVisualStyleBackColor = true;
             // 
             // comboBoxSeat
             // 
@@ -352,19 +326,51 @@ namespace ProjectAirlineManagment
             this.labelUnderTitle.Text = "_________________________________________________________________________________" +
     "______________________________________________________________";
             // 
+            // rjRadioButtonOneWay
+            // 
+            this.rjRadioButtonOneWay.AutoSize = true;
+            this.rjRadioButtonOneWay.CheckedColor = System.Drawing.Color.MediumAquamarine;
+            this.rjRadioButtonOneWay.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold);
+            this.rjRadioButtonOneWay.ForeColor = System.Drawing.Color.White;
+            this.rjRadioButtonOneWay.Location = new System.Drawing.Point(317, 115);
+            this.rjRadioButtonOneWay.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rjRadioButtonOneWay.Name = "rjRadioButtonOneWay";
+            this.rjRadioButtonOneWay.Size = new System.Drawing.Size(172, 22);
+            this.rjRadioButtonOneWay.TabIndex = 24;
+            this.rjRadioButtonOneWay.TabStop = true;
+            this.rjRadioButtonOneWay.Text = "A one-way ticket";
+            this.rjRadioButtonOneWay.UnChekedColor = System.Drawing.Color.LightCoral;
+            this.rjRadioButtonOneWay.UseVisualStyleBackColor = true;
+            // 
+            // rjRadioButtonRoundTrip
+            // 
+            this.rjRadioButtonRoundTrip.AutoSize = true;
+            this.rjRadioButtonRoundTrip.CheckedColor = System.Drawing.Color.MediumAquamarine;
+            this.rjRadioButtonRoundTrip.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold);
+            this.rjRadioButtonRoundTrip.ForeColor = System.Drawing.Color.White;
+            this.rjRadioButtonRoundTrip.Location = new System.Drawing.Point(317, 143);
+            this.rjRadioButtonRoundTrip.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rjRadioButtonRoundTrip.Name = "rjRadioButtonRoundTrip";
+            this.rjRadioButtonRoundTrip.Size = new System.Drawing.Size(185, 22);
+            this.rjRadioButtonRoundTrip.TabIndex = 25;
+            this.rjRadioButtonRoundTrip.TabStop = true;
+            this.rjRadioButtonRoundTrip.Text = "A round-trip ticket";
+            this.rjRadioButtonRoundTrip.UnChekedColor = System.Drawing.Color.LightCoral;
+            this.rjRadioButtonRoundTrip.UseVisualStyleBackColor = true;
+            // 
             // FormTickets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(846, 474);
+            this.Controls.Add(this.rjRadioButtonRoundTrip);
+            this.Controls.Add(this.rjRadioButtonOneWay);
             this.Controls.Add(this.textBoxTicketFlightId);
             this.Controls.Add(this.textBoxTicketClientId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBoxSeat);
-            this.Controls.Add(this.radioButtonRoundTrip);
-            this.Controls.Add(this.radioButtonOneWay);
             this.Controls.Add(this.buttonTicketSave);
             this.Controls.Add(this.buttonTicketDelete);
             this.Controls.Add(this.buttonTicketsInsert);
@@ -399,13 +405,13 @@ namespace ProjectAirlineManagment
         private System.Windows.Forms.Button buttonTicketsInsert;
         private System.Windows.Forms.Button buttonTicketDelete;
         private System.Windows.Forms.Button buttonTicketSave;
-        private System.Windows.Forms.RadioButton radioButtonOneWay;
-        private System.Windows.Forms.RadioButton radioButtonRoundTrip;
         private System.Windows.Forms.ComboBox comboBoxSeat;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxTicketClientId;
         private System.Windows.Forms.TextBox textBoxTicketFlightId;
         private System.Windows.Forms.Label labelUnderTitle;
+        private RJRadioButton rjRadioButtonOneWay;
+        private RJRadioButton rjRadioButtonRoundTrip;
     }
 }

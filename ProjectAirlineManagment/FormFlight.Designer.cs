@@ -197,10 +197,11 @@ namespace ProjectAirlineManagment
             this.labelUnderTitle.AutoSize = true;
             this.labelUnderTitle.Location = new System.Drawing.Point(-2, 25);
             this.labelUnderTitle.Name = "labelUnderTitle";
-            this.labelUnderTitle.Size = new System.Drawing.Size(865, 13);
+            this.labelUnderTitle.Size = new System.Drawing.Size(1159, 13);
             this.labelUnderTitle.TabIndex = 12;
-            this.labelUnderTitle.Text = "_________________________________________________________________________________" +
-    "______________________________________________________________";
+            this.labelUnderTitle.Text = "__________________________________________________________--_____________________" +
+    "________________________________________________________________________________" +
+    "________________________________";
             // 
             // FormFlight
             // 

@@ -25,8 +25,8 @@ namespace ProjectAirlineManagment
             textBoxPilotAge.Text = "";
             textBoxPilotPhoneNum.Text = "";
             textBoxPilotFlightId.Text = "";
-            radioButtonChiefPilot.Checked = true;
-            radioButtonAssistantPilot.Checked = false;
+            rjRadioButtonChiefPilot.Checked = true;
+            rjRadioButtonAssistantPilot.Checked = false;
 
         }
 
@@ -91,7 +91,7 @@ namespace ProjectAirlineManagment
             int.TryParse(textBoxPilotFlightId.Text, out flightId);
 
             Pilot pilot = new Pilot(editId, name, phoneNumber, age, flightId);
-            if (radioButtonChiefPilot.Checked)
+            if (rjRadioButtonChiefPilot.Checked)
             {
                 pilot.TypePilot = "Chief Pilot";
             }
@@ -119,7 +119,7 @@ namespace ProjectAirlineManagment
                 int.TryParse(textBoxPilotFlightId.Text, out flightId);
 
                 Pilot pilot = new Pilot(name, phoneNumber, age, flightId);
-                if (radioButtonChiefPilot.Checked)
+                if (rjRadioButtonChiefPilot.Checked)
                 {
                     pilot.TypePilot = "Chief Pilot";
                 }
@@ -212,6 +212,16 @@ namespace ProjectAirlineManagment
         }
 
         private void buttonPilotInsert_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void radioButtonChiefPilot_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rjRadioButtonChiefPilot_CheckedChanged(object sender, EventArgs e)
         {
 
         }

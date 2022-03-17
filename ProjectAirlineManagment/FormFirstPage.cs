@@ -179,5 +179,10 @@ namespace ProjectAirlineManagment
             pilot.MdiParent = this;
             pilot.Show();
         }
+
+        private void panelSideMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

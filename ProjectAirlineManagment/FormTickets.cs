@@ -25,8 +25,8 @@ namespace ProjectAirlineManagment
         {
             textBoxPrice.Text = "0";
             comboBoxSeat.Text = "";
-            radioButtonOneWay.Checked = true;
-            radioButtonRoundTrip.Checked = false;
+            rjRadioButtonOneWay.Checked = true;
+            rjRadioButtonRoundTrip.Checked = false;
         }
 
         private void UpdateGrid()
@@ -62,7 +62,7 @@ namespace ProjectAirlineManagment
                 string seat = comboBoxSeat.Text; ;
 
                 Ticket ticket = new Ticket(clientId, flightId, price, seat);
-                if (radioButtonOneWay.Checked)
+                if (rjRadioButtonOneWay.Checked)
                 {
                     ticket.TypeTicket = "A one-way ticket";
                 }
@@ -97,7 +97,7 @@ namespace ProjectAirlineManagment
             Ticket ticket = ticketBusiness.GetTicket(id);
             textBoxPrice.Text = ticket.Price.ToString();
             comboBoxSeat.Text = ticket.Seat;
-            if (radioButtonOneWay.Checked)
+            if (rjRadioButtonOneWay.Checked)
             {
                 ticket.TypeTicket = "A one-way ticket";
             }
@@ -148,7 +148,7 @@ namespace ProjectAirlineManagment
             ticket.Price = price;
             ticket.Seat = seat;
 
-            if (radioButtonOneWay.Checked)
+            if (rjRadioButtonOneWay.Checked)
             {
                 ticket.TypeTicket = "A one-way ticket";
             }

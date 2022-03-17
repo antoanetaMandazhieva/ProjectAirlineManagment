@@ -29,6 +29,7 @@ namespace ProjectAirlineManagment
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClients));
             this.dataGridViewClients = new System.Windows.Forms.DataGridView();
             this.labelClients = new System.Windows.Forms.Label();
             this.labelNameClient = new System.Windows.Forms.Label();
@@ -217,10 +218,9 @@ namespace ProjectAirlineManagment
             this.labelUnderTitle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelUnderTitle.Location = new System.Drawing.Point(-2, 25);
             this.labelUnderTitle.Name = "labelUnderTitle";
-            this.labelUnderTitle.Size = new System.Drawing.Size(865, 13);
+            this.labelUnderTitle.Size = new System.Drawing.Size(1783, 13);
             this.labelUnderTitle.TabIndex = 22;
-            this.labelUnderTitle.Text = "_________________________________________________________________________________" +
-    "______________________________________________________________";
+            this.labelUnderTitle.Text = resources.GetString("labelUnderTitle.Text");
             // 
             // FormClients
             // 
