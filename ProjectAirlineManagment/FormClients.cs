@@ -41,16 +41,17 @@ namespace ProjectAirlineManagment
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //if (textBoxNameClient.Text is null || textBoxPhoneNumClient.Text is null || comboBoxNationalityClient.Text is null || textBoxPassNumClient.Text is null)
+            //{
+            //    MessageBox.Show("Please, fill in all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+
             string name = textBoxNameClient.Text;
             string phoneNumber = textBoxPhoneNumClient.Text;
             string nationality = comboBoxNationalityClient.Text;
             string passportNumber = textBoxPassNumClient.Text;
 
-            Client client = new Client();
-            client.Name = name;
-            client.PhoneNumber = phoneNumber;
-            client.Nationality = nationality;
-            client.PassportNumber = passportNumber;
+            Client client = new Client(name, phoneNumber, nationality, passportNumber);
 
             int n = clientBusiness.AddClient(client);
             if (n == 1)

@@ -27,20 +27,25 @@ namespace Business.ModelsBusiness
 
         public int AddTicket(Ticket ticket)
         {
-            Flight flight = flightBusiness.GetFlight(ticket.FlightId);
+            Flight flight;
+            if (this.airlineManagmentContext.Flights.Any(x => x.Id == ticket.FlightId))
+            {
+                flight = flightBusiness.GetFlight(ticket.FlightId);
+            }
+            else
+            {
+                return 3;
+                // not exist
+            }
             Client client = clientBusiness.GetClient(ticket.ClientId);
             if (flight.SeatCount == flight.TakenSeats && flight.Id == ticket.FlightId)
             {
                 return 1;
                 // nqma mesta
             }
-            //if (ticket.FlightId != flight.Id)
-            //{
-            //    return
-            //}
             if (this.airlineManagmentContext.Tickets.Any(x => x.ClientId == client.Id && x.FlightId == flight.Id))
             {
-
+                // already exist
                 return 2;
             }
             else
@@ -62,7 +67,7 @@ namespace Business.ModelsBusiness
             {
                 flight.TakenSeats--;
                 airlineManagmentContext.Tickets.Remove(ticket);
-                airlineManagmentContext.Tickets.Remove(ticket);
+                this.airlineManagmentContext.Flights.FirstOrDefault(x => x.Id == ticket.FlightId).TakenSeats--;
                 airlineManagmentContext.SaveChanges();
             }
         }

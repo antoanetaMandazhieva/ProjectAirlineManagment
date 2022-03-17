@@ -51,13 +51,10 @@ namespace ProjectAirlineManagment
             DateTime date = default;
             DateTime.TryParse(dateTimePickerDate.Text, out date);
             string destination = comboBoxDestination.Text;
-            int numOfSeats = 0;
-            int.TryParse(textBoxNumberOfSeats.Text, out numOfSeats);
+            int seatCount = 0;
+            int.TryParse(textBoxNumberOfSeats.Text, out seatCount);
 
-            Flight flight = new Flight();
-            flight.Date = date;
-            flight.Destination = destination;
-            flight.SeatCount = numOfSeats;
+            Flight flight = new Flight(destination, date, seatCount);
 
             int n = flightBusiness.AddFlight(flight);
             if (n == 1)

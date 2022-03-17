@@ -12,6 +12,18 @@ namespace Data.Models
     /// </summary>
     public class Ticket
     {
+        public Ticket()
+        {
+        }
+
+        public Ticket(int clientid, int flightId, decimal price, string seat)
+        {
+            this.ClientId = clientid;
+            this.FlightId = flightId;
+            this.Price = price;
+            this.Seat = seat;
+        }
+
         /// <summary>
         /// Create an object and properties.
         /// </summary>

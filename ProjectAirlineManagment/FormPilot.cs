@@ -110,11 +110,7 @@ namespace ProjectAirlineManagment
             int flightId = 0;
             int.TryParse(textBoxPilotFlightId.Text, out flightId);
 
-            Pilot pilot = new Pilot();
-            pilot.Name = name;
-            pilot.Age = age;
-            pilot.PhoneNumber = phoneNumber;
-            pilot.FlightId = flightId;
+            Pilot pilot = new Pilot(name, phoneNumber, age, flightId);
             if (radioButtonChiefPilot.Checked)
             {
                 pilot.TypePilot = "Chief Pilot";
@@ -128,6 +124,10 @@ namespace ProjectAirlineManagment
             if (n == 1)
             {
                 MessageBox.Show("This pilot has already been introduced", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (n == 2)
+            {
+                MessageBox.Show("This flight does not exist", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

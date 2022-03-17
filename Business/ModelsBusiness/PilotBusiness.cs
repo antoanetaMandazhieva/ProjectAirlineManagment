@@ -13,10 +13,8 @@ namespace Business.ModelsBusiness
         public PilotBusiness()
         {
             airlineManagmentContext = new AirlineManagmentContext();
-            pilots = new List<Pilot>();
         }
         private AirlineManagmentContext airlineManagmentContext;
-        private List<Pilot> pilots;
 
         public List<Pilot> PilotGetAll() => airlineManagmentContext.Pilots.ToList();
 
@@ -24,7 +22,12 @@ namespace Business.ModelsBusiness
 
         public int AddPilot(Pilot pilot)
         {
-            if (pilots.Contains(pilot))
+            if (!(this.airlineManagmentContext.Flights.Any(x => x.Id == pilot.FlightId)))
+            {
+                return 2;
+                // not exist
+            }
+            if (this.airlineManagmentContext.Pilots.Any(x => x.Name == pilot.Name && x.FlightId == pilot.FlightId))
             {
                 return 1;
                 //ima go
@@ -33,7 +36,6 @@ namespace Business.ModelsBusiness
             {
                 airlineManagmentContext.Pilots.Add(pilot);
                 airlineManagmentContext.SaveChanges();
-                this.pilots.Add(pilot);
                 return 0;
                 // vs top
             }
@@ -45,7 +47,6 @@ namespace Business.ModelsBusiness
             if (pilot != null)
             {
                 airlineManagmentContext.Pilots.Remove(pilot);
-                this.pilots.Remove(pilot);
                 airlineManagmentContext.SaveChanges();
             }
         }

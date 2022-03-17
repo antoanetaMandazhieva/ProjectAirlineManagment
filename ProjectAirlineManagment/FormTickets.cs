@@ -49,12 +49,7 @@ namespace ProjectAirlineManagment
             decimal.TryParse(textBoxPrice.Text, out price);
             string seat = comboBoxSeat.Text;;
 
-
-            Ticket ticket = new Ticket();
-            ticket.ClientId = clientId;
-            ticket.FlightId = flightId;
-            ticket.Price = price;
-            ticket.Seat = seat;
+            Ticket ticket = new Ticket(clientId, flightId, price, seat);
             if (radioButtonOneWay.Checked)
             {
                 ticket.TypeTicket = "A one-way ticket";
@@ -71,7 +66,11 @@ namespace ProjectAirlineManagment
             }
             else if (n == 2)
             {
-                MessageBox.Show("This ticket exist", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("This ticket has already been introduced", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (n == 3)
+            {
+                MessageBox.Show("This flight does not exist", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

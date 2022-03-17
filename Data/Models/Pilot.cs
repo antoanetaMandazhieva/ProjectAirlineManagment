@@ -12,6 +12,18 @@ namespace Data.Models
     /// </summary>
     public class Pilot
     {
+        public Pilot()
+        {
+        }
+
+        public Pilot(string name, string phoneNumber, int age, int flightId)
+        {
+            this.Name = name;
+            this.PhoneNumber = phoneNumber;
+            this.Age = age;
+            this.FlightId = flightId;
+        }
+
         /// <summary>
         /// Create an object and properties.
         /// /// </summary>
