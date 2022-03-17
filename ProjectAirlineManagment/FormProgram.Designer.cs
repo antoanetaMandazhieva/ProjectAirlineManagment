@@ -69,10 +69,9 @@
             this.panelMenu.Controls.Add(this.panelMenuSubmenu);
             this.panelMenu.Controls.Add(this.buttonMenu);
             this.panelMenu.Controls.Add(this.panellogo);
-            this.panelMenu.Location = new System.Drawing.Point(0, -28);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMenu.Location = new System.Drawing.Point(0, -23);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(237, 575);
+            this.panelMenu.Size = new System.Drawing.Size(178, 467);
             this.panelMenu.TabIndex = 1;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
@@ -84,10 +83,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 366);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(0, 298);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(237, 49);
+            this.button1.Size = new System.Drawing.Size(178, 40);
             this.button1.TabIndex = 3;
             this.button1.Text = "Home";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -102,10 +100,9 @@
             this.panelMenuSubmenu.Controls.Add(this.buttonTicket);
             this.panelMenuSubmenu.Controls.Add(this.buttonClient);
             this.panelMenuSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuSubmenu.Location = new System.Drawing.Point(0, 168);
-            this.panelMenuSubmenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMenuSubmenu.Location = new System.Drawing.Point(0, 137);
             this.panelMenuSubmenu.Name = "panelMenuSubmenu";
-            this.panelMenuSubmenu.Size = new System.Drawing.Size(237, 198);
+            this.panelMenuSubmenu.Size = new System.Drawing.Size(178, 161);
             this.panelMenuSubmenu.TabIndex = 2;
             // 
             // buttonPilot
@@ -116,11 +113,10 @@
             this.buttonPilot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPilot.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPilot.ForeColor = System.Drawing.Color.White;
-            this.buttonPilot.Location = new System.Drawing.Point(0, 147);
-            this.buttonPilot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonPilot.Location = new System.Drawing.Point(0, 120);
             this.buttonPilot.Name = "buttonPilot";
-            this.buttonPilot.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.buttonPilot.Size = new System.Drawing.Size(237, 49);
+            this.buttonPilot.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonPilot.Size = new System.Drawing.Size(178, 40);
             this.buttonPilot.TabIndex = 3;
             this.buttonPilot.Text = "Pilots";
             this.buttonPilot.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -135,11 +131,10 @@
             this.buttonFlight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFlight.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFlight.ForeColor = System.Drawing.Color.White;
-            this.buttonFlight.Location = new System.Drawing.Point(0, 98);
-            this.buttonFlight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonFlight.Location = new System.Drawing.Point(0, 80);
             this.buttonFlight.Name = "buttonFlight";
-            this.buttonFlight.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.buttonFlight.Size = new System.Drawing.Size(237, 49);
+            this.buttonFlight.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonFlight.Size = new System.Drawing.Size(178, 40);
             this.buttonFlight.TabIndex = 2;
             this.buttonFlight.Text = "Flights";
             this.buttonFlight.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -154,11 +149,10 @@
             this.buttonTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTicket.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTicket.ForeColor = System.Drawing.Color.White;
-            this.buttonTicket.Location = new System.Drawing.Point(0, 49);
-            this.buttonTicket.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonTicket.Location = new System.Drawing.Point(0, 40);
             this.buttonTicket.Name = "buttonTicket";
-            this.buttonTicket.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.buttonTicket.Size = new System.Drawing.Size(237, 49);
+            this.buttonTicket.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonTicket.Size = new System.Drawing.Size(178, 40);
             this.buttonTicket.TabIndex = 1;
             this.buttonTicket.Text = "Tickets";
             this.buttonTicket.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -174,10 +168,9 @@
             this.buttonClient.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClient.ForeColor = System.Drawing.Color.White;
             this.buttonClient.Location = new System.Drawing.Point(0, 0);
-            this.buttonClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonClient.Name = "buttonClient";
-            this.buttonClient.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
-            this.buttonClient.Size = new System.Drawing.Size(237, 49);
+            this.buttonClient.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonClient.Size = new System.Drawing.Size(178, 40);
             this.buttonClient.TabIndex = 0;
             this.buttonClient.Text = "Clients";
             this.buttonClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -192,10 +185,9 @@
             this.buttonMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMenu.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMenu.ForeColor = System.Drawing.Color.White;
-            this.buttonMenu.Location = new System.Drawing.Point(0, 119);
-            this.buttonMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonMenu.Location = new System.Drawing.Point(0, 97);
             this.buttonMenu.Name = "buttonMenu";
-            this.buttonMenu.Size = new System.Drawing.Size(237, 49);
+            this.buttonMenu.Size = new System.Drawing.Size(178, 40);
             this.buttonMenu.TabIndex = 2;
             this.buttonMenu.Text = "Menu";
             this.buttonMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -207,9 +199,8 @@
             this.panellogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(15)))), ((int)(((byte)(34)))));
             this.panellogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panellogo.Location = new System.Drawing.Point(0, 0);
-            this.panellogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panellogo.Name = "panellogo";
-            this.panellogo.Size = new System.Drawing.Size(237, 119);
+            this.panellogo.Size = new System.Drawing.Size(178, 97);
             this.panellogo.TabIndex = 2;
             // 
             // panelTopMenu
@@ -219,17 +210,15 @@
             this.panelTopMenu.Controls.Add(this.panelMin);
             this.panelTopMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTopMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelTopMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelTopMenu.Name = "panelTopMenu";
-            this.panelTopMenu.Size = new System.Drawing.Size(1132, 43);
+            this.panelTopMenu.Size = new System.Drawing.Size(849, 35);
             this.panelTopMenu.TabIndex = 2;
             // 
             // panelClose
             // 
-            this.panelClose.Location = new System.Drawing.Point(1092, -1);
-            this.panelClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelClose.Location = new System.Drawing.Point(819, -1);
             this.panelClose.Name = "panelClose";
-            this.panelClose.Size = new System.Drawing.Size(40, 37);
+            this.panelClose.Size = new System.Drawing.Size(30, 30);
             this.panelClose.TabIndex = 3;
             this.panelClose.Click += new System.EventHandler(this.panelClose_Click_1);
             this.panelClose.Paint += new System.Windows.Forms.PaintEventHandler(this.panelClose_Paint_1);
@@ -240,8 +229,8 @@
             this.menuStripMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStripMenu.Location = new System.Drawing.Point(0, 0);
             this.menuStripMenu.Name = "menuStripMenu";
-            this.menuStripMenu.Padding = new System.Windows.Forms.Padding(8, 6, 0, 9);
-            this.menuStripMenu.Size = new System.Drawing.Size(1132, 24);
+            this.menuStripMenu.Padding = new System.Windows.Forms.Padding(6, 5, 0, 7);
+            this.menuStripMenu.Size = new System.Drawing.Size(849, 24);
             this.menuStripMenu.TabIndex = 0;
             this.menuStripMenu.Text = "menuStrip1";
             this.menuStripMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.menuStripMenu_MouseDown_1);
@@ -250,11 +239,10 @@
             // 
             // panelMin
             // 
-            this.panelMin.Location = new System.Drawing.Point(1052, 15);
-            this.panelMin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMin.Location = new System.Drawing.Point(789, 12);
             this.panelMin.Name = "panelMin";
             this.panelMin.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.panelMin.Size = new System.Drawing.Size(40, 37);
+            this.panelMin.Size = new System.Drawing.Size(30, 30);
             this.panelMin.TabIndex = 1;
             this.panelMin.Click += new System.EventHandler(this.panelMin_Click_1);
             this.panelMin.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMin_Paint_1);
@@ -262,25 +250,24 @@
             // drawer
             // 
             this.drawer.Controls.Add(this.panelMenu);
-            this.drawer.Location = new System.Drawing.Point(0, 43);
-            this.drawer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.drawer.Location = new System.Drawing.Point(0, 35);
             this.drawer.Name = "drawer";
-            this.drawer.Size = new System.Drawing.Size(237, 532);
+            this.drawer.Size = new System.Drawing.Size(178, 432);
             this.drawer.TabIndex = 0;
             this.drawer.Paint += new System.Windows.Forms.PaintEventHandler(this.drawer_Paint);
             // 
             // FormProgram
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1132, 575);
+            this.ClientSize = new System.Drawing.Size(849, 467);
             this.Controls.Add(this.panelTopMenu);
             this.Controls.Add(this.drawer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.miniToolStrip;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormProgram";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormProgram";

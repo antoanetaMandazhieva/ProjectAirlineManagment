@@ -56,8 +56,8 @@ namespace ProjectAirlineManagment
             this.menuStripMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStripMenu.Location = new System.Drawing.Point(0, 0);
             this.menuStripMenu.Name = "menuStripMenu";
-            this.menuStripMenu.Padding = new System.Windows.Forms.Padding(8, 9, 0, 6);
-            this.menuStripMenu.Size = new System.Drawing.Size(1067, 24);
+            this.menuStripMenu.Padding = new System.Windows.Forms.Padding(6, 7, 0, 5);
+            this.menuStripMenu.Size = new System.Drawing.Size(1000, 24);
             this.menuStripMenu.TabIndex = 0;
             this.menuStripMenu.Text = "menuStrip1";
             this.menuStripMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.menuStripMenu_MouseDown);
@@ -68,10 +68,9 @@ namespace ProjectAirlineManagment
             // 
             this.panelMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(15)))), ((int)(((byte)(34)))));
-            this.panelMax.Location = new System.Drawing.Point(1000, -1);
-            this.panelMax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMax.Location = new System.Drawing.Point(950, -1);
             this.panelMax.Name = "panelMax";
-            this.panelMax.Size = new System.Drawing.Size(33, 31);
+            this.panelMax.Size = new System.Drawing.Size(25, 25);
             this.panelMax.TabIndex = 1;
             this.panelMax.Click += new System.EventHandler(this.panelMax_Click);
             this.panelMax.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMax_Paint);
@@ -80,10 +79,9 @@ namespace ProjectAirlineManagment
             // 
             this.panelClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(15)))), ((int)(((byte)(34)))));
-            this.panelClose.Location = new System.Drawing.Point(1033, -1);
-            this.panelClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelClose.Location = new System.Drawing.Point(975, -1);
             this.panelClose.Name = "panelClose";
-            this.panelClose.Size = new System.Drawing.Size(33, 31);
+            this.panelClose.Size = new System.Drawing.Size(25, 25);
             this.panelClose.TabIndex = 2;
             this.panelClose.Click += new System.EventHandler(this.panelClose_Click);
             this.panelClose.Paint += new System.Windows.Forms.PaintEventHandler(this.panelClose_Paint);
@@ -92,10 +90,9 @@ namespace ProjectAirlineManagment
             // 
             this.panelMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(15)))), ((int)(((byte)(34)))));
-            this.panelMin.Location = new System.Drawing.Point(967, -1);
-            this.panelMin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMin.Location = new System.Drawing.Point(925, -1);
             this.panelMin.Name = "panelMin";
-            this.panelMin.Size = new System.Drawing.Size(33, 31);
+            this.panelMin.Size = new System.Drawing.Size(25, 25);
             this.panelMin.TabIndex = 2;
             this.panelMin.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMin_Paint);
             this.panelMin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMin_MouseClick);
@@ -109,9 +106,8 @@ namespace ProjectAirlineManagment
             this.panelSideMenu.Controls.Add(this.panelLogo);
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 24);
-            this.panelSideMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(207, 530);
+            this.panelSideMenu.Size = new System.Drawing.Size(155, 476);
             this.panelSideMenu.TabIndex = 3;
             // 
             // panelMenuSubmenu
@@ -121,10 +117,9 @@ namespace ProjectAirlineManagment
             this.panelMenuSubmenu.Controls.Add(this.buttonTickets);
             this.panelMenuSubmenu.Controls.Add(this.buttonFlights);
             this.panelMenuSubmenu.Controls.Add(this.buttonClients);
-            this.panelMenuSubmenu.Location = new System.Drawing.Point(0, 213);
-            this.panelMenuSubmenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMenuSubmenu.Location = new System.Drawing.Point(0, 173);
             this.panelMenuSubmenu.Name = "panelMenuSubmenu";
-            this.panelMenuSubmenu.Size = new System.Drawing.Size(207, 201);
+            this.panelMenuSubmenu.Size = new System.Drawing.Size(155, 163);
             this.panelMenuSubmenu.TabIndex = 7;
             // 
             // buttonPilots
@@ -133,11 +128,10 @@ namespace ProjectAirlineManagment
             this.buttonPilots.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPilots.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPilots.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonPilots.Location = new System.Drawing.Point(0, 147);
-            this.buttonPilots.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonPilots.Location = new System.Drawing.Point(0, 120);
             this.buttonPilots.Name = "buttonPilots";
-            this.buttonPilots.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
-            this.buttonPilots.Size = new System.Drawing.Size(207, 49);
+            this.buttonPilots.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.buttonPilots.Size = new System.Drawing.Size(155, 40);
             this.buttonPilots.TabIndex = 3;
             this.buttonPilots.Text = "Pilots";
             this.buttonPilots.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -150,11 +144,10 @@ namespace ProjectAirlineManagment
             this.buttonTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTickets.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTickets.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonTickets.Location = new System.Drawing.Point(0, 98);
-            this.buttonTickets.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonTickets.Location = new System.Drawing.Point(0, 80);
             this.buttonTickets.Name = "buttonTickets";
-            this.buttonTickets.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
-            this.buttonTickets.Size = new System.Drawing.Size(207, 49);
+            this.buttonTickets.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.buttonTickets.Size = new System.Drawing.Size(155, 40);
             this.buttonTickets.TabIndex = 2;
             this.buttonTickets.Text = "Tickets";
             this.buttonTickets.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -167,11 +160,10 @@ namespace ProjectAirlineManagment
             this.buttonFlights.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFlights.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFlights.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonFlights.Location = new System.Drawing.Point(0, 49);
-            this.buttonFlights.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonFlights.Location = new System.Drawing.Point(0, 40);
             this.buttonFlights.Name = "buttonFlights";
-            this.buttonFlights.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
-            this.buttonFlights.Size = new System.Drawing.Size(207, 49);
+            this.buttonFlights.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.buttonFlights.Size = new System.Drawing.Size(155, 40);
             this.buttonFlights.TabIndex = 1;
             this.buttonFlights.Text = "Flights";
             this.buttonFlights.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -185,10 +177,9 @@ namespace ProjectAirlineManagment
             this.buttonClients.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClients.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonClients.Location = new System.Drawing.Point(0, 0);
-            this.buttonClients.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonClients.Name = "buttonClients";
-            this.buttonClients.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
-            this.buttonClients.Size = new System.Drawing.Size(207, 49);
+            this.buttonClients.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.buttonClients.Size = new System.Drawing.Size(155, 40);
             this.buttonClients.TabIndex = 0;
             this.buttonClients.Text = "Clients";
             this.buttonClients.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -202,11 +193,10 @@ namespace ProjectAirlineManagment
             this.buttonMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMenu.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMenu.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonMenu.Location = new System.Drawing.Point(0, 157);
-            this.buttonMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonMenu.Location = new System.Drawing.Point(0, 128);
             this.buttonMenu.Name = "buttonMenu";
-            this.buttonMenu.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.buttonMenu.Size = new System.Drawing.Size(207, 55);
+            this.buttonMenu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonMenu.Size = new System.Drawing.Size(155, 45);
             this.buttonMenu.TabIndex = 6;
             this.buttonMenu.Text = "Menu";
             this.buttonMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -220,11 +210,10 @@ namespace ProjectAirlineManagment
             this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHome.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHome.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonHome.Location = new System.Drawing.Point(0, 102);
-            this.buttonHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonHome.Location = new System.Drawing.Point(0, 83);
             this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.buttonHome.Size = new System.Drawing.Size(207, 55);
+            this.buttonHome.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonHome.Size = new System.Drawing.Size(155, 45);
             this.buttonHome.TabIndex = 5;
             this.buttonHome.Text = "Home";
             this.buttonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -236,27 +225,25 @@ namespace ProjectAirlineManagment
             this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(207, 102);
+            this.panelLogo.Size = new System.Drawing.Size(155, 83);
             this.panelLogo.TabIndex = 4;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(207, 102);
+            this.pictureBox1.Size = new System.Drawing.Size(155, 83);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
             // FormFirstPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1000, 500);
             this.Controls.Add(this.panelSideMenu);
             this.Controls.Add(this.panelMin);
             this.Controls.Add(this.panelClose);
@@ -265,7 +252,6 @@ namespace ProjectAirlineManagment
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStripMenu;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormFirstPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormFirstPage";
