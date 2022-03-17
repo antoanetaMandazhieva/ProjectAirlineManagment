@@ -1,4 +1,5 @@
 ﻿using Business.ModelsBusiness;
+using Data;
 using Data.Models;
 using System;
 using System.Collections.Generic;
@@ -16,12 +17,13 @@ namespace ProjectAirlineManagment
     {
         private FlightBusiness flightBusiness;
         private int editId;
+        private AirlineManagmentContext airlineManagmentContext;
 
         private void ClearTextBoxes()
         {
             dateTimePickerDate.Text = default;
             comboBoxDestination.Text = "";
-            textBoxNumberOfSeats.Text = "";
+            textBoxSeatsCount.Text = "";
         }
 
         private void UpdateGrid()
@@ -34,6 +36,7 @@ namespace ProjectAirlineManagment
         {
             InitializeComponent();
             flightBusiness = new FlightBusiness();
+            airlineManagmentContext = new AirlineManagmentContext();
         }
         private void FormFlight_Load(object sender, EventArgs e)
         {
@@ -48,40 +51,53 @@ namespace ProjectAirlineManagment
 
         private void buttonFlightInsert_Click(object sender, EventArgs e)
         {
-            DateTime date = default;
-            DateTime.TryParse(dateTimePickerDate.Text, out date);
-            string destination = comboBoxDestination.Text;
-            int seatCount = 0;
-            int.TryParse(textBoxNumberOfSeats.Text, out seatCount);
-
-            Flight flight = new Flight(destination, date, seatCount);
-
-            int n = flightBusiness.AddFlight(flight);
-            if (n == 1)
+            if (dateTimePickerDate.Text == "" || comboBoxDestination.Text == "" || textBoxSeatsCount.Text == "")
             {
-                MessageBox.Show("This flight has already been introduced", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please, fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+                DateTime date = default;
+                DateTime.TryParse(dateTimePickerDate.Text, out date);
+                string destination = comboBoxDestination.Text;
+                int seatCount = default;
+                int.TryParse(textBoxSeatsCount.Text, out seatCount);
+
+                Flight flight = new Flight(destination, date, seatCount);
+
+                int n = flightBusiness.AddFlight(flight);
+                if (n == 1)
+                {
+                    MessageBox.Show("This flight has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    UpdateGrid();
+                    ClearTextBoxes();
+                }
+
+                flightBusiness.AddFlight(flight);
                 UpdateGrid();
                 ClearTextBoxes();
             }
 
-            flightBusiness.AddFlight(flight);
-            UpdateGrid();
-            ClearTextBoxes();
+            
         }
         private void UpdateTextBoxes(int id)
         {
             Flight flight = flightBusiness.GetFlight(id);
             dateTimePickerDate.Text = flight.Date.ToString();
             comboBoxDestination.Text = flight.Destination;
-            textBoxNumberOfSeats.Text = flight.SeatCount.ToString();
+            textBoxSeatsCount.Text = flight.SeatCount.ToString();
         }
 
         private void buttonFlightSave_Click(object sender, EventArgs e)
         {
             Flight flight = GetEditedFlight();
+            if (this.airlineManagmentContext.Flights.Any(x => x.Destination == flight.Destination && x.Date == flight.Date))
+            {
+                MessageBox.Show("This flight has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             flightBusiness.UpdateFlight(flight);
             UpdateGrid();
             ToggleSaveUpdate();
@@ -99,7 +115,7 @@ namespace ProjectAirlineManagment
             DateTime.TryParse(dateTimePickerDate.Text, out date);
             string destination = comboBoxDestination.Text;
             int numOfSeats = 0;
-            int.TryParse(textBoxNumberOfSeats.Text, out numOfSeats);
+            int.TryParse(textBoxSeatsCount.Text, out numOfSeats);
 
 
             Flight flight = new Flight();
@@ -156,6 +172,11 @@ namespace ProjectAirlineManagment
                 ResetSelect();
 
             }
+        }
+
+        private void textBoxNumberOfSeats_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

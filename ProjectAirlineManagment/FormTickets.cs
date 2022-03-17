@@ -1,4 +1,5 @@
 ﻿using Business.ModelsBusiness;
+using Data;
 using Data.Models;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,9 @@ namespace ProjectAirlineManagment
     {
         private TicketBusiness ticketBusiness;
         private int editId;
+        private AirlineManagmentContext airlineManagmentContext;
+        private FlightBusiness flightBusiness;
+        private ClientBusiness clientBusiness;
 
         private void ClearTextBoxes()
         {
@@ -36,48 +40,56 @@ namespace ProjectAirlineManagment
         {
             InitializeComponent();
             ticketBusiness = new TicketBusiness();
+            airlineManagmentContext = new AirlineManagmentContext();
+            flightBusiness = new FlightBusiness();
+            clientBusiness = new ClientBusiness();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
-            int clientId = 0;
-            int.TryParse(textBoxTicketClientId.Text, out clientId);
-            int flightId = 0;
-            int.TryParse(textBoxTicketFlightId.Text, out flightId);
-            decimal price = 0;
-            decimal.TryParse(textBoxPrice.Text, out price);
-            string seat = comboBoxSeat.Text;;
-
-            Ticket ticket = new Ticket(clientId, flightId, price, seat);
-            if (radioButtonOneWay.Checked)
+            if (textBoxTicketClientId.Text == "" || textBoxTicketFlightId.Text == "" || textBoxPrice.Text == "0" || comboBoxSeat.Text == "")
             {
-                ticket.TypeTicket = "A one-way ticket";
+                MessageBox.Show("Please, fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                ticket.TypeTicket = "A round-trip ticket";
-            }
+                int clientId = 0;
+                int.TryParse(textBoxTicketClientId.Text, out clientId);
+                int flightId = 0;
+                int.TryParse(textBoxTicketFlightId.Text, out flightId);
+                decimal price = 0;
+                decimal.TryParse(textBoxPrice.Text, out price);
+                string seat = comboBoxSeat.Text; ;
 
-            int n = ticketBusiness.AddTicket(ticket);
-            if (n == 1)
-            {
-                MessageBox.Show("There are no seats available for this flight", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Ticket ticket = new Ticket(clientId, flightId, price, seat);
+                if (radioButtonOneWay.Checked)
+                {
+                    ticket.TypeTicket = "A one-way ticket";
+                }
+                else
+                {
+                    ticket.TypeTicket = "A round-trip ticket";
+                }
+
+                int n = ticketBusiness.AddTicket(ticket);
+                if (n == 1)
+                {
+                    MessageBox.Show("There are no seats available for this flight.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (n == 2)
+                {
+                    MessageBox.Show("This ticket has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (n == 3)
+                {
+                    MessageBox.Show("This flight does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    UpdateGrid();
+                    ClearTextBoxes();
+                }
             }
-            else if (n == 2)
-            {
-                MessageBox.Show("This ticket has already been introduced", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (n == 3)
-            {
-                MessageBox.Show("This flight does not exist", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                UpdateGrid();
-                ClearTextBoxes();
-            }
-           
         }
 
         private void UpdateTextBoxes(int id)
@@ -104,6 +116,20 @@ namespace ProjectAirlineManagment
         private void buttonTicketSave_Click(object sender, EventArgs e)
         {
             Ticket ticket = GetEditedTicket();
+            Flight flight = flightBusiness.GetFlight(ticket.FlightId);
+            Client client = clientBusiness.GetClient(ticket.ClientId);
+            if (!(this.airlineManagmentContext.Flights.Any(x => x.Id == ticket.FlightId)))
+            {
+                MessageBox.Show("This flight does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (flight.SeatCount == flight.TakenSeats && flight.Id == ticket.FlightId)
+            {
+                MessageBox.Show("There are no seats available for this flight.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (this.airlineManagmentContext.Tickets.Any(x => x.ClientId == client.Id && x.FlightId == flight.Id && x.Seat == ticket.Seat))
+            {
+                MessageBox.Show("This ticket has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             ticketBusiness.UpdateTicket(ticket);
             UpdateGrid();
             ToggleSaveUpdate();
