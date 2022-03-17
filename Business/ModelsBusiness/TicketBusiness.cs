@@ -10,16 +10,16 @@ namespace Business.ModelsBusiness
 {
     public class TicketBusiness
     {
-        public TicketBusiness() 
+        public TicketBusiness()
         {
-            tickets = new List<Ticket>();
             airlineManagmentContext = new AirlineManagmentContext();
             flightBusiness = new FlightBusiness();
+            clientBusiness = new ClientBusiness();
         }
 
         private AirlineManagmentContext airlineManagmentContext;
-        private List<Ticket> tickets;
         private FlightBusiness flightBusiness;
+        private ClientBusiness clientBusiness;
 
         public List<Ticket> TicketGetAll() => airlineManagmentContext.Tickets.ToList();
 
@@ -28,25 +28,29 @@ namespace Business.ModelsBusiness
         public int AddTicket(Ticket ticket)
         {
             Flight flight = flightBusiness.GetFlight(ticket.FlightId);
+            Client client = clientBusiness.GetClient(ticket.ClientId);
             if (flight.SeatCount == flight.TakenSeats && flight.Id == ticket.FlightId)
             {
                 return 1;
                 // nqma mesta
             }
-            if (flight.Id == ticket.FlightId)
+            //if (ticket.FlightId != flight.Id)
+            //{
+            //    return
+            //}
+            if (this.airlineManagmentContext.Tickets.Any(x => x.ClientId == client.Id && x.FlightId == flight.Id))
             {
-                airlineManagmentContext.Tickets.Add(ticket);
-                this.tickets.Add(ticket);
-                flight.TakenSeats++;
-                airlineManagmentContext.SaveChanges();
-                return 0;
-                // wsichko top
+
+                return 2;
             }
             else
             {
-                return 2;
-                //poletite ne syv
+                airlineManagmentContext.Tickets.Add(ticket);
+                this.airlineManagmentContext.Flights.FirstOrDefault(x => x.Id == ticket.FlightId).TakenSeats++;
+                airlineManagmentContext.SaveChanges();
+                return 0;
             }
+
 
         }
 
@@ -58,7 +62,7 @@ namespace Business.ModelsBusiness
             {
                 flight.TakenSeats--;
                 airlineManagmentContext.Tickets.Remove(ticket);
-                this.tickets.Remove(ticket);
+                airlineManagmentContext.Tickets.Remove(ticket);
                 airlineManagmentContext.SaveChanges();
             }
         }

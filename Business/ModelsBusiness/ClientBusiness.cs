@@ -14,13 +14,9 @@ namespace Business.ModelsBusiness
        
         public ClientBusiness()
         {
-            clients = new List<Client>();
             airlineManagmentContext = new AirlineManagmentContext();
         }
 
-     
-        private List<Client> clients;
-        
        
         private AirlineManagmentContext airlineManagmentContext;
         
@@ -32,7 +28,7 @@ namespace Business.ModelsBusiness
 
         public int AddClient(Client client)
         {
-            if (this.clients.Contains(client))
+            if (this.airlineManagmentContext.Clients.Any(x => x.Name == client.Name && x.PassportNumber == client.PassportNumber && x.Nationality == client.Nationality))
             {
                 return 1;
                 //ima go
@@ -40,7 +36,6 @@ namespace Business.ModelsBusiness
             else
             {
                 airlineManagmentContext.Clients.Add(client);
-                this.clients.Add(client);
                 airlineManagmentContext.SaveChanges();
                 return 0;
                 // vs top

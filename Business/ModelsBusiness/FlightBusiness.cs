@@ -12,12 +12,10 @@ namespace Business.ModelsBusiness
     {
         public FlightBusiness()
         {
-            flights = new List<Flight>();
             airlineManagmentContext = new AirlineManagmentContext();
         }
 
-        private AirlineManagmentContext airlineManagmentContext;
-        public List<Flight> flights;
+        private AirlineManagmentContext airlineManagmentContext;      
 
         public Flight GetFlight(int id) => airlineManagmentContext.Flights.Find(id);
 
@@ -25,7 +23,7 @@ namespace Business.ModelsBusiness
 
         public int AddFlight(Flight flight)
         {
-            if (flights.Contains(flight))
+            if (this.airlineManagmentContext.Flights.Any(x => x.Destination == flight.Destination && x.Date == flight.Date))
             {
                 return 1;
                 //ima go
@@ -34,7 +32,6 @@ namespace Business.ModelsBusiness
             {
                 airlineManagmentContext.Flights.Add(flight);
                 airlineManagmentContext.SaveChanges();
-                this.flights.Add(flight);
                 return 0;
                 //vsichko top
             }
@@ -46,7 +43,7 @@ namespace Business.ModelsBusiness
             if (flight != null)
             {
                 airlineManagmentContext.Flights.Remove(flight);
-                this.flights.Remove(flight);
+                airlineManagmentContext.Flights.Remove(flight);
                 airlineManagmentContext.SaveChanges();
             }
         }

@@ -71,7 +71,7 @@ namespace ProjectAirlineManagment
             }
             else if (n == 2)
             {
-                MessageBox.Show("This flight does not exist", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("This ticket exist", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
