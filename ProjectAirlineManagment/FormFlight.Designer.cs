@@ -43,6 +43,8 @@ namespace ProjectAirlineManagment
             this.buttonFlightSave = new System.Windows.Forms.Button();
             this.dataGridViewFlights = new System.Windows.Forms.DataGridView();
             this.labelUnderTitle = new System.Windows.Forms.Label();
+            this.labelFlightsTakenSeats = new System.Windows.Forms.Label();
+            this.textBoxFlightsTakenSeats = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFlights)).BeginInit();
             this.SuspendLayout();
             // 
@@ -227,12 +229,34 @@ namespace ProjectAirlineManagment
     "________________________________________________________________________________" +
     "________________________________";
             // 
+            // labelFlightsTakenSeats
+            // 
+            this.labelFlightsTakenSeats.AutoSize = true;
+            this.labelFlightsTakenSeats.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFlightsTakenSeats.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelFlightsTakenSeats.Location = new System.Drawing.Point(43, 203);
+            this.labelFlightsTakenSeats.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelFlightsTakenSeats.Name = "labelFlightsTakenSeats";
+            this.labelFlightsTakenSeats.Size = new System.Drawing.Size(131, 23);
+            this.labelFlightsTakenSeats.TabIndex = 13;
+            this.labelFlightsTakenSeats.Text = "Taken Seats";
+            // 
+            // textBoxFlightsTakenSeats
+            // 
+            this.textBoxFlightsTakenSeats.Location = new System.Drawing.Point(268, 206);
+            this.textBoxFlightsTakenSeats.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxFlightsTakenSeats.Name = "textBoxFlightsTakenSeats";
+            this.textBoxFlightsTakenSeats.Size = new System.Drawing.Size(88, 22);
+            this.textBoxFlightsTakenSeats.TabIndex = 14;
+            // 
             // FormFlight
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1128, 583);
+            this.Controls.Add(this.textBoxFlightsTakenSeats);
+            this.Controls.Add(this.labelFlightsTakenSeats);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.labelUnderTitle);
             this.Controls.Add(this.dataGridViewFlights);
@@ -274,5 +298,7 @@ namespace ProjectAirlineManagment
         private System.Windows.Forms.Button buttonFlightSave;
         private System.Windows.Forms.Label labelUnderTitle;
         internal System.Windows.Forms.DataGridView dataGridViewFlights;
+        private System.Windows.Forms.Label labelFlightsTakenSeats;
+        private System.Windows.Forms.TextBox textBoxFlightsTakenSeats;
     }
 }

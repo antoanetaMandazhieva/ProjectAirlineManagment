@@ -16,11 +16,21 @@ namespace Data.Models
         {
         }
 
-        public Flight(string destination, DateTime date, int seatCount)
+        public Flight(string destination, DateTime date, int seatCount, int takenSeats)
         {
             this.Destination = destination;
             this.Date = date;
             this.SeatCount = seatCount;
+            this.TakenSeats = takenSeats;
+        }
+
+        public Flight(int id, string destination, DateTime date, int seatCount, int takenSeats)
+        {
+            this.Id = id;
+            this.Destination = destination;
+            this.Date = date;
+            this.SeatCount = seatCount;
+            this.TakenSeats = takenSeats;
         }
 
         /// <summary>

@@ -87,20 +87,27 @@ namespace ProjectAirlineManagment
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Client client = GetEditedClient();
-            if (this.airlineManagmentContext.Clients.Any
-                (x => x.Name == client.Name 
-                && x.PhoneNumber == client.PhoneNumber
-                && x.PassportNumber == client.PassportNumber 
-                && x.Nationality == client.Nationality))
+            if (textBoxNameClient.Text == "" || textBoxPhoneNumClient.Text == "" || comboBoxNationalityClient.Text == "" || textBoxPassNumClient.Text == "")
             {
-                MessageBox.Show("This client has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please, fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            clientBusiness.UpdateClient(client);
-            UpdateGrid();
-            ToggleSaveUpdate();
-            ResetSelect();
-            ClearTextBoxes();
+            else
+            {
+                Client client = GetEditedClient();
+                if (this.airlineManagmentContext.Clients.Any
+                    (x => x.Name == client.Name
+                    && x.PhoneNumber == client.PhoneNumber
+                    && x.PassportNumber == client.PassportNumber
+                    && x.Nationality == client.Nationality))
+                {
+                    MessageBox.Show("This client has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                clientBusiness.UpdateClient(client);
+                UpdateGrid();
+                ToggleSaveUpdate();
+                ResetSelect();
+                ClearTextBoxes();
+            }
         }
 
         private void ResetSelect()
