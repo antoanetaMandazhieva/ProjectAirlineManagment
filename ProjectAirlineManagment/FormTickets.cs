@@ -146,12 +146,18 @@ namespace ProjectAirlineManagment
 
         private Ticket GetEditedTicket()
         {
+            int clientId = 0;
+            int.TryParse(textBoxTicketClientId.Text, out clientId);
+            int flightId = 0;
+            int.TryParse(textBoxTicketFlightId.Text, out flightId);
             decimal price = 0;
             decimal.TryParse(textBoxPrice.Text, out price);
             string seat = comboBoxSeat.Text;
 
             Ticket ticket = new Ticket();
             ticket.Id = editId;
+            ticket.ClientId = clientId;
+            ticket.FlightId = flightId;
             ticket.Price = price;
             ticket.Seat = seat;
 
