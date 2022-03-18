@@ -114,21 +114,21 @@ namespace ProjectAirlineManagment
             UpdateGrid();
             ClearTextBoxes();
         }
-
+        
         private void buttonTicketSave_Click(object sender, EventArgs e)
         {
             Ticket ticket = GetEditedTicket();
-            Flight flight = flightBusiness.GetFlight(ticket.FlightId);
+            Flight flight;
             Client client = clientBusiness.GetClient(ticket.ClientId);
-            //if (this.airlineManagmentContext.Flights.Any(x => x.Id == ticket.FlightId))
-            //{
-            //    flight = flightBusiness.GetFlight(ticket.FlightId);
-            //}
-            //else
-            //{
-            //    MessageBox.Show("This flight does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
+            if (this.airlineManagmentContext.Flights.Any(x => x.Id == ticket.FlightId))
+            {
+                flight = flightBusiness.GetFlight(ticket.FlightId);
+            }
+            else
+            {
+                MessageBox.Show("This flight does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (flight.SeatCount == flight.TakenSeats && flight.Id == ticket.FlightId)
             {
                 MessageBox.Show("There are no seats available for this flight.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

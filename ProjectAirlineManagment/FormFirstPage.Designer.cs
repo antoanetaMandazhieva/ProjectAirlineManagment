@@ -36,14 +36,14 @@ namespace ProjectAirlineManagment
             this.panelMin = new System.Windows.Forms.Panel();
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panelMenuSubmenu = new System.Windows.Forms.Panel();
+            this.iconButtonPilots = new FontAwesome.Sharp.IconButton();
+            this.iconButtonTickets = new FontAwesome.Sharp.IconButton();
+            this.iconButtonFlights = new FontAwesome.Sharp.IconButton();
+            this.iconButtonClients = new FontAwesome.Sharp.IconButton();
             this.buttonMenu = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.iconButtonClients = new FontAwesome.Sharp.IconButton();
-            this.iconButtonFlights = new FontAwesome.Sharp.IconButton();
-            this.iconButtonTickets = new FontAwesome.Sharp.IconButton();
-            this.iconButtonPilots = new FontAwesome.Sharp.IconButton();
             this.panelSideMenu.SuspendLayout();
             this.panelMenuSubmenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -125,6 +125,90 @@ namespace ProjectAirlineManagment
             this.panelMenuSubmenu.Size = new System.Drawing.Size(155, 163);
             this.panelMenuSubmenu.TabIndex = 7;
             // 
+            // iconButtonPilots
+            // 
+            this.iconButtonPilots.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
+            this.iconButtonPilots.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButtonPilots.FlatAppearance.BorderSize = 0;
+            this.iconButtonPilots.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonPilots.Font = new System.Drawing.Font("Lucida Bright", 11.25F);
+            this.iconButtonPilots.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonPilots.IconChar = FontAwesome.Sharp.IconChar.UserTie;
+            this.iconButtonPilots.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.iconButtonPilots.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonPilots.IconSize = 32;
+            this.iconButtonPilots.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonPilots.Location = new System.Drawing.Point(0, 120);
+            this.iconButtonPilots.Name = "iconButtonPilots";
+            this.iconButtonPilots.Size = new System.Drawing.Size(155, 40);
+            this.iconButtonPilots.TabIndex = 8;
+            this.iconButtonPilots.Text = "Pilots";
+            this.iconButtonPilots.UseVisualStyleBackColor = false;
+            this.iconButtonPilots.Click += new System.EventHandler(this.iconButtonPilots_Click);
+            // 
+            // iconButtonTickets
+            // 
+            this.iconButtonTickets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
+            this.iconButtonTickets.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButtonTickets.FlatAppearance.BorderSize = 0;
+            this.iconButtonTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonTickets.Font = new System.Drawing.Font("Lucida Bright", 11.25F);
+            this.iconButtonTickets.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonTickets.IconChar = FontAwesome.Sharp.IconChar.TicketAlt;
+            this.iconButtonTickets.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.iconButtonTickets.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonTickets.IconSize = 32;
+            this.iconButtonTickets.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonTickets.Location = new System.Drawing.Point(0, 80);
+            this.iconButtonTickets.Name = "iconButtonTickets";
+            this.iconButtonTickets.Size = new System.Drawing.Size(155, 40);
+            this.iconButtonTickets.TabIndex = 7;
+            this.iconButtonTickets.Text = "Tickets";
+            this.iconButtonTickets.UseVisualStyleBackColor = false;
+            this.iconButtonTickets.Click += new System.EventHandler(this.iconButtonTickets_Click);
+            // 
+            // iconButtonFlights
+            // 
+            this.iconButtonFlights.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
+            this.iconButtonFlights.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButtonFlights.FlatAppearance.BorderSize = 0;
+            this.iconButtonFlights.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonFlights.Font = new System.Drawing.Font("Lucida Bright", 11.25F);
+            this.iconButtonFlights.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonFlights.IconChar = FontAwesome.Sharp.IconChar.Plane;
+            this.iconButtonFlights.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.iconButtonFlights.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonFlights.IconSize = 32;
+            this.iconButtonFlights.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonFlights.Location = new System.Drawing.Point(0, 40);
+            this.iconButtonFlights.Name = "iconButtonFlights";
+            this.iconButtonFlights.Size = new System.Drawing.Size(155, 40);
+            this.iconButtonFlights.TabIndex = 6;
+            this.iconButtonFlights.Text = "Flights";
+            this.iconButtonFlights.UseVisualStyleBackColor = false;
+            this.iconButtonFlights.Click += new System.EventHandler(this.iconButtonFlights_Click);
+            // 
+            // iconButtonClients
+            // 
+            this.iconButtonClients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
+            this.iconButtonClients.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButtonClients.FlatAppearance.BorderSize = 0;
+            this.iconButtonClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonClients.Font = new System.Drawing.Font("Lucida Bright", 11.25F);
+            this.iconButtonClients.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonClients.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.iconButtonClients.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.iconButtonClients.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonClients.IconSize = 32;
+            this.iconButtonClients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonClients.Location = new System.Drawing.Point(0, 0);
+            this.iconButtonClients.Name = "iconButtonClients";
+            this.iconButtonClients.Size = new System.Drawing.Size(155, 40);
+            this.iconButtonClients.TabIndex = 5;
+            this.iconButtonClients.Text = "Clients";
+            this.iconButtonClients.UseVisualStyleBackColor = false;
+            this.iconButtonClients.Click += new System.EventHandler(this.iconButtonClients_Click);
+            // 
             // buttonMenu
             // 
             this.buttonMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(26)))), ((int)(((byte)(56)))));
@@ -177,90 +261,6 @@ namespace ProjectAirlineManagment
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            // 
-            // iconButtonClients
-            // 
-            this.iconButtonClients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
-            this.iconButtonClients.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButtonClients.FlatAppearance.BorderSize = 0;
-            this.iconButtonClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonClients.Font = new System.Drawing.Font("Lucida Bright", 11.25F);
-            this.iconButtonClients.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButtonClients.IconChar = FontAwesome.Sharp.IconChar.Users;
-            this.iconButtonClients.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.iconButtonClients.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonClients.IconSize = 32;
-            this.iconButtonClients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonClients.Location = new System.Drawing.Point(0, 0);
-            this.iconButtonClients.Name = "iconButtonClients";
-            this.iconButtonClients.Size = new System.Drawing.Size(155, 40);
-            this.iconButtonClients.TabIndex = 5;
-            this.iconButtonClients.Text = "Clients";
-            this.iconButtonClients.UseVisualStyleBackColor = false;
-            this.iconButtonClients.Click += new System.EventHandler(this.iconButtonClients_Click);
-            // 
-            // iconButtonFlights
-            // 
-            this.iconButtonFlights.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
-            this.iconButtonFlights.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButtonFlights.FlatAppearance.BorderSize = 0;
-            this.iconButtonFlights.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonFlights.Font = new System.Drawing.Font("Lucida Bright", 11.25F);
-            this.iconButtonFlights.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButtonFlights.IconChar = FontAwesome.Sharp.IconChar.Plane;
-            this.iconButtonFlights.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.iconButtonFlights.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonFlights.IconSize = 32;
-            this.iconButtonFlights.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonFlights.Location = new System.Drawing.Point(0, 40);
-            this.iconButtonFlights.Name = "iconButtonFlights";
-            this.iconButtonFlights.Size = new System.Drawing.Size(155, 40);
-            this.iconButtonFlights.TabIndex = 6;
-            this.iconButtonFlights.Text = "Flights";
-            this.iconButtonFlights.UseVisualStyleBackColor = false;
-            this.iconButtonFlights.Click += new System.EventHandler(this.iconButtonFlights_Click);
-            // 
-            // iconButtonTickets
-            // 
-            this.iconButtonTickets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
-            this.iconButtonTickets.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButtonTickets.FlatAppearance.BorderSize = 0;
-            this.iconButtonTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonTickets.Font = new System.Drawing.Font("Lucida Bright", 11.25F);
-            this.iconButtonTickets.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButtonTickets.IconChar = FontAwesome.Sharp.IconChar.TicketAlt;
-            this.iconButtonTickets.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.iconButtonTickets.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonTickets.IconSize = 32;
-            this.iconButtonTickets.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonTickets.Location = new System.Drawing.Point(0, 80);
-            this.iconButtonTickets.Name = "iconButtonTickets";
-            this.iconButtonTickets.Size = new System.Drawing.Size(155, 40);
-            this.iconButtonTickets.TabIndex = 7;
-            this.iconButtonTickets.Text = "Tickets";
-            this.iconButtonTickets.UseVisualStyleBackColor = false;
-            this.iconButtonTickets.Click += new System.EventHandler(this.iconButtonTickets_Click);
-            // 
-            // iconButtonPilots
-            // 
-            this.iconButtonPilots.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
-            this.iconButtonPilots.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButtonPilots.FlatAppearance.BorderSize = 0;
-            this.iconButtonPilots.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonPilots.Font = new System.Drawing.Font("Lucida Bright", 11.25F);
-            this.iconButtonPilots.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButtonPilots.IconChar = FontAwesome.Sharp.IconChar.UserTie;
-            this.iconButtonPilots.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.iconButtonPilots.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonPilots.IconSize = 32;
-            this.iconButtonPilots.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonPilots.Location = new System.Drawing.Point(0, 120);
-            this.iconButtonPilots.Name = "iconButtonPilots";
-            this.iconButtonPilots.Size = new System.Drawing.Size(155, 40);
-            this.iconButtonPilots.TabIndex = 8;
-            this.iconButtonPilots.Text = "Pilots";
-            this.iconButtonPilots.UseVisualStyleBackColor = false;
-            this.iconButtonPilots.Click += new System.EventHandler(this.iconButtonPilots_Click);
             // 
             // FormFirstPage
             // 

@@ -22,7 +22,7 @@ namespace Pilots.Tests
         //    var mockSet = new Mock<DbSet<Pilot>>();
 
         //    var mockContext = new Mock<AirlineManagmentContext>();
-        //    mockContext.Setup(m => m.Tickets).Returns(mockSet.Object);
+        //    mockContext.Setup(m => m.Pilots).Returns(mockSet.Object);
 
         //    var service = new PilotBusiness(mockSet.Object);
         //    service.AddPilot(new Pilot());
