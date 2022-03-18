@@ -99,7 +99,7 @@ namespace ProjectAirlineManagment
             this.dateTimePickerDate.CalendarFont = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerDate.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerDate.Location = new System.Drawing.Point(268, 78);
-            this.dateTimePickerDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePickerDate.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePickerDate.Name = "dateTimePickerDate";
             this.dateTimePickerDate.Size = new System.Drawing.Size(224, 24);
             this.dateTimePickerDate.TabIndex = 4;
@@ -122,7 +122,7 @@ namespace ProjectAirlineManagment
             "Ljubljana, Slovenia",
             "Ankara, Turkey"});
             this.comboBoxDestination.Location = new System.Drawing.Point(268, 121);
-            this.comboBoxDestination.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxDestination.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxDestination.Name = "comboBoxDestination";
             this.comboBoxDestination.Size = new System.Drawing.Size(224, 24);
             this.comboBoxDestination.TabIndex = 5;
@@ -130,7 +130,7 @@ namespace ProjectAirlineManagment
             // textBoxSeatsCount
             // 
             this.textBoxSeatsCount.Location = new System.Drawing.Point(268, 164);
-            this.textBoxSeatsCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxSeatsCount.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSeatsCount.Name = "textBoxSeatsCount";
             this.textBoxSeatsCount.Size = new System.Drawing.Size(88, 22);
             this.textBoxSeatsCount.TabIndex = 6;
@@ -142,7 +142,7 @@ namespace ProjectAirlineManagment
             this.buttonFlightInsert.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFlightInsert.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonFlightInsert.Location = new System.Drawing.Point(813, 241);
-            this.buttonFlightInsert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonFlightInsert.Margin = new System.Windows.Forms.Padding(4);
             this.buttonFlightInsert.Name = "buttonFlightInsert";
             this.buttonFlightInsert.Size = new System.Drawing.Size(129, 46);
             this.buttonFlightInsert.TabIndex = 7;
@@ -156,7 +156,7 @@ namespace ProjectAirlineManagment
             this.buttonFlightUpdate.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFlightUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonFlightUpdate.Location = new System.Drawing.Point(813, 325);
-            this.buttonFlightUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonFlightUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.buttonFlightUpdate.Name = "buttonFlightUpdate";
             this.buttonFlightUpdate.Size = new System.Drawing.Size(129, 46);
             this.buttonFlightUpdate.TabIndex = 8;
@@ -170,7 +170,7 @@ namespace ProjectAirlineManagment
             this.buttonFlightDelete.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFlightDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonFlightDelete.Location = new System.Drawing.Point(813, 406);
-            this.buttonFlightDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonFlightDelete.Margin = new System.Windows.Forms.Padding(4);
             this.buttonFlightDelete.Name = "buttonFlightDelete";
             this.buttonFlightDelete.Size = new System.Drawing.Size(129, 46);
             this.buttonFlightDelete.TabIndex = 9;
@@ -184,7 +184,7 @@ namespace ProjectAirlineManagment
             this.buttonFlightSave.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFlightSave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonFlightSave.Location = new System.Drawing.Point(813, 482);
-            this.buttonFlightSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonFlightSave.Margin = new System.Windows.Forms.Padding(4);
             this.buttonFlightSave.Name = "buttonFlightSave";
             this.buttonFlightSave.Size = new System.Drawing.Size(129, 46);
             this.buttonFlightSave.TabIndex = 10;
@@ -208,7 +208,7 @@ namespace ProjectAirlineManagment
             this.dataGridViewFlights.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewFlights.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.dataGridViewFlights.Location = new System.Drawing.Point(27, 240);
-            this.dataGridViewFlights.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewFlights.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewFlights.Name = "dataGridViewFlights";
             this.dataGridViewFlights.RowHeadersWidth = 51;
             this.dataGridViewFlights.Size = new System.Drawing.Size(752, 287);
@@ -248,7 +248,7 @@ namespace ProjectAirlineManagment
             this.Controls.Add(this.labelDate);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormFlight";
             this.Text = "FormFlight";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
