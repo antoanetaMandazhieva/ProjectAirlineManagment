@@ -95,6 +95,8 @@ namespace ProjectAirlineManagment
         private void UpdateTextBoxes(int id)
         {
             Ticket ticket = ticketBusiness.GetTicket(id);
+            textBoxTicketClientId.Text = ticket.ClientId.ToString();
+            textBoxTicketFlightId.Text = ticket.FlightId.ToString();
             textBoxPrice.Text = ticket.Price.ToString();
             comboBoxSeat.Text = ticket.Seat;
             if (rjRadioButtonOneWay.Checked)
@@ -118,10 +120,15 @@ namespace ProjectAirlineManagment
             Ticket ticket = GetEditedTicket();
             Flight flight = flightBusiness.GetFlight(ticket.FlightId);
             Client client = clientBusiness.GetClient(ticket.ClientId);
-            if (!(this.airlineManagmentContext.Flights.Any(x => x.Id == ticket.FlightId)))
-            {
-                MessageBox.Show("This flight does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //if (this.airlineManagmentContext.Flights.Any(x => x.Id == ticket.FlightId))
+            //{
+            //    flight = flightBusiness.GetFlight(ticket.FlightId);
+            //}
+            //else
+            //{
+            //    MessageBox.Show("This flight does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
             if (flight.SeatCount == flight.TakenSeats && flight.Id == ticket.FlightId)
             {
                 MessageBox.Show("There are no seats available for this flight.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -220,6 +227,11 @@ namespace ProjectAirlineManagment
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewTickets_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

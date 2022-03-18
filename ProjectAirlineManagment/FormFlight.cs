@@ -75,13 +75,7 @@ namespace ProjectAirlineManagment
                     UpdateGrid();
                     ClearTextBoxes();
                 }
-
-                flightBusiness.AddFlight(flight);
-                UpdateGrid();
-                ClearTextBoxes();
             }
-
-            
         }
         private void UpdateTextBoxes(int id)
         {
@@ -175,6 +169,11 @@ namespace ProjectAirlineManagment
         }
 
         private void textBoxNumberOfSeats_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewFlights_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
