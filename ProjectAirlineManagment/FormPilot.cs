@@ -175,7 +175,11 @@ namespace ProjectAirlineManagment
             {
                 MessageBox.Show("This flight does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (this.airlineManagmentContext.Pilots.Any(x => x.Name == pilot.Name && x.FlightId == pilot.FlightId))
+            if (this.airlineManagmentContext.Pilots.Any
+                (x => x.Name == pilot.Name 
+                && x.FlightId == pilot.FlightId
+                && x.PhoneNumber == pilot.PhoneNumber
+                && x.TypePilot == pilot.TypePilot))
             {
                 MessageBox.Show("This pilot has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

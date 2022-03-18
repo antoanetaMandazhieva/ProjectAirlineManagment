@@ -89,7 +89,7 @@ namespace ProjectAirlineManagment
             // textBoxPrice
             // 
             this.textBoxPrice.Location = new System.Drawing.Point(235, 214);
-            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(179, 22);
             this.textBoxPrice.TabIndex = 5;
@@ -100,7 +100,7 @@ namespace ProjectAirlineManagment
             this.dataGridViewTickets.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTickets.Location = new System.Drawing.Point(38, 267);
-            this.dataGridViewTickets.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dataGridViewTickets.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridViewTickets.Name = "dataGridViewTickets";
             this.dataGridViewTickets.RowHeadersWidth = 51;
             this.dataGridViewTickets.Size = new System.Drawing.Size(861, 272);
@@ -112,8 +112,8 @@ namespace ProjectAirlineManagment
             this.buttonTicketUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.buttonTicketUpdate.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTicketUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonTicketUpdate.Location = new System.Drawing.Point(1259, 425);
-            this.buttonTicketUpdate.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonTicketUpdate.Location = new System.Drawing.Point(954, 327);
+            this.buttonTicketUpdate.Margin = new System.Windows.Forms.Padding(5);
             this.buttonTicketUpdate.Name = "buttonTicketUpdate";
             this.buttonTicketUpdate.Size = new System.Drawing.Size(129, 46);
             this.buttonTicketUpdate.TabIndex = 9;
@@ -126,7 +126,7 @@ namespace ProjectAirlineManagment
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(1243, 164);
-            this.button2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(0, 0);
             this.button2.TabIndex = 10;
@@ -138,8 +138,8 @@ namespace ProjectAirlineManagment
             this.buttonTicketsInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.buttonTicketsInsert.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTicketsInsert.ForeColor = System.Drawing.Color.White;
-            this.buttonTicketsInsert.Location = new System.Drawing.Point(1259, 329);
-            this.buttonTicketsInsert.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonTicketsInsert.Location = new System.Drawing.Point(954, 253);
+            this.buttonTicketsInsert.Margin = new System.Windows.Forms.Padding(5);
             this.buttonTicketsInsert.Name = "buttonTicketsInsert";
             this.buttonTicketsInsert.Size = new System.Drawing.Size(129, 46);
             this.buttonTicketsInsert.TabIndex = 11;
@@ -152,8 +152,8 @@ namespace ProjectAirlineManagment
             this.buttonTicketDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.buttonTicketDelete.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTicketDelete.ForeColor = System.Drawing.Color.White;
-            this.buttonTicketDelete.Location = new System.Drawing.Point(1259, 517);
-            this.buttonTicketDelete.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonTicketDelete.Location = new System.Drawing.Point(954, 408);
+            this.buttonTicketDelete.Margin = new System.Windows.Forms.Padding(5);
             this.buttonTicketDelete.Name = "buttonTicketDelete";
             this.buttonTicketDelete.Size = new System.Drawing.Size(129, 46);
             this.buttonTicketDelete.TabIndex = 12;
@@ -166,8 +166,8 @@ namespace ProjectAirlineManagment
             this.buttonTicketSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.buttonTicketSave.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTicketSave.ForeColor = System.Drawing.Color.White;
-            this.buttonTicketSave.Location = new System.Drawing.Point(1259, 608);
-            this.buttonTicketSave.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonTicketSave.Location = new System.Drawing.Point(954, 482);
+            this.buttonTicketSave.Margin = new System.Windows.Forms.Padding(5);
             this.buttonTicketSave.Name = "buttonTicketSave";
             this.buttonTicketSave.Size = new System.Drawing.Size(129, 46);
             this.buttonTicketSave.TabIndex = 13;
@@ -281,7 +281,7 @@ namespace ProjectAirlineManagment
             "19F",
             "20F"});
             this.comboBoxSeat.Location = new System.Drawing.Point(667, 100);
-            this.comboBoxSeat.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.comboBoxSeat.Margin = new System.Windows.Forms.Padding(5);
             this.comboBoxSeat.Name = "comboBoxSeat";
             this.comboBoxSeat.Size = new System.Drawing.Size(179, 24);
             this.comboBoxSeat.TabIndex = 16;
@@ -400,7 +400,7 @@ namespace ProjectAirlineManagment
             this.Controls.Add(this.labelTickets);
             this.Controls.Add(this.labelUnderTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormTickets";
             this.Text = "FormTickets";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

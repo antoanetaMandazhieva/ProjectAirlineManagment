@@ -246,7 +246,7 @@ namespace ProjectAirlineManagment
             this.Controls.Add(this.labelSeat);
             this.Controls.Add(this.labelDestination);
             this.Controls.Add(this.labelDate);
-            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormFlight";

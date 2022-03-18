@@ -88,7 +88,11 @@ namespace ProjectAirlineManagment
         private void button3_Click(object sender, EventArgs e)
         {
             Client client = GetEditedClient();
-            if (this.airlineManagmentContext.Clients.Any(x => x.Name == client.Name && x.PassportNumber == client.PassportNumber && x.Nationality == client.Nationality))
+            if (this.airlineManagmentContext.Clients.Any
+                (x => x.Name == client.Name 
+                && x.PhoneNumber == client.PhoneNumber
+                && x.PassportNumber == client.PassportNumber 
+                && x.Nationality == client.Nationality))
             {
                 MessageBox.Show("This client has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

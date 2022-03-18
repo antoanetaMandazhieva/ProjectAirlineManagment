@@ -28,7 +28,11 @@ namespace Business.ModelsBusiness
 
         public int AddClient(Client client)
         {
-            if (this.airlineManagmentContext.Clients.Any(x => x.Name == client.Name && x.PassportNumber == client.PassportNumber && x.Nationality == client.Nationality))
+            if (this.airlineManagmentContext.Clients.Any
+                (x => x.Name == client.Name 
+                && x.PhoneNumber == client.PhoneNumber
+                && x.PassportNumber == client.PassportNumber 
+                && x.Nationality == client.Nationality))
             {
                 return 1;
                 //ima go

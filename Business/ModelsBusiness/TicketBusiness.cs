@@ -43,7 +43,12 @@ namespace Business.ModelsBusiness
                 return 1;
                 // nqma mesta
             }
-            if (this.airlineManagmentContext.Tickets.Any(x => x.ClientId == client.Id && x.FlightId == flight.Id && x.Seat == ticket.Seat))
+            if (this.airlineManagmentContext.Tickets.Any
+                (x => x.ClientId == client.Id 
+                && x.FlightId == flight.Id 
+                && x.Seat == ticket.Seat
+                && x.Price == ticket.Price
+                && x.TypeTicket == ticket.TypeTicket))
             {
                 // already exist
                 return 2;

@@ -133,7 +133,12 @@ namespace ProjectAirlineManagment
             {
                 MessageBox.Show("There are no seats available for this flight.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (this.airlineManagmentContext.Tickets.Any(x => x.ClientId == client.Id && x.FlightId == flight.Id && x.Seat == ticket.Seat))
+            if (this.airlineManagmentContext.Tickets.Any
+                (x => x.ClientId == client.Id 
+                && x.FlightId == flight.Id 
+                && x.Seat == ticket.Seat 
+                && x.Price == ticket.Price
+                && x.TypeTicket == ticket.TypeTicket))
             {
                 MessageBox.Show("This ticket has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

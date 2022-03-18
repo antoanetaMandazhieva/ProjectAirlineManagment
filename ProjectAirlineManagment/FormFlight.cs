@@ -88,7 +88,11 @@ namespace ProjectAirlineManagment
         private void buttonFlightSave_Click(object sender, EventArgs e)
         {
             Flight flight = GetEditedFlight();
-            if (this.airlineManagmentContext.Flights.Any(x => x.Destination == flight.Destination && x.Date == flight.Date && x.SeatCount == flight.SeatCount))
+            if (this.airlineManagmentContext.Flights.Any
+                (x => x.Destination == flight.Destination 
+                && x.Date == flight.Date 
+                && x.SeatCount == flight.SeatCount
+                && x.TakenSeats == flight.TakenSeats))
             {
                 MessageBox.Show("This flight has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
