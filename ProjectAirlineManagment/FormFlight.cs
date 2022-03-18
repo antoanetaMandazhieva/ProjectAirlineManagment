@@ -178,5 +178,10 @@ namespace ProjectAirlineManagment
         {
 
         }
+
+        private void dataGridViewFlights_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

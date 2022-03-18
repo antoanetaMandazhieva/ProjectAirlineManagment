@@ -191,6 +191,7 @@ namespace ProjectAirlineManagment
             this.dataGridViewFlights.RowHeadersWidth = 51;
             this.dataGridViewFlights.Size = new System.Drawing.Size(564, 233);
             this.dataGridViewFlights.TabIndex = 11;
+            this.dataGridViewFlights.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFlights_CellContentClick);
             // 
             // labelUnderTitle
             // 

@@ -10,8 +10,8 @@ namespace ProjectAirlineManagment
 {
     class RJRadioButton : RadioButton
     {
-        private Color checkedColor = Color.MediumAquamarine;
-        private Color unChekedColor = Color.LightCoral;
+        private Color checkedColor = Color.MediumPurple;
+        private Color unChekedColor = Color.Purple;
 
         public Color CheckedColor { get => checkedColor; set { checkedColor = value; this.Invalidate(); } }
         public Color UnChekedColor { get => unChekedColor;
