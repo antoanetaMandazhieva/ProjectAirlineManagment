@@ -30,7 +30,6 @@ namespace ProjectAirlineManagment
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPilotAge));
             this.labelPilot = new System.Windows.Forms.Label();
             this.labelPilotName = new System.Windows.Forms.Label();
@@ -59,9 +58,9 @@ namespace ProjectAirlineManagment
             this.labelPilot.ForeColor = System.Drawing.Color.Transparent;
             this.labelPilot.Location = new System.Drawing.Point(15, 9);
             this.labelPilot.Name = "labelPilot";
-            this.labelPilot.Size = new System.Drawing.Size(66, 27);
+            this.labelPilot.Size = new System.Drawing.Size(78, 27);
             this.labelPilot.TabIndex = 0;
-            this.labelPilot.Text = "Pilot";
+            this.labelPilot.Text = "Pilots";
             // 
             // labelPilotName
             // 
@@ -265,7 +264,7 @@ namespace ProjectAirlineManagment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(846, 474);
             this.Controls.Add(this.rjRadioButtonAssistantPilot);
             this.Controls.Add(this.rjRadioButtonChiefPilot);
