@@ -179,6 +179,7 @@ namespace ProjectAirlineManagment
             this.pictureBoxBalkanAirlinesLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxBalkanAirlinesLogo.TabIndex = 5;
             this.pictureBoxBalkanAirlinesLogo.TabStop = false;
+            this.pictureBoxBalkanAirlinesLogo.Click += new System.EventHandler(this.pictureBoxBalkanAirlinesLogo_Click);
             // 
             // iconButtonPilots
             // 

@@ -117,7 +117,7 @@ namespace ProjectAirlineManagment
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTickets.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTickets.Location = new System.Drawing.Point(32, 205);
+            this.dataGridViewTickets.Location = new System.Drawing.Point(20, 205);
             this.dataGridViewTickets.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.dataGridViewTickets.Name = "dataGridViewTickets";
             this.dataGridViewTickets.RowHeadersWidth = 51;
@@ -369,7 +369,7 @@ namespace ProjectAirlineManagment
             this.rjRadioButtonRoundTrip.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold);
             this.rjRadioButtonRoundTrip.ForeColor = System.Drawing.Color.White;
             this.rjRadioButtonRoundTrip.Location = new System.Drawing.Point(617, 130);
-            this.rjRadioButtonRoundTrip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rjRadioButtonRoundTrip.Margin = new System.Windows.Forms.Padding(4);
             this.rjRadioButtonRoundTrip.MinimumSize = new System.Drawing.Size(0, 26);
             this.rjRadioButtonRoundTrip.Name = "rjRadioButtonRoundTrip";
             this.rjRadioButtonRoundTrip.Size = new System.Drawing.Size(185, 26);
@@ -387,7 +387,7 @@ namespace ProjectAirlineManagment
             this.rjRadioButtonOneWay.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold);
             this.rjRadioButtonOneWay.ForeColor = System.Drawing.Color.White;
             this.rjRadioButtonOneWay.Location = new System.Drawing.Point(617, 79);
-            this.rjRadioButtonOneWay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rjRadioButtonOneWay.Margin = new System.Windows.Forms.Padding(4);
             this.rjRadioButtonOneWay.MinimumSize = new System.Drawing.Size(0, 26);
             this.rjRadioButtonOneWay.Name = "rjRadioButtonOneWay";
             this.rjRadioButtonOneWay.Size = new System.Drawing.Size(172, 26);
