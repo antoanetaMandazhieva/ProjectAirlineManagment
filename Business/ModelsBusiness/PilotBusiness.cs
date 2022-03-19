@@ -54,6 +54,11 @@ namespace Business.ModelsBusiness
                 return 2;
                 // not exist
             }
+            if (this.airlineManagmentContext.Pilots.Any(x => x.FlightId == pilot.FlightId
+                && x.TypePilot == pilot.TypePilot))
+            {
+                return 2;
+            }
             if (this.airlineManagmentContext.Pilots.Any
                 (x => x.Name == pilot.Name 
                 && x.FlightId == pilot.FlightId 

@@ -137,6 +137,10 @@ namespace ProjectAirlineManagment
                 {
                     MessageBox.Show("This flight does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else if (n == 3)
+                {
+                    MessageBox.Show("This seat is taken for this flight.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else
                 {
                     UpdateGrid();
@@ -187,6 +191,10 @@ namespace ProjectAirlineManagment
                     && x.TypePilot == pilot.TypePilot))
                 {
                     MessageBox.Show("This pilot has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                if (this.airlineManagmentContext.Pilots.Any(x => x.TypePilot == pilot.TypePilot && x.FlightId == pilot.FlightId))
+                {
+                    MessageBox.Show("In this flight has already been introduced that type of pilot.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 if (this.airlineManagmentContext.Pilots.Any(x=>x.TypePilot == pilot.TypePilot && x.FlightId == pilot.FlightId))
                 {
