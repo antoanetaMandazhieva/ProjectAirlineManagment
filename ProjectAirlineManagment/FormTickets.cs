@@ -117,31 +117,44 @@ namespace ProjectAirlineManagment
         
         private void buttonTicketSave_Click(object sender, EventArgs e)
         {
-            Ticket ticket = GetEditedTicket();
-            Flight flight;
-            Client client = clientBusiness.GetClient(ticket.ClientId);
-            if (this.airlineManagmentContext.Flights.Any(x => x.Id == ticket.FlightId))
+            if (textBoxTicketClientId.Text == "" || textBoxTicketFlightId.Text == "" || textBoxPrice.Text == "0" || comboBoxSeat.Text == "")
             {
-                flight = flightBusiness.GetFlight(ticket.FlightId);
+                MessageBox.Show("Please, fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("This flight does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                Ticket ticket = GetEditedTicket();
+                Flight flight;
+                Client client = clientBusiness.GetClient(ticket.ClientId);
+                if (this.airlineManagmentContext.Flights.Any(x => x.Id == ticket.FlightId))
+                {
+                    flight = flightBusiness.GetFlight(ticket.FlightId);
+                }
+                else
+                {
+                    MessageBox.Show("This flight does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (flight.SeatCount == flight.TakenSeats && flight.Id == ticket.FlightId)
+                {
+                    MessageBox.Show("There are no seats available for this flight.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                if (this.airlineManagmentContext.Tickets.Any
+                    (x => x.ClientId == client.Id
+                    && x.FlightId == flight.Id
+                    && x.Seat == ticket.Seat
+                    && x.Price == ticket.Price
+                    && x.TypeTicket == ticket.TypeTicket))
+                {
+                    MessageBox.Show("This ticket has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                ticketBusiness.UpdateTicket(ticket);
+                UpdateGrid();
+                ToggleSaveUpdate();
+                ResetSelect();
+                ClearTextBoxes();
             }
-            if (flight.SeatCount == flight.TakenSeats && flight.Id == ticket.FlightId)
-            {
-                MessageBox.Show("There are no seats available for this flight.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            if (this.airlineManagmentContext.Tickets.Any(x => x.ClientId == client.Id && x.FlightId == flight.Id && x.Seat == ticket.Seat))
-            {
-                MessageBox.Show("This ticket has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            ticketBusiness.UpdateTicket(ticket);
-            UpdateGrid();
-            ToggleSaveUpdate();
-            ResetSelect();
-            ClearTextBoxes();
+            
         }
 
         private Ticket GetEditedTicket()
@@ -154,12 +167,7 @@ namespace ProjectAirlineManagment
             decimal.TryParse(textBoxPrice.Text, out price);
             string seat = comboBoxSeat.Text;
 
-            Ticket ticket = new Ticket();
-            ticket.Id = editId;
-            ticket.ClientId = clientId;
-            ticket.FlightId = flightId;
-            ticket.Price = price;
-            ticket.Seat = seat;
+            Ticket ticket = new Ticket(editId, clientId, flightId, price, seat);
 
             if (rjRadioButtonOneWay.Checked)
             {

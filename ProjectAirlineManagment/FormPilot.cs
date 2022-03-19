@@ -169,24 +169,35 @@ namespace ProjectAirlineManagment
 
         private void buttonPilotSave_Click(object sender, EventArgs e)
         {
-
-            Pilot pilot = GetEditedPilot();
-            if (!(this.airlineManagmentContext.Flights.Any(x => x.Id == pilot.FlightId)))
+            if (textBoxPilotName.Text == "" || textBoxPilotAge.Text == "" || textBoxPilotPhoneNum.Text == "" || textBoxPilotFlightId.Text == "")
             {
-                MessageBox.Show("This flight does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            if (this.airlineManagmentContext.Pilots.Any(x => x.Name == pilot.Name && x.FlightId == pilot.FlightId))
-            {
-                MessageBox.Show("This pilot has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please, fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                pilotBusiness.UpdatePilot(pilot);
-                UpdateGrid();
-                ToggleSaveUpdate();
-                ResetSelect();
-                ClearTextBoxes();
+                Pilot pilot = GetEditedPilot();
+                if (!(this.airlineManagmentContext.Flights.Any(x => x.Id == pilot.FlightId)))
+                {
+                    MessageBox.Show("This flight does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                if (this.airlineManagmentContext.Pilots.Any
+                    (x => x.Name == pilot.Name
+                    && x.FlightId == pilot.FlightId
+                    && x.PhoneNumber == pilot.PhoneNumber
+                    && x.TypePilot == pilot.TypePilot))
+                {
+                    MessageBox.Show("This pilot has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    pilotBusiness.UpdatePilot(pilot);
+                    UpdateGrid();
+                    ToggleSaveUpdate();
+                    ResetSelect();
+                    ClearTextBoxes();
+                }
             }
+            
         }
 
         private void buttonPiloDelete_Click(object sender, EventArgs e)
