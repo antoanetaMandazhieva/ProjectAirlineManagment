@@ -47,7 +47,7 @@ namespace ProjectAirlineManagment
             clientBusiness = new ClientBusiness();
         }
 
-        private void buttonTicketsInsert_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             if (textBoxTicketClientId.Text == "" || textBoxTicketFlightId.Text == "" || textBoxPrice.Text == "0" || comboBoxSeat.Text == "")
             {
