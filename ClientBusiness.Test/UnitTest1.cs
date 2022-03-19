@@ -78,7 +78,7 @@ namespace Business.Tests
         //    var service = new ClientBusiness(mockContext.Object);
         //    var clientsFound = service.GetClient(1);
 
-        //    Assert.AreEqual(1, clientsFound[0].Id, clientsFound[0].Name);
+        //    Assert.AreEqual(1, clientsFound[0].Id);
         //}
     }
 }

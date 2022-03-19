@@ -56,9 +56,9 @@ namespace Business.ModelsBusiness
         {
             if (this.airlineManagmentContext.Clients.Any
                 (x => x.Name == client.Name 
-                && x.PhoneNumber == client.PhoneNumber
                 && x.PassportNumber == client.PassportNumber 
-                && x.Nationality == client.Nationality))
+                && x.Nationality == client.Nationality
+                ))
             {
                 return 1;
                 //ima go
