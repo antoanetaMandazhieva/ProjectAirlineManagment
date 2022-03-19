@@ -105,36 +105,14 @@ namespace ProjectAirlineManagment
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //FormClients client = new FormClients();
-            //foreach (var item in this.MdiChildren)
-            //{
-            //    item.Close();
-            //}
-            //client.MdiParent = this;
-            //client.BringToFront();
-            //client.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //FormFlight flight = new FormFlight();
-            //foreach (var item in this.MdiChildren)
-            //{
-            //    item.Close();
-            //}
-            //flight.MdiParent = this;
-            //flight.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //FormTickets ticket = new FormTickets();
-            //foreach (var item in this.MdiChildren)
-            //{
-            //    item.Close();
-            //}
-            //ticket.MdiParent = this;
-            //ticket.Show();
         }
         private void ShowSubMenu(Panel subMenu)
         {
@@ -179,13 +157,6 @@ namespace ProjectAirlineManagment
 
         private void buttonPilots_Click(object sender, EventArgs e)
         {
-        //    FormPilotAge pilot = new FormPilotAge();
-        //    foreach (var item in this.MdiChildren)
-        //    {
-        //        item.Close();
-        //    }
-        //    pilot.MdiParent = this;
-        //    pilot.Show();
         }
 
         private void panelSideMenu_Paint(object sender, PaintEventArgs e)

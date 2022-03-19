@@ -96,8 +96,6 @@ namespace Business.ModelsBusiness
                 airlineManagmentContext.SaveChanges();
                 return 0;
             }
-
-
         }
 
         /// <summary>
