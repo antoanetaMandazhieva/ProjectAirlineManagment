@@ -76,7 +76,7 @@ namespace ProjectAirlineManagment
             // 
             // pictureBoxPlane
             // 
-            this.pictureBoxPlane.Image = global::ProjectAirlineManagment.Properties.Resources.Orange_Minimalist_Greeting_Condolences_of_Airline_Crash_for_Instagram_Post_Template__2_;
+            this.pictureBoxPlane.Image = global::ProjectAirlineManagment.Properties.Resources.MicrosoftTeams_image__2_1;
             this.pictureBoxPlane.Location = new System.Drawing.Point(605, 243);
             this.pictureBoxPlane.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxPlane.Name = "pictureBoxPlane";

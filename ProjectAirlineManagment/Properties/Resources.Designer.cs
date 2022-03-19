@@ -114,6 +114,26 @@ namespace ProjectAirlineManagment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MicrosoftTeams_image__2_1 {
+            get {
+                object obj = ResourceManager.GetObject("MicrosoftTeams-image (2)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MicrosoftTeams_image__3_ {
+            get {
+                object obj = ResourceManager.GetObject("MicrosoftTeams-image (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Orange_Minimalist_Greeting_Condolences_of_Airline_Crash_for_Instagram_Post_Template__2_ {
             get {
                 object obj = ResourceManager.GetObject("Orange Minimalist Greeting Condolences of Airline Crash for Instagram Post Templa" +

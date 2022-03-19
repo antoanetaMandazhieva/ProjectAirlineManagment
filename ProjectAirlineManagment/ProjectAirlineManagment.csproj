@@ -299,6 +299,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="hnet.com-image.ico" />
+    <None Include="Resources\MicrosoftTeams-image %283%29.png" />
+    <None Include="Resources\MicrosoftTeams-image %282%291.png" />
     <None Include="Resources\Orange Minimalist Greeting Condolences of Airline Crash for Instagram Post Template %282%29.png" />
     <None Include="Resources\icon.png" />
   </ItemGroup>
