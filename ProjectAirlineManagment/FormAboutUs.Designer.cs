@@ -54,11 +54,12 @@ namespace ProjectAirlineManagment
             this.labelText.BackColor = System.Drawing.Color.Silver;
             this.labelText.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelText.ForeColor = System.Drawing.Color.White;
-            this.labelText.Location = new System.Drawing.Point(38, 69);
+            this.labelText.Location = new System.Drawing.Point(35, 82);
             this.labelText.Name = "labelText";
-            this.labelText.Size = new System.Drawing.Size(776, 560);
+            this.labelText.Size = new System.Drawing.Size(776, 340);
             this.labelText.TabIndex = 1;
             this.labelText.Text = resources.GetString("labelText.Text");
+            this.labelText.Click += new System.EventHandler(this.labelText_Click);
             // 
             // labelUnderTitle
             // 
@@ -76,7 +77,7 @@ namespace ProjectAirlineManagment
             // pictureBoxPlane
             // 
             this.pictureBoxPlane.Image = global::ProjectAirlineManagment.Properties.Resources.Orange_Minimalist_Greeting_Condolences_of_Airline_Crash_for_Instagram_Post_Template__2_;
-            this.pictureBoxPlane.Location = new System.Drawing.Point(582, 268);
+            this.pictureBoxPlane.Location = new System.Drawing.Point(605, 243);
             this.pictureBoxPlane.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxPlane.Name = "pictureBoxPlane";
             this.pictureBoxPlane.Size = new System.Drawing.Size(182, 165);
