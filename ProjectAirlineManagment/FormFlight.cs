@@ -1,4 +1,5 @@
 ﻿using Business.ModelsBusiness;
+using Data;
 using Data.Models;
 using System;
 using System.Collections.Generic;
@@ -16,12 +17,13 @@ namespace ProjectAirlineManagment
     {
         private FlightBusiness flightBusiness;
         private int editId;
+        private AirlineManagmentContext airlineManagmentContext;
 
         private void ClearTextBoxes()
         {
             dateTimePickerDate.Text = default;
             comboBoxDestination.Text = "";
-            textBoxNumberOfSeats.Text = "";
+            textBoxSeatsCount.Text = "";
         }
 
         private void UpdateGrid()
@@ -34,6 +36,7 @@ namespace ProjectAirlineManagment
         {
             InitializeComponent();
             flightBusiness = new FlightBusiness();
+            airlineManagmentContext = new AirlineManagmentContext();
         }
         private void FormFlight_Load(object sender, EventArgs e)
         {
@@ -48,48 +51,67 @@ namespace ProjectAirlineManagment
 
         private void buttonFlightInsert_Click(object sender, EventArgs e)
         {
-            DateTime date = default;
-            DateTime.TryParse(dateTimePickerDate.Text, out date);
-            string destination = comboBoxDestination.Text;
-            int numOfSeats = 0;
-            int.TryParse(textBoxNumberOfSeats.Text, out numOfSeats);
-
-            Flight flight = new Flight();
-            flight.Date = date;
-            flight.Destination = destination;
-            flight.SeatCount = numOfSeats;
-
-            int n = flightBusiness.AddFlight(flight);
-            if (n == 1)
+            if (dateTimePickerDate.Text == "" || comboBoxDestination.Text == "" || textBoxSeatsCount.Text == "")
             {
-                MessageBox.Show("This flight has already been introduced", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please, fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                UpdateGrid();
-                ClearTextBoxes();
-            }
+                DateTime date = default;
+                DateTime.TryParse(dateTimePickerDate.Text, out date);
+                string destination = comboBoxDestination.Text;
+                int seatCount = default;
+                int.TryParse(textBoxSeatsCount.Text, out seatCount);
+                int takenSeats = default;
+                int.TryParse(textBoxFlightsTakenSeats.Text, out takenSeats);
 
-            flightBusiness.AddFlight(flight);
-            UpdateGrid();
-            ClearTextBoxes();
+                Flight flight = new Flight(destination, date, seatCount, takenSeats);
+
+                int n = flightBusiness.AddFlight(flight);
+                if (n == 1)
+                {
+                    MessageBox.Show("This flight has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    UpdateGrid();
+                    ClearTextBoxes();
+                }
+            }
         }
         private void UpdateTextBoxes(int id)
         {
             Flight flight = flightBusiness.GetFlight(id);
             dateTimePickerDate.Text = flight.Date.ToString();
             comboBoxDestination.Text = flight.Destination;
-            textBoxNumberOfSeats.Text = flight.SeatCount.ToString();
+            textBoxSeatsCount.Text = flight.SeatCount.ToString();
+            textBoxFlightsTakenSeats.Text = flight.TakenSeats.ToString();
         }
 
         private void buttonFlightSave_Click(object sender, EventArgs e)
         {
-            Flight flight = GetEditedFlight();
-            flightBusiness.UpdateFlight(flight);
-            UpdateGrid();
-            ToggleSaveUpdate();
-            ResetSelect();
-            ClearTextBoxes();
+            if (dateTimePickerDate.Text == "" || comboBoxDestination.Text == "" || textBoxSeatsCount.Text == "")
+            {
+                MessageBox.Show("Please, fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Flight flight = GetEditedFlight();
+                if (this.airlineManagmentContext.Flights.Any
+                    (x => x.Destination == flight.Destination
+                    && x.Date == flight.Date
+                    && x.SeatCount == flight.SeatCount
+                    && x.TakenSeats == flight.TakenSeats))
+                {
+                    MessageBox.Show("This flight has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                flightBusiness.UpdateFlight(flight);
+                UpdateGrid();
+                ToggleSaveUpdate();
+                ResetSelect();
+                ClearTextBoxes();
+            }
+            
         }
         private void ResetSelect()
         {
@@ -101,15 +123,12 @@ namespace ProjectAirlineManagment
             DateTime date = default;
             DateTime.TryParse(dateTimePickerDate.Text, out date);
             string destination = comboBoxDestination.Text;
-            int numOfSeats = 0;
-            int.TryParse(textBoxNumberOfSeats.Text, out numOfSeats);
+            int seatCount = 0;
+            int.TryParse(textBoxSeatsCount.Text, out seatCount);
+            int takenSeats = default;
+            int.TryParse(textBoxFlightsTakenSeats.Text, out takenSeats);
 
-
-            Flight flight = new Flight();
-            flight.Id = editId;
-            flight.Date = date;
-            flight.Destination = destination;
-            flight.SeatCount = numOfSeats;
+            Flight flight = new Flight(editId, destination, date, seatCount, takenSeats);
 
             return flight;
         }
@@ -159,6 +178,16 @@ namespace ProjectAirlineManagment
                 ResetSelect();
 
             }
+        }
+
+        private void textBoxNumberOfSeats_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewFlights_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -12,6 +12,27 @@ namespace Data.Models
     /// </summary>
     public class Flight
     {
+        public Flight()
+        {
+        }
+
+        public Flight(string destination, DateTime date, int seatCount, int takenSeats)
+        {
+            this.Destination = destination;
+            this.Date = date;
+            this.SeatCount = seatCount;
+            this.TakenSeats = takenSeats;
+        }
+
+        public Flight(int id, string destination, DateTime date, int seatCount, int takenSeats)
+        {
+            this.Id = id;
+            this.Destination = destination;
+            this.Date = date;
+            this.SeatCount = seatCount;
+            this.TakenSeats = takenSeats;
+        }
+
         /// <summary>
         /// Create an object and properties.
         /// </summary>

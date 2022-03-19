@@ -1,4 +1,5 @@
 ﻿using Business.ModelsBusiness;
+using Data;
 using Data.Models;
 using System;
 using System.Collections.Generic;
@@ -16,14 +17,16 @@ namespace ProjectAirlineManagment
     {
         private PilotBusiness pilotBusiness;
         private int editId;
+        private AirlineManagmentContext airlineManagmentContext;
 
         private void ClearTextBoxes()
         {
             textBoxPilotName.Text = "";
             textBoxPilotAge.Text = "";
             textBoxPilotPhoneNum.Text = "";
-            radioButtonChiefPilot.Checked = true;
-            radioButtonAssistantPilot.Checked = false;
+            textBoxPilotFlightId.Text = "";
+            rjRadioButtonChiefPilot.Checked = true;
+            rjRadioButtonAssistantPilot.Checked = false;
 
         }
 
@@ -38,6 +41,7 @@ namespace ProjectAirlineManagment
         {
             InitializeComponent();
             pilotBusiness = new PilotBusiness();
+            airlineManagmentContext = new AirlineManagmentContext();
         }
 
         private void buttonPilotUpdate_Click(object sender, EventArgs e)
@@ -82,14 +86,12 @@ namespace ProjectAirlineManagment
             string name = textBoxPilotName.Text;
             int age = 0;
             int.TryParse(textBoxPilotAge.Text, out age);
-            string phoneNumber = textBoxPilotPhoneNum.Text; ;
+            string phoneNumber = textBoxPilotPhoneNum.Text;
+            int flightId = 0;
+            int.TryParse(textBoxPilotFlightId.Text, out flightId);
 
-            Pilot pilot = new Pilot();
-            pilot.Id = editId;
-            pilot.Name = name;
-            pilot.Age = age;
-            pilot.PhoneNumber = phoneNumber;
-            if (radioButtonChiefPilot.Checked)
+            Pilot pilot = new Pilot(editId, name, phoneNumber, age, flightId);
+            if (rjRadioButtonChiefPilot.Checked)
             {
                 pilot.TypePilot = "Chief Pilot";
             }
@@ -103,37 +105,46 @@ namespace ProjectAirlineManagment
 
         private void buttonPilotInsert_Click(object sender, EventArgs e)
         {
-            string name = textBoxPilotName.Text; 
-            int age = 0;
-            int.TryParse(textBoxPilotAge.Text, out age);
-            string phoneNumber = textBoxPilotPhoneNum.Text; ;
-            int flightId = 0;
-            int.TryParse(textBoxPilotFlightId.Text, out flightId);
-
-            Pilot pilot = new Pilot();
-            pilot.Name = name;
-            pilot.Age = age;
-            pilot.PhoneNumber = phoneNumber;
-            pilot.FlightId = flightId;
-            if (radioButtonChiefPilot.Checked)
+            if (textBoxPilotName.Text == "" || textBoxPilotAge.Text == "" || textBoxPilotPhoneNum.Text == "" || textBoxPilotFlightId.Text == "")
             {
-                pilot.TypePilot = "Chief Pilot";
+                MessageBox.Show("Please, fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                pilot.TypePilot = "Assistant Pilot";
+                string name = textBoxPilotName.Text;
+                int age = 0;
+                int.TryParse(textBoxPilotAge.Text, out age);
+                string phoneNumber = textBoxPilotPhoneNum.Text; ;
+                int flightId = 0;
+                int.TryParse(textBoxPilotFlightId.Text, out flightId);
+
+                Pilot pilot = new Pilot(name, phoneNumber, age, flightId);
+                if (rjRadioButtonChiefPilot.Checked)
+                {
+                    pilot.TypePilot = "Chief Pilot";
+                }
+                else
+                {
+                    pilot.TypePilot = "Assistant Pilot";
+                }
+
+                int n = pilotBusiness.AddPilot(pilot);
+                if (n == 1)
+                {
+                    MessageBox.Show("This pilot has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (n == 2)
+                {
+                    MessageBox.Show("This flight does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    UpdateGrid();
+                    ClearTextBoxes();
+                }
             }
 
-            int n = pilotBusiness.AddPilot(pilot);
-            if (n == 1)
-            {
-                MessageBox.Show("This pilot has already been introduced", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                UpdateGrid();
-                ClearTextBoxes();
-            }
+            
         }
 
         private void FormPilotAge_Load(object sender, EventArgs e)
@@ -148,6 +159,7 @@ namespace ProjectAirlineManagment
             textBoxPilotName.Text = pilot.Name;
             textBoxPilotAge.Text = pilot.Age.ToString();
             textBoxPilotPhoneNum.Text = pilot.PhoneNumber;
+            textBoxPilotFlightId.Text = pilot.FlightId.ToString();
         }
 
         private void DisabeSelect()
@@ -157,12 +169,35 @@ namespace ProjectAirlineManagment
 
         private void buttonPilotSave_Click(object sender, EventArgs e)
         {
-            Pilot pilot = GetEditedPilot();
-            pilotBusiness.UpdatePilot(pilot);
-            UpdateGrid();
-            ToggleSaveUpdate();
-            ResetSelect();
-            ClearTextBoxes();
+            if (textBoxPilotName.Text == "" || textBoxPilotAge.Text == "" || textBoxPilotPhoneNum.Text == "" || textBoxPilotFlightId.Text == "")
+            {
+                MessageBox.Show("Please, fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Pilot pilot = GetEditedPilot();
+                if (!(this.airlineManagmentContext.Flights.Any(x => x.Id == pilot.FlightId)))
+                {
+                    MessageBox.Show("This flight does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                if (this.airlineManagmentContext.Pilots.Any
+                    (x => x.Name == pilot.Name
+                    && x.FlightId == pilot.FlightId
+                    && x.PhoneNumber == pilot.PhoneNumber
+                    && x.TypePilot == pilot.TypePilot))
+                {
+                    MessageBox.Show("This pilot has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    pilotBusiness.UpdatePilot(pilot);
+                    UpdateGrid();
+                    ToggleSaveUpdate();
+                    ResetSelect();
+                    ClearTextBoxes();
+                }
+            }
+            
         }
 
         private void buttonPiloDelete_Click(object sender, EventArgs e)
@@ -188,6 +223,16 @@ namespace ProjectAirlineManagment
         }
 
         private void buttonPilotInsert_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void radioButtonChiefPilot_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rjRadioButtonChiefPilot_CheckedChanged(object sender, EventArgs e)
         {
 
         }

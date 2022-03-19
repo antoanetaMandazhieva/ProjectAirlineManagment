@@ -12,6 +12,27 @@ namespace Data.Models
     /// </summary>
     public class Client
     {
+        public Client()
+        {
+        }
+
+        public Client(string name, string phoneNumber, string nationality, string passportNumber)
+        {
+            this.Name = name;
+            this.PhoneNumber = phoneNumber;
+            this.Nationality = nationality;
+            this.PassportNumber = passportNumber;
+        }
+
+        public Client(int id, string name, string phoneNumber, string nationality, string passportNumber)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.PhoneNumber = phoneNumber;
+            this.Nationality = nationality;
+            this.PassportNumber = passportNumber;
+        }
+
         /// <summary>
         /// Create an object with properties.
         /// </summary>

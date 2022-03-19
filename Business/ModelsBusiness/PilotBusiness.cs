@@ -19,7 +19,6 @@ namespace Business.ModelsBusiness
         public PilotBusiness()
         {
             airlineManagmentContext = new AirlineManagmentContext();
-            pilots = new List<Pilot>();
         }
         /// <summary>
         /// Create an obgect of AirlineManagmentContext.
@@ -50,7 +49,16 @@ namespace Business.ModelsBusiness
         /// <returns>Returns number.</returns>
         public int AddPilot(Pilot pilot)
         {
-            if (pilots.Contains(pilot))
+            if (!(this.airlineManagmentContext.Flights.Any(x => x.Id == pilot.FlightId)))
+            {
+                return 2;
+                // not exist
+            }
+            if (this.airlineManagmentContext.Pilots.Any
+                (x => x.Name == pilot.Name 
+                && x.FlightId == pilot.FlightId 
+                && x.PhoneNumber == pilot.PhoneNumber
+                && x.TypePilot == pilot.TypePilot))
             {
                 return 1;
                
@@ -59,7 +67,6 @@ namespace Business.ModelsBusiness
             {
                 airlineManagmentContext.Pilots.Add(pilot);
                 airlineManagmentContext.SaveChanges();
-                this.pilots.Add(pilot);
                 return 0;
               
             }
@@ -75,7 +82,6 @@ namespace Business.ModelsBusiness
             if (pilot != null)
             {
                 airlineManagmentContext.Pilots.Remove(pilot);
-                this.pilots.Remove(pilot);
                 airlineManagmentContext.SaveChanges();
             }
         }

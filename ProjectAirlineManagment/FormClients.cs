@@ -1,4 +1,5 @@
 ﻿using Business.ModelsBusiness;
+using Data;
 using Data.Models;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace ProjectAirlineManagment
     {
         private ClientBusiness clientBusiness;
         private int editId;
+        private AirlineManagmentContext airlineManagmentContext;
 
         private void ClearTextBoxes()
         {
@@ -37,30 +39,34 @@ namespace ProjectAirlineManagment
         {
             InitializeComponent();
             clientBusiness = new ClientBusiness();
+            airlineManagmentContext = new AirlineManagmentContext();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string name = textBoxNameClient.Text;
-            string phoneNumber = textBoxPhoneNumClient.Text;
-            string nationality = comboBoxNationalityClient.Text;
-            string passportNumber = textBoxPassNumClient.Text;
-
-            Client client = new Client();
-            client.Name = name;
-            client.PhoneNumber = phoneNumber;
-            client.Nationality = nationality;
-            client.PassportNumber = passportNumber;
-
-            int n = clientBusiness.AddClient(client);
-            if (n == 1)
+            if (textBoxNameClient.Text == "" || textBoxPhoneNumClient.Text == "" || comboBoxNationalityClient.Text == "" || textBoxPassNumClient.Text == "")
             {
-                MessageBox.Show("This client has already been introduced", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please, fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                UpdateGrid();
-                ClearTextBoxes();
+                string name = textBoxNameClient.Text;
+                string phoneNumber = textBoxPhoneNumClient.Text;
+                string nationality = comboBoxNationalityClient.Text;
+                string passportNumber = textBoxPassNumClient.Text;
+
+                Client client = new Client(name, phoneNumber, nationality, passportNumber);
+
+                int n = clientBusiness.AddClient(client);
+                if (n == 1)
+                {
+                    MessageBox.Show("This client has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    UpdateGrid();
+                    ClearTextBoxes();
+                }
             }
         }
 
@@ -81,12 +87,27 @@ namespace ProjectAirlineManagment
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Client client = GetEditedClient();
-            clientBusiness.UpdateClient(client);
-            UpdateGrid();
-            ToggleSaveUpdate();
-            ResetSelect();
-            ClearTextBoxes();
+            if (textBoxNameClient.Text == "" || textBoxPhoneNumClient.Text == "" || comboBoxNationalityClient.Text == "" || textBoxPassNumClient.Text == "")
+            {
+                MessageBox.Show("Please, fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Client client = GetEditedClient();
+                if (this.airlineManagmentContext.Clients.Any
+                    (x => x.Name == client.Name
+                    && x.PhoneNumber == client.PhoneNumber
+                    && x.PassportNumber == client.PassportNumber
+                    && x.Nationality == client.Nationality))
+                {
+                    MessageBox.Show("This client has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                clientBusiness.UpdateClient(client);
+                UpdateGrid();
+                ToggleSaveUpdate();
+                ResetSelect();
+                ClearTextBoxes();
+            }
         }
 
         private void ResetSelect()
@@ -102,12 +123,7 @@ namespace ProjectAirlineManagment
             string nationality = comboBoxNationalityClient.Text;
             string passportNumber = textBoxPassNumClient.Text;
 
-            Client client = new Client();
-            client.Id = editId;
-            client.Name = name;
-            client.Nationality = nationality;
-            client.PhoneNumber = phoneNumber;
-            client.PassportNumber = passportNumber;
+            Client client = new Client(editId, name, phoneNumber, nationality, passportNumber);
 
             return client;
         }
@@ -157,6 +173,11 @@ namespace ProjectAirlineManagment
         }
 
         private void textBoxPhoneNumClient_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

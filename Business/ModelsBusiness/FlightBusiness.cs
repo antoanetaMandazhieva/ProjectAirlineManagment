@@ -46,7 +46,11 @@ namespace Business.ModelsBusiness
         /// <returns>Return number.</returns>
         public int AddFlight(Flight flight)
         {
-            if (this.airlineManagmentContext.Flights.Any(x => x.Destination == flight.Destination && x.Date == flight.Date))
+            if (this.airlineManagmentContext.Flights.Any
+                (x => x.Destination == flight.Destination 
+                && x.Date == flight.Date
+                && x.SeatCount == flight.SeatCount
+                && x.TakenSeats == flight.TakenSeats))
             {
                 return 1;
                
