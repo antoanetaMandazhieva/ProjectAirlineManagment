@@ -15,20 +15,11 @@ namespace ProjectAirlineManagment
 {
     public partial class FormTickets : Form
     {
+        private TicketBusiness ticketBusiness;
         private int editId;
         private AirlineManagmentContext airlineManagmentContext;
-        private TicketBusiness ticketBusiness;
         private FlightBusiness flightBusiness;
         private ClientBusiness clientBusiness;
-
-        public FormTickets()
-        {
-            InitializeComponent();
-            airlineManagmentContext = new AirlineManagmentContext();
-            ticketBusiness = new TicketBusiness();
-            flightBusiness = new FlightBusiness();
-            clientBusiness = new ClientBusiness();
-        }
 
         private void ClearTextBoxes()
         {
@@ -45,12 +36,18 @@ namespace ProjectAirlineManagment
             dataGridViewTickets.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
+        public FormTickets()
+        {
+            InitializeComponent();
+            ticketBusiness = new TicketBusiness();
+            airlineManagmentContext = new AirlineManagmentContext();
+            flightBusiness = new FlightBusiness();
+            clientBusiness = new ClientBusiness();
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
-            if (textBoxTicketClientId.Text == "" 
-                || textBoxTicketFlightId.Text == "" 
-                 || textBoxPrice.Text == "0" 
-                  || comboBoxSeat.Text == "")
+            if (textBoxTicketClientId.Text == "" || textBoxTicketFlightId.Text == "" || textBoxPrice.Text == "0" || comboBoxSeat.Text == "")
             {
                 MessageBox.Show("Please, fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -77,18 +74,15 @@ namespace ProjectAirlineManagment
                 int n = ticketBusiness.AddTicket(ticket);
                 if (n == 1)
                 {
-                    MessageBox.Show("There are no seats available for this flight.", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("There are no seats available for this flight.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (n == 2)
                 {
-                    MessageBox.Show("This ticket has already been introduced.", "Error", 
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("This ticket has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (n == 3)
                 {
-                    MessageBox.Show("This flight does not exist.", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("This flight does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (n == 4)
                 {
@@ -127,13 +121,9 @@ namespace ProjectAirlineManagment
         
         private void buttonTicketSave_Click(object sender, EventArgs e)
         {
-            if (textBoxTicketClientId.Text == "" 
-                || textBoxTicketFlightId.Text == "" 
-                || textBoxPrice.Text == "0" 
-                || comboBoxSeat.Text == "")
+            if (textBoxTicketClientId.Text == "" || textBoxTicketFlightId.Text == "" || textBoxPrice.Text == "0" || comboBoxSeat.Text == "")
             {
-                MessageBox.Show("Please, fill in all fields.", "Error", 
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please, fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -146,18 +136,16 @@ namespace ProjectAirlineManagment
                 }
                 else
                 {
-                    MessageBox.Show("This flight does not exist.", "Error", 
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("This flight does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (flight.SeatCount == flight.TakenSeats && flight.Id == ticket.FlightId)
                 {
-                    MessageBox.Show("There are no seats available for this flight.", "Error", 
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("There are no seats available for this flight.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 if (this.airlineManagmentContext.Tickets.Any
-                    (x => x.FlightId == flight.Id
-                    && x.Seat == ticket.Seat))
+                (x => x.FlightId == flight.Id
+                && x.Seat == ticket.Seat))
                 {
                     MessageBox.Show("This seat is taken for this flight.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -166,8 +154,7 @@ namespace ProjectAirlineManagment
                     && x.FlightId == flight.Id
                     && x.Seat == ticket.Seat))
                 {
-                    MessageBox.Show("This ticket has already been introduced.", "Error", 
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("This ticket has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -177,7 +164,8 @@ namespace ProjectAirlineManagment
                     ResetSelect();
                     ClearTextBoxes();
                 }
-            } 
+            }
+            
         }
 
         private Ticket GetEditedTicket()
