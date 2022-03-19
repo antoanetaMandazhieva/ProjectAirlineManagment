@@ -9,7 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{9BE40F5D-4D55-47F7-A0E6-04F217037358}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F800F14C-61F0-405F-83C9-B9C741511358}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectAirlineManagment.Tests", "ProjectAirlineManagment.Tests\ProjectAirlineManagment.Tests.csproj", "{B49EEFA7-86E2-4C4F-9812-23219F7F796B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A2CADE38-B36E-4D16-8E83-FE6924FF5B05}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientBusiness.Test", "ClientBusiness.Test\ClientBusiness.Test.csproj", "{A2E8A803-4C2D-49C5-BE26-AAEA62E133B7}"
 EndProject

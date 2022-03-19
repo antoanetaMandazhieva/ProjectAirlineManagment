@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Business.ModelsBusiness
 {
+    /// <summary>
+    /// Create interface IFlightBusiness.
+    /// </summary>
     interface IFlightBusiness
     {
         Flight GetFlight(int id);
