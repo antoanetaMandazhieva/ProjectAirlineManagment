@@ -30,6 +30,7 @@ namespace ProjectAirlineManagment
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelPilot = new System.Windows.Forms.Label();
             this.labelPilotName = new System.Windows.Forms.Label();
             this.labelPilotPhoneNum = new System.Windows.Forms.Label();
@@ -96,17 +97,27 @@ namespace ProjectAirlineManagment
             // 
             // dataGridViewPilot
             // 
+            this.dataGridViewPilot.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewPilot.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridViewPilot.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewPilot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPilot.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Bright", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewPilot.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewPilot.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewPilot.ColumnHeadersHeight = 29;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewPilot.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewPilot.Location = new System.Drawing.Point(20, 210);
             this.dataGridViewPilot.Name = "dataGridViewPilot";
             this.dataGridViewPilot.RowHeadersWidth = 51;
@@ -228,7 +239,7 @@ namespace ProjectAirlineManagment
             // rjRadioButtonAssistantPilot
             // 
             this.rjRadioButtonAssistantPilot.AutoSize = true;
-            this.rjRadioButtonAssistantPilot.CheckedColor = System.Drawing.Color.MediumAquamarine;
+            this.rjRadioButtonAssistantPilot.CheckedColor = System.Drawing.Color.Indigo;
             this.rjRadioButtonAssistantPilot.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjRadioButtonAssistantPilot.ForeColor = System.Drawing.Color.White;
             this.rjRadioButtonAssistantPilot.Location = new System.Drawing.Point(585, 124);
@@ -238,13 +249,13 @@ namespace ProjectAirlineManagment
             this.rjRadioButtonAssistantPilot.TabIndex = 23;
             this.rjRadioButtonAssistantPilot.TabStop = true;
             this.rjRadioButtonAssistantPilot.Text = "Assistant Pilot";
-            this.rjRadioButtonAssistantPilot.UnChekedColor = System.Drawing.Color.LightCoral;
+            this.rjRadioButtonAssistantPilot.UnChekedColor = System.Drawing.Color.DarkOrchid;
             this.rjRadioButtonAssistantPilot.UseVisualStyleBackColor = true;
             // 
             // rjRadioButtonChiefPilot
             // 
             this.rjRadioButtonChiefPilot.AutoSize = true;
-            this.rjRadioButtonChiefPilot.CheckedColor = System.Drawing.Color.MediumAquamarine;
+            this.rjRadioButtonChiefPilot.CheckedColor = System.Drawing.Color.Indigo;
             this.rjRadioButtonChiefPilot.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjRadioButtonChiefPilot.ForeColor = System.Drawing.Color.White;
             this.rjRadioButtonChiefPilot.Location = new System.Drawing.Point(585, 82);
@@ -254,7 +265,7 @@ namespace ProjectAirlineManagment
             this.rjRadioButtonChiefPilot.TabIndex = 22;
             this.rjRadioButtonChiefPilot.TabStop = true;
             this.rjRadioButtonChiefPilot.Text = "Chief Pilot";
-            this.rjRadioButtonChiefPilot.UnChekedColor = System.Drawing.Color.LightCoral;
+            this.rjRadioButtonChiefPilot.UnChekedColor = System.Drawing.Color.DarkOrchid;
             this.rjRadioButtonChiefPilot.UseVisualStyleBackColor = true;
             this.rjRadioButtonChiefPilot.CheckedChanged += new System.EventHandler(this.rjRadioButtonChiefPilot_CheckedChanged);
             // 
