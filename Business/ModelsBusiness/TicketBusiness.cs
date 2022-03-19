@@ -66,7 +66,16 @@ namespace Business.ModelsBusiness
                 return 3;
                 // flight does not exist
             }
-            Client client = clientBusiness.GetClient(ticket.ClientId);
+            Client client;
+            if (this.airlineManagmentContext.Clients.Any(x => x.Id == ticket.ClientId))
+            {
+                client = clientBusiness.GetClient(ticket.ClientId);
+            }
+            else
+            {
+                return 5;
+                // client does not exist
+            }
             if (flight.SeatCount == flight.TakenSeats && flight.Id == ticket.FlightId)
             {
                 return 1;

@@ -196,10 +196,6 @@ namespace ProjectAirlineManagment
                 {
                     MessageBox.Show("In this flight has already been introduced that type of pilot.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                if (this.airlineManagmentContext.Pilots.Any(x=>x.TypePilot == pilot.TypePilot && x.FlightId == pilot.FlightId))
-                {
-                    MessageBox.Show("In this flight there has already been introduced that type of pilot.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
                 else
                 {
                     pilotBusiness.UpdatePilot(pilot);

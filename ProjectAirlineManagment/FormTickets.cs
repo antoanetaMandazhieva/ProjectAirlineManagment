@@ -23,7 +23,9 @@ namespace ProjectAirlineManagment
 
         private void ClearTextBoxes()
         {
-            textBoxPrice.Text = "0";
+            textBoxTicketClientId.Text = "";
+            textBoxTicketFlightId.Text = "";
+            textBoxPrice.Text = "";
             comboBoxSeat.Text = "";
             rjRadioButtonOneWay.Checked = true;
             rjRadioButtonRoundTrip.Checked = false;
@@ -45,7 +47,7 @@ namespace ProjectAirlineManagment
             clientBusiness = new ClientBusiness();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonTicketsInsert_Click(object sender, EventArgs e)
         {
             if (textBoxTicketClientId.Text == "" || textBoxTicketFlightId.Text == "" || textBoxPrice.Text == "0" || comboBoxSeat.Text == "")
             {
@@ -88,6 +90,10 @@ namespace ProjectAirlineManagment
                 {
                     MessageBox.Show("This seat is taken for this flight.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else if (n == 5)
+                {
+                    MessageBox.Show("This client does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else
                 {
                     UpdateGrid();
@@ -129,7 +135,7 @@ namespace ProjectAirlineManagment
             {
                 Ticket ticket = GetEditedTicket();
                 Flight flight;
-                Client client = clientBusiness.GetClient(ticket.ClientId);
+                Client client;
                 if (this.airlineManagmentContext.Flights.Any(x => x.Id == ticket.FlightId))
                 {
                     flight = flightBusiness.GetFlight(ticket.FlightId);
@@ -139,13 +145,22 @@ namespace ProjectAirlineManagment
                     MessageBox.Show("This flight does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                if (this.airlineManagmentContext.Clients.Any(x => x.Id == ticket.ClientId))
+                {
+                    client = clientBusiness.GetClient(ticket.ClientId);
+                }
+                else
+                {
+                    MessageBox.Show("This client does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 if (flight.SeatCount == flight.TakenSeats && flight.Id == ticket.FlightId)
                 {
                     MessageBox.Show("There are no seats available for this flight.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 if (this.airlineManagmentContext.Tickets.Any
-                (x => x.FlightId == flight.Id
-                && x.Seat == ticket.Seat))
+                    (x => x.FlightId == ticket.FlightId
+                    && x.Seat == ticket.Seat))
                 {
                     MessageBox.Show("This seat is taken for this flight.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

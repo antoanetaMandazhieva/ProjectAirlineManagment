@@ -105,11 +105,14 @@ namespace ProjectAirlineManagment
                 {
                     MessageBox.Show("This flight has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                flightBusiness.UpdateFlight(flight);
-                UpdateGrid();
-                ToggleSaveUpdate();
-                ResetSelect();
-                ClearTextBoxes();
+                else
+                {
+                    flightBusiness.UpdateFlight(flight);
+                    UpdateGrid();
+                    ToggleSaveUpdate();
+                    ResetSelect();
+                    ClearTextBoxes();
+                }
             }
             
         }
