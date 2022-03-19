@@ -118,10 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="labelText.Text" xml:space="preserve">
-    <value>Welcome to our company! Our company was established in 2017. Over the years of work we
-have managed to gain a lot of experience and improve the quality of the remaining services. 
-To facilitate our work, we have created the application "Balkan Airlines", with which our 
-employees work every day. The application itself allows trackingcustomers with their IDs,
-tickets, flights and also the pilots performing the flight. Nice work! </value>
+    <value>
+
+
+      Welcome to our company! Our company was established in 2017. Over the years of work we      
+      have managed to gain a lot of experience and improve the quality of the remaining services.       
+      To facilitate our work, we have created the application "Balkan Airlines", with which our      
+      employees work every day. The application itself allows trackingcustomers with their IDs,      
+      tickets, flights and also the pilots performing the flight. Nice work!      
+
+
+      If you have a problem, call the support center:
+
+      phone: 089765438 or email: balkanairsupportcentre@gmail.com 
+
+
+
+
+</value>
   </data>
 </root>

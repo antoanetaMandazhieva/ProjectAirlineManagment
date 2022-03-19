@@ -90,6 +90,10 @@ namespace ProjectAirlineManagment
                     MessageBox.Show("This flight does not exist.", "Error",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else if (n == 4)
+                {
+                    MessageBox.Show("This seat is taken for this flight.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else
                 {
                     UpdateGrid();
@@ -152,20 +156,27 @@ namespace ProjectAirlineManagment
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 if (this.airlineManagmentContext.Tickets.Any
+                (x => x.FlightId == flight.Id
+                && x.Seat == ticket.Seat))
+                {
+                    MessageBox.Show("This seat is taken for this flight.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                if (this.airlineManagmentContext.Tickets.Any
                     (x => x.ClientId == client.Id
                     && x.FlightId == flight.Id
-                    && x.Seat == ticket.Seat
-                    && x.Price == ticket.Price
-                    && x.TypeTicket == ticket.TypeTicket))
+                    && x.Seat == ticket.Seat))
                 {
                     MessageBox.Show("This ticket has already been introduced.", "Error", 
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                ticketBusiness.UpdateTicket(ticket);
-                UpdateGrid();
-                ToggleSaveUpdate();
-                ResetSelect();
-                ClearTextBoxes();
+                else
+                {
+                    ticketBusiness.UpdateTicket(ticket);
+                    UpdateGrid();
+                    ToggleSaveUpdate();
+                    ResetSelect();
+                    ClearTextBoxes();
+                }
             }
             
         }

@@ -82,6 +82,13 @@ namespace Business.ModelsBusiness
                 // already exist
                 return 2;
             }
+            if (this.airlineManagmentContext.Tickets.Any
+                (x => x.FlightId == flight.Id
+                && x.Seat == ticket.Seat))
+            {
+                //seat is taken
+                return 4;
+            }
             else
             {
                 airlineManagmentContext.Tickets.Add(ticket);

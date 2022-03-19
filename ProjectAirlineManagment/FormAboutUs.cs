@@ -16,5 +16,10 @@ namespace ProjectAirlineManagment
         {
             InitializeComponent();
         }
+
+        private void labelText_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

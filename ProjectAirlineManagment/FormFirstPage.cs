@@ -161,6 +161,7 @@ namespace ProjectAirlineManagment
         }
         private void buttonHome_Click(object sender, EventArgs e)
         {
+            pictureBoxBalkanAirlinesLogo.Hide();
             FormAboutUs aboutUs = new FormAboutUs();
             foreach (var item in this.MdiChildren)
             {
@@ -194,6 +195,7 @@ namespace ProjectAirlineManagment
 
         private void iconButtonClients_Click(object sender, EventArgs e)
         {
+            pictureBoxBalkanAirlinesLogo.Hide();
             FormClients client = new FormClients();
             foreach (var item in this.MdiChildren)
             {
@@ -206,6 +208,7 @@ namespace ProjectAirlineManagment
 
         private void iconButtonFlights_Click(object sender, EventArgs e)
         {
+            pictureBoxBalkanAirlinesLogo.Hide();
             FormFlight flight = new FormFlight();
             foreach (var item in this.MdiChildren)
             {
@@ -217,6 +220,7 @@ namespace ProjectAirlineManagment
 
         private void iconButtonTickets_Click(object sender, EventArgs e)
         {
+            pictureBoxBalkanAirlinesLogo.Hide();
             FormTickets ticket = new FormTickets();
             foreach (var item in this.MdiChildren)
             {
@@ -228,6 +232,7 @@ namespace ProjectAirlineManagment
 
         private void iconButtonPilots_Click(object sender, EventArgs e)
         {
+            pictureBoxBalkanAirlinesLogo.Hide();
             FormPilotAge pilot = new FormPilotAge();
             foreach (var item in this.MdiChildren)
             {
@@ -235,6 +240,11 @@ namespace ProjectAirlineManagment
             }
             pilot.MdiParent = this;
             pilot.Show();
+        }
+
+        private void pictureBoxBalkanAirlinesLogo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

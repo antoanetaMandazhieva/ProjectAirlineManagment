@@ -32,9 +32,9 @@ namespace ProjectAirlineManagment
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAboutUs));
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelText = new System.Windows.Forms.Label();
-            this.labelSubText = new System.Windows.Forms.Label();
-            this.labelIfo = new System.Windows.Forms.Label();
             this.labelUnderTitle = new System.Windows.Forms.Label();
+            this.pictureBoxPlane = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlane)).BeginInit();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -51,35 +51,15 @@ namespace ProjectAirlineManagment
             // labelText
             // 
             this.labelText.AutoSize = true;
+            this.labelText.BackColor = System.Drawing.Color.Silver;
             this.labelText.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelText.ForeColor = System.Drawing.Color.White;
-            this.labelText.Location = new System.Drawing.Point(47, 112);
+            this.labelText.Location = new System.Drawing.Point(35, 82);
             this.labelText.Name = "labelText";
-            this.labelText.Size = new System.Drawing.Size(716, 100);
+            this.labelText.Size = new System.Drawing.Size(776, 340);
             this.labelText.TabIndex = 1;
             this.labelText.Text = resources.GetString("labelText.Text");
-            // 
-            // labelSubText
-            // 
-            this.labelSubText.AutoSize = true;
-            this.labelSubText.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSubText.ForeColor = System.Drawing.Color.White;
-            this.labelSubText.Location = new System.Drawing.Point(43, 250);
-            this.labelSubText.Name = "labelSubText";
-            this.labelSubText.Size = new System.Drawing.Size(366, 40);
-            this.labelSubText.TabIndex = 2;
-            this.labelSubText.Text = " If you have a problem, call the support center:\r\n\r\n";
-            // 
-            // labelIfo
-            // 
-            this.labelIfo.AutoSize = true;
-            this.labelIfo.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIfo.ForeColor = System.Drawing.Color.White;
-            this.labelIfo.Location = new System.Drawing.Point(47, 281);
-            this.labelIfo.Name = "labelIfo";
-            this.labelIfo.Size = new System.Drawing.Size(504, 20);
-            this.labelIfo.TabIndex = 3;
-            this.labelIfo.Text = "phone: 089765438 or email: balkanairsupportcentre@gmail.com ";
+            this.labelText.Click += new System.EventHandler(this.labelText_Click);
             // 
             // labelUnderTitle
             // 
@@ -94,14 +74,24 @@ namespace ProjectAirlineManagment
     "________________________________________________________________________________" +
     "_________________________________";
             // 
+            // pictureBoxPlane
+            // 
+            this.pictureBoxPlane.Image = global::ProjectAirlineManagment.Properties.Resources.MicrosoftTeams_image__2_1;
+            this.pictureBoxPlane.Location = new System.Drawing.Point(605, 243);
+            this.pictureBoxPlane.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxPlane.Name = "pictureBoxPlane";
+            this.pictureBoxPlane.Size = new System.Drawing.Size(182, 165);
+            this.pictureBoxPlane.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPlane.TabIndex = 23;
+            this.pictureBoxPlane.TabStop = false;
+            // 
             // FormAboutUs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(846, 474);
-            this.Controls.Add(this.labelIfo);
-            this.Controls.Add(this.labelSubText);
+            this.Controls.Add(this.pictureBoxPlane);
             this.Controls.Add(this.labelText);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.labelUnderTitle);
@@ -109,6 +99,7 @@ namespace ProjectAirlineManagment
             this.Name = "FormAboutUs";
             this.Text = "FormAboutUs";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlane)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,8 +109,7 @@ namespace ProjectAirlineManagment
 
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelText;
-        private System.Windows.Forms.Label labelSubText;
-        private System.Windows.Forms.Label labelIfo;
         private System.Windows.Forms.Label labelUnderTitle;
+        private System.Windows.Forms.PictureBox pictureBoxPlane;
     }
 }
