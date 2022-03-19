@@ -30,6 +30,8 @@ namespace ProjectAirlineManagment
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPilotAge));
             this.labelPilot = new System.Windows.Forms.Label();
             this.labelPilotName = new System.Windows.Forms.Label();
             this.labelPilotPhoneNum = new System.Windows.Forms.Label();
@@ -283,6 +285,7 @@ namespace ProjectAirlineManagment
             this.Controls.Add(this.labelPilot);
             this.Controls.Add(this.labelUnderTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPilotAge";
             this.Text = "FormPilot";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
