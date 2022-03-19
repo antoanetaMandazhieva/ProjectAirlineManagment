@@ -237,7 +237,6 @@ namespace ProjectAirlineManagment
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -246,6 +245,16 @@ namespace ProjectAirlineManagment
         }
 
         private void dataGridViewTickets_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void rjRadioButtonOneWay_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rjRadioButtonRoundTrip_CheckedChanged(object sender, EventArgs e)
         {
 
         }

@@ -161,7 +161,14 @@ namespace ProjectAirlineManagment
         }
         private void buttonHome_Click(object sender, EventArgs e)
         {
-
+            FormAboutUs aboutUs = new FormAboutUs();
+            foreach (var item in this.MdiChildren)
+            {
+                item.Close();
+            }
+            aboutUs.MdiParent = this;
+            aboutUs.BringToFront();
+            aboutUs.Show();
         }
 
         private void buttonMenu_Click(object sender, EventArgs e)
