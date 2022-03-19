@@ -64,13 +64,13 @@ namespace Business.ModelsBusiness
             else
             {
                 return 3;
-                // not exist
+                // flight does not exist
             }
             Client client = clientBusiness.GetClient(ticket.ClientId);
             if (flight.SeatCount == flight.TakenSeats && flight.Id == ticket.FlightId)
             {
                 return 1;
-                // nqma mesta
+                // there is no free seats
             }
             if (this.airlineManagmentContext.Tickets.Any
                 (x => x.ClientId == client.Id 
@@ -79,7 +79,7 @@ namespace Business.ModelsBusiness
                 && x.Price == ticket.Price
                 && x.TypeTicket == ticket.TypeTicket))
             {
-                // already exist
+                // ticket already exist
                 return 2;
             }
             if (this.airlineManagmentContext.Tickets.Any
