@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Business.ModelsBusiness
 {
+    /// <summary>
+    /// Create an interface ITicketBusiness.
+    /// </summary>
     interface ITicketBusiness
     {
         List<Ticket> TicketGetAll();
