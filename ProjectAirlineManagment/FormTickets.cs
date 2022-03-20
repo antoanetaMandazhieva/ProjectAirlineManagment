@@ -127,9 +127,13 @@ namespace ProjectAirlineManagment
         
         private void buttonTicketSave_Click(object sender, EventArgs e)
         {
-            if (textBoxTicketClientId.Text == "" || textBoxTicketFlightId.Text == "" || textBoxPrice.Text == "0" || comboBoxSeat.Text == "")
+            if (textBoxTicketClientId.Text == ""
+                || textBoxTicketFlightId.Text == "" 
+                || textBoxPrice.Text == "0" 
+                || comboBoxSeat.Text == "")
             {
-                MessageBox.Show("Please, fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please, fill in all fields.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -142,7 +146,8 @@ namespace ProjectAirlineManagment
                 }
                 else
                 {
-                    MessageBox.Show("This flight does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("This flight does not exist.", "Error", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (this.airlineManagmentContext.Clients.Any(x => x.Id == ticket.ClientId))
@@ -151,25 +156,29 @@ namespace ProjectAirlineManagment
                 }
                 else
                 {
-                    MessageBox.Show("This client does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("This client does not exist.", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (flight.SeatCount == flight.TakenSeats && flight.Id == ticket.FlightId)
                 {
-                    MessageBox.Show("There are no seats available for this flight.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("There are no seats available for this flight.", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 if (this.airlineManagmentContext.Tickets.Any
                     (x => x.FlightId == ticket.FlightId
                     && x.Seat == ticket.Seat))
                 {
-                    MessageBox.Show("This seat is taken for this flight.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("This seat is taken for this flight.", "Error", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 if (this.airlineManagmentContext.Tickets.Any
                     (x => x.ClientId == client.Id
                     && x.FlightId == flight.Id
                     && x.Seat == ticket.Seat))
                 {
-                    MessageBox.Show("This ticket has already been introduced.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("This ticket has already been introduced.", "Error", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
