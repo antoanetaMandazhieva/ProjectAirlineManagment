@@ -145,8 +145,8 @@ namespace ProjectAirlineManagment
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(170)))), ((int)(((byte)(180)))));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(932, 133);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(1243, 164);
+            this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(0, 0);
             this.button2.TabIndex = 10;
@@ -369,9 +369,9 @@ namespace ProjectAirlineManagment
             this.rjRadioButtonRoundTrip.CheckedColor = System.Drawing.Color.DarkOrchid;
             this.rjRadioButtonRoundTrip.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold);
             this.rjRadioButtonRoundTrip.ForeColor = System.Drawing.Color.White;
-            this.rjRadioButtonRoundTrip.Location = new System.Drawing.Point(630, 111);
-            this.rjRadioButtonRoundTrip.Margin = new System.Windows.Forms.Padding(4);
-            this.rjRadioButtonRoundTrip.MinimumSize = new System.Drawing.Size(0, 26);
+            this.rjRadioButtonRoundTrip.Location = new System.Drawing.Point(840, 137);
+            this.rjRadioButtonRoundTrip.Margin = new System.Windows.Forms.Padding(5);
+            this.rjRadioButtonRoundTrip.MinimumSize = new System.Drawing.Size(0, 32);
             this.rjRadioButtonRoundTrip.Name = "rjRadioButtonRoundTrip";
             this.rjRadioButtonRoundTrip.Size = new System.Drawing.Size(185, 26);
             this.rjRadioButtonRoundTrip.TabIndex = 25;
@@ -387,9 +387,9 @@ namespace ProjectAirlineManagment
             this.rjRadioButtonOneWay.CheckedColor = System.Drawing.Color.DarkOrchid;
             this.rjRadioButtonOneWay.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold);
             this.rjRadioButtonOneWay.ForeColor = System.Drawing.Color.White;
-            this.rjRadioButtonOneWay.Location = new System.Drawing.Point(630, 80);
-            this.rjRadioButtonOneWay.Margin = new System.Windows.Forms.Padding(4);
-            this.rjRadioButtonOneWay.MinimumSize = new System.Drawing.Size(0, 26);
+            this.rjRadioButtonOneWay.Location = new System.Drawing.Point(840, 98);
+            this.rjRadioButtonOneWay.Margin = new System.Windows.Forms.Padding(5);
+            this.rjRadioButtonOneWay.MinimumSize = new System.Drawing.Size(0, 32);
             this.rjRadioButtonOneWay.Name = "rjRadioButtonOneWay";
             this.rjRadioButtonOneWay.Size = new System.Drawing.Size(172, 26);
             this.rjRadioButtonOneWay.TabIndex = 24;
@@ -425,7 +425,7 @@ namespace ProjectAirlineManagment
             this.Controls.Add(this.labelUnderTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormTickets";
             this.Text = "FormTickets";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
